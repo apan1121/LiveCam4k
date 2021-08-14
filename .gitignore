@@ -1,0 +1,10 @@
+
+/node_modules/
+/vendor/
+package-lock.json
+composer.lock
+/dist
+/config/config.php
+/config/credentials.json
+
+

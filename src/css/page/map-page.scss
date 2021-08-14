@@ -1,0 +1,8 @@
+@import '../common/_variable.scss';
+#map{
+    height: 80vh;
+    width: 100%;
+    .live-cam-card{
+        min-width: $spacer * 18;
+    }
+}

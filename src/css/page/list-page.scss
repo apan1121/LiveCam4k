@@ -1,0 +1,14 @@
+@import '../common/_variable.scss';
+
+
+.live-cam-group-box{
+    margin-bottom: $spacer * 2;
+    .live-cam-group-title{
+        h3{
+            color: $white;
+            padding-bottom: $spacer;
+            font-size: $spacer * 2;
+        }
+
+    }
+}
