@@ -22,3 +22,4 @@ define('NOTICE_MAIL', $NOTICE_MAIL);
 
 define('GOOGLE_SHEET_ID', '');
 define('YOUTUBE_API_KEY', '');
+define('OPEN_WEATHER_KEYS', []);

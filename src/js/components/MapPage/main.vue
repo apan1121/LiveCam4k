@@ -189,7 +189,7 @@ export default {
                     if (!!LiveCamInfo.gps && !!LiveCamInfo.gps.lat && !!LiveCamInfo.gps.lng) {
                         const { url } = LiveCamInfo.thumbnail;
                         const { lat, lng } = LiveCamInfo.gps;
-                        const { title } = LiveCamInfo;
+                        const { title, key, youtube_id } = LiveCamInfo;
                         const StatisticsFormat = {
                             view_count: 0,
                             like_count: 0,
@@ -215,7 +215,7 @@ export default {
                                         ${like_count}
                                     </span>
                                 </div>
-                                <div class="live-cam-title ellipsis">${title}</div>
+                                <div class="live-cam-title ellipsis">${youtube_id} ${title}</div>
                             </div>
                         `;
                         const marker = L.marker(new L.LatLng(lat, lng), { icon: greenIcon })

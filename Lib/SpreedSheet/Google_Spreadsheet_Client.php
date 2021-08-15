@@ -20,7 +20,8 @@ class Google_Spreadsheet_Client {
       $this->client = new \Google_Client();
       $this->client->setAuthConfig($key_file);
       $this->client->setScopes(array(
-        \Google_Service_Sheets::SPREADSHEETS_READONLY
+        // \Google_Service_Sheets::SPREADSHEETS_READONLY,
+        \Google_Service_Sheets::SPREADSHEETS,
       ));
     }
   }

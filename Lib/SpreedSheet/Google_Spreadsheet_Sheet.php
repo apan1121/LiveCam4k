@@ -184,6 +184,28 @@ class Google_Spreadsheet_Sheet {
   }
 
   /**
+   * Undocumented function
+   *
+   * @param [type] $name
+   * @param [type] $values
+   * @return void
+   */
+  public function set($name, $values) {
+    $data = [];
+    $data[] = new \Google_Service_Sheets_ValueRange([
+        'range' => $name,
+        'values' => $values
+    ]);
+      // Additional ranges to update ...
+    $body = new \Google_Service_Sheets_BatchUpdateValuesRequest([
+        'valueInputOption' => "RAW",
+        'data' => $data
+    ]);
+    $result = $this->sheet->spreadsheets_values->batchUpdate($this->id, $body);
+    return $result;
+  }
+
+  /**
    * Update cells' value by row and column number
    *
    * @param integer $row
