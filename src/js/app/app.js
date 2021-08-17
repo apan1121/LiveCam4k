@@ -37,6 +37,11 @@ $('body').on('lazyImg', () => {
 
 
 const { origin, pathname } = window.location;
-const BASE_API_HOST = `${origin}${pathname}`;
+
+let BASE_API_HOST = `${origin}${pathname}`;
+
+if (BASE_API_HOST.substr(-1) === '/') {
+    BASE_API_HOST = BASE_API_HOST.substr(0, BASE_API_HOST.length - 1);
+}
 jsVars.set('API_CONFIG.API_HOST', BASE_API_HOST);
 jsVars.set('ASSETS_HOST', BASE_API_HOST);

@@ -1,5 +1,5 @@
 <template>
-    <div class="alert alert-primary"
+    <div class="alert-geo-box alert alert-primary"
         :class="{
             'alert-primary': CurrentPosition.status === 'ask',
             'alert-danger': CurrentPosition.status === 'deny',

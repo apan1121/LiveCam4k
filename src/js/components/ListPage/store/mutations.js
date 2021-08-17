@@ -6,6 +6,9 @@ const main = {
     //     DiscussSortDirection[params.discussBoxId] = params.sortDirection;
     //     state.DiscussSortDirection = DiscussSortDirection;
     // },
+    setScrollTop(state, value){
+        state.scrollTop = value;
+    },
 };
 
 export default main;

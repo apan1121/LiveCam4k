@@ -109,6 +109,12 @@ export default {
                 }, 100);
             }).trigger('resize');
 
+
+            $(window).bind('scroll', () => {
+                that.SetPageSetting({ scrollTop: $(window).scrollTop() });
+            })
+
+
             /* 偵測 adblocker */
             detectAnyAdblocker().then((detected) => {
                 that.CheckAdBlock(detected);

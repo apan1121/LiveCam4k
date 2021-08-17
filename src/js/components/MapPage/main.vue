@@ -5,7 +5,7 @@
 </template>
 <script>
 import { mapActions, mapMutations, mapGetters } from 'vuex';
-import { linkRegister, string, localStorage } from 'lib/common/util';
+import { linkRegister, string, localStorage, jsVars } from 'lib/common/util';
 import L from 'leaflet';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
@@ -15,6 +15,7 @@ import 'leaflet.locatecontrol/dist/L.Control.Locate.min.css';
 // import 'leaflet.locatecontrol/dist/L.Control.Locate.mapbox.min.css';
 
 import LiveCam4kPageMixin from 'lib/common/mixins/LiveCam4kPageMixin';
+import CalUnits from 'lib/common/mixins/CalUnits';
 import { module_name, module_store } from './store/index';
 
 
@@ -27,12 +28,13 @@ import { module_name, module_store } from './store/index';
 export default {
     components: {},
     filters: {},
-    mixins: [LiveCam4kPageMixin],
+    mixins: [LiveCam4kPageMixin, CalUnits],
     props: {},
     data(){
         return {
             initFlag: false,
             localFlag: false,
+            localStorageFlag: false,
             moveFlag: false,
             map: null,
         };
@@ -41,7 +43,7 @@ export default {
         ...mapGetters([
             'CurrentPosition',
         ]),
-        ...mapGetters(module_name, ['LiveCamList']),
+        ...mapGetters(module_name, ['LiveCamList', 'currentPoint']),
         locale(){
             return this.$i18n.locale;
         },
@@ -58,7 +60,7 @@ export default {
 
                 if (!!that.map && !!this.CurrentPosition && this.CurrentPosition.status === 'success') {
                     const { lat, lng } = this.CurrentPosition;
-                    that.setYourPoint(lat, lng);
+                    that.setYourPoint(lat, lng, !that.localStorageFlag);
                 }
             },
         },
@@ -74,7 +76,7 @@ export default {
     beforeCreate(){
         const module_name_array = module_name.split('/');
         if (!this.$store.hasModule([module_name_array[0]])) {
-            this.$store.registerModule([module_name_array[0]], { state: { a: '' }, mutations: { a: () => {} }, getter: { b: () => {} }, action: {}, namespaced: true });
+            this.$store.registerModule([module_name_array[0]], { state: {}, mutations: {}, getter: {}, action: {}, namespaced: true });
         }
 
         if (!this.$store.hasModule(module_name_array)) {
@@ -111,46 +113,71 @@ export default {
     destroyed(){},
     methods: {
         ...mapActions({}),
-        ...mapMutations({}),
+        ...mapMutations({
+            setCurrentPoint: `${module_name}/setCurrentPoint`,
+        }),
         carryFormatter: string.carryFormatter,
         init(){
             const that = this;
-            that.map = L.map('map', {
-            }).fitWorld();
-            // let mapPath = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-            const mapPath = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGl2ZWNhbTRrIiwiYSI6ImNrc2FuN2JnODA5cnEyd3MyanZtbmJldGoifQ.Wsh6Un3PV_8eUA7EgecozA';
-            L.tileLayer(mapPath, {
-                maxZoom: 18,
-                attribution: '',
-                id: 'mapbox/streets-v11',
-                tileSize: 512,
-                zoomOffset: -1,
-            }).addTo(that.map);
+            setTimeout(() => {
+                that.map = L.map('map', {
+                    // zoomControl: false,
+                }).fitWorld();
+                const mapPath = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+                // const mapPath = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGl2ZWNhbTRrIiwiYSI6ImNrc2FuN2JnODA5cnEyd3MyanZtbmJldGoifQ.Wsh6Un3PV_8eUA7EgecozA';
+                L.tileLayer(mapPath, {
+                    maxZoom: 18,
+                    attribution: '  ',
+                    id: 'mapbox/streets-v11',
+                    tileSize: 512,
+                    zoomOffset: -1,
+                }).addTo(that.map);
 
 
-            const localStorageLatLng = localStorage.get('MapLatLng', false);
+                const { query } = this.$route;
 
-            if (!!localStorageLatLng && 1) {
-                const { lat, lng } = localStorageLatLng;
-                that.map.setView(new L.LatLng(lat, lng), 13);
-            } else if (!!that.CurrentPosition && that.CurrentPosition.status === 'success') {
-                const { lat, lng } = that.CurrentPosition;
-                this.setYourPoint(lat, lng);
-            } else {
-                that.map.setView(new L.LatLng(25.049234259657265, 121.52369884103936), 13);
-            }
+                const localStorageLatLng = localStorage.get('MapLatLng', false);
 
-            if (that.LiveCamList.length > 0) {
-                that.setLiveCamPoint();
-            }
+                if (typeof query.lat !== 'undefined' && typeof query.lng !== 'undefined') {
+                    console.log(11111);
+                    that.$router.replace({ name: 'MapPage' });
+                    that.map.setView(new L.LatLng(query.lat, query.lng), that.currentPoint.zoom);
+                } else if (!!localStorageLatLng && 1) {
+                    console.log(22222);
+                    that.localStorageFlag = true;
+                    const { lat, lng, zoom } = localStorageLatLng;
+                    console.log(lat, lng, zoom);
+                    that.map.setView(new L.LatLng(lat, lng), (zoom || 13));
+                    if (!!that.CurrentPosition && that.CurrentPosition.status === 'success') {
+                        const { lat, lng } = that.CurrentPosition;
+                        this.setYourPoint(lat, lng);
+                    }
+                } else if (!!that.CurrentPosition && that.CurrentPosition.status === 'success') {
+                    console.log(33333);
+                    const { lat, lng } = that.CurrentPosition;
+                    this.setYourPoint(lat, lng, that.currentPoint.zoom);
+                } else {
+                    console.log(44444);
+                    that.map.setView(new L.LatLng(25.049234259657265, 121.52369884103936), that.currentPoint.zoom);
+                }
 
-            that.map.on('move', () => {
-                const { lat, lng } = that.map.getCenter();
-                localStorage.set('MapLatLng', { lat, lng });
-                that.moveFlag = true;
-            });
+                if (that.LiveCamList.length > 0) {
+                    that.setLiveCamPoint();
+                }
+
+                that.map.on('move', () => {
+                    const { lat, lng } = that.map.getCenter();
+                    const zoom = that.map.getZoom();
+                    that.moveCurrentPoint(lat, lng, zoom);
+                });
+                that.map.on('zoomend', () => {
+                    const { lat, lng } = that.map.getCenter();
+                    const zoom = that.map.getZoom();
+                    that.moveCurrentPoint(lat, lng, zoom);
+                });
+            }, 300);
         },
-        setYourPoint(lat, lng){
+        setYourPoint(lat, lng, goTo = false){
             const that = this;
             // that.map.setView([lat, lng], 13);
             const radius = 12;
@@ -159,7 +186,7 @@ export default {
                 .bindPopup(that.$t('MapPage.YourCurrentPosition'));
 
 
-            if (!that.moveFlag) {
+            if (!that.moveFlag && goTo) {
                 that.map.setView(new L.LatLng(lat, lng), 13);
             }
 
@@ -175,6 +202,7 @@ export default {
             const that = this;
             clearTimeout(that.setLiveCamPointTimer);
             that.setLiveCamPointTimer = setTimeout(() => {
+                const ASSETS_HOST = jsVars.get('ASSETS_HOST');
                 const greenIcon = new L.Icon({
                     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
                     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -187,45 +215,84 @@ export default {
 
                 that.LiveCamList.forEach((LiveCamInfo) => {
                     if (!!LiveCamInfo.gps && !!LiveCamInfo.gps.lat && !!LiveCamInfo.gps.lng) {
-                        const { url } = LiveCamInfo.thumbnail;
+                        const { url } = LiveCamInfo.video.thumbnail;
                         const { lat, lng } = LiveCamInfo.gps;
-                        const { title, key, youtube_id } = LiveCamInfo;
+                        const { key, youtube_id, video, weather } = LiveCamInfo;
                         const StatisticsFormat = {
                             view_count: 0,
                             like_count: 0,
                             dislike_count: 0,
                             favorite_count: 0,
                             comment_count: 0,
-                            ...LiveCamInfo.statistics,
+                            ...video.statistics,
+
+                            temp: weather.temp,
+                            humidity: weather.humidity,
+                            wind_speed: weather.wind_speed,
                         };
                         const view_count = string.carryFormatter(StatisticsFormat.view_count);
                         const like_count = string.carryFormatter(StatisticsFormat.like_count);
+
+                        const temp = that.transTemp(StatisticsFormat.temp, 0);
+                        const { humidity, wind_speed } = StatisticsFormat;
+
+                        const route_obj = that.$router.matcher.match({ name: 'LiveCamPage', params: { LiveCamKey: LiveCamInfo.key } });
+                        const liveCamPageUrl = `${ASSETS_HOST}#${route_obj.fullPath}`;
                         const html = `
-                            <div class="live-cam-card">
-                                <div class="live-cam-thumb lazyload" data-src="${url}">
-                                    <i class="icon far fa-play-circle"></i>
+                            <a href='${liveCamPageUrl}'>
+                                <div class="live-cam-card video" statistics-type="video">
+                                    <div class="live-cam-thumb lazyload" data-src="${url}">
+                                        <i class="icon far fa-play-circle"></i>
+                                    </div>
+                                    <div rel='video' class="live-cam-statistics">
+                                        <span class="statistic-item">
+                                            <i class="fas fa-eye"></i>
+                                            ${view_count}
+                                        </span>
+                                        <span class="statistic-item">
+                                            <i class="fas fa-thumbs-up"></i>
+                                            ${like_count}
+                                        </span>
+                                    </div>
+                                    <div rel='weather' class="live-cam-statistics">
+                                        <span class="statistic-item">
+                                            <i class="fas fa-thermometer-half"></i>
+                                            ${temp}
+                                        </span>
+                                        <span class="statistic-item">
+                                            <i class="fas fa-tint"></i>
+                                            ${humidity}
+                                        </span>
+                                        <span class="statistic-item">
+                                            <i class="fas fa-wind"></i>
+                                            ${wind_speed}
+                                        </span>
+                                    </div>
+                                    <div class="live-cam-title ellipsis">${video.title}</div>
                                 </div>
-                                <div class="live-cam-statistics">
-                                    <span class="statistic-item">
-                                        <i class="fas fa-eye"></i>
-                                        ${view_count}
-                                    </span>
-                                    <span class="statistic-item">
-                                        <i class="fas fa-thumbs-up"></i>
-                                        ${like_count}
-                                    </span>
-                                </div>
-                                <div class="live-cam-title ellipsis">${youtube_id} ${title}</div>
-                            </div>
+                            </a>
                         `;
                         const marker = L.marker(new L.LatLng(lat, lng), { icon: greenIcon })
                             .bindPopup(html)
                             .on('click', () => {
                                 that.map.panTo(new L.LatLng(LiveCamInfo.gps.lat, LiveCamInfo.gps.lng));
 
-                                $('.leaflet-popup-content-wrapper').find('.icon').on('click', () => {
-                                    console.log('play', LiveCamInfo);
+                                $('.leaflet-popup-content-wrapper').find('.icon').off('click').on('click', (e) => {
+                                    e.stopPropagation();
+                                    e.preventDefault();
+                                    that.$router.push({ name: 'LiveCamPage', params: { LiveCamKey: LiveCamInfo.key } });
                                 });
+                                const type = ['video', 'weather'];
+                                $('.leaflet-popup-content-wrapper').find('.live-cam-statistics').off('click').on('click', function(e){
+                                    e.stopPropagation();
+                                    const liveCamCard = $(this).parents('.live-cam-card');
+                                    let statisticsType = liveCamCard.attr('statistics-type');
+                                    let statisticsIndex = type.indexOf(statisticsType);
+                                    statisticsIndex = (statisticsIndex + 1) % type.length;
+                                    statisticsType = type[statisticsIndex];
+                                    liveCamCard.attr('statistics-type', statisticsType);
+                                });
+
                                 $('body').trigger('lazyImg');
                             });
                         markers.addLayer(marker);
@@ -234,6 +301,11 @@ export default {
 
                 that.map.addLayer(markers);
             }, 100);
+        },
+        moveCurrentPoint(lat, lng, zoom){
+            localStorage.set('MapLatLng', { lat, lng, zoom });
+            this.setCurrentPoint({ lat, lng, zoom });
+            this.moveFlag = true;
         },
     },
 };

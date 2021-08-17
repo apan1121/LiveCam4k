@@ -1,0 +1,160 @@
+@import '../../common/_variable.scss';
+
+.live-cam-info-box{
+    .live-cam-player-wrapper{
+        margin-bottom: $spacer * 1.5;
+        .youtube-player-box{
+            position: relative;
+            max-height: 90vh;
+            width: 100%;
+            background: #000;
+
+            @include aspect-ratio(percentage(9/16));
+            &:before{
+                pointer-events: none;
+            }
+            iframe {
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+            }
+            .youtube-thumbnail{
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                color: $white;
+                .icon{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    text-shadow: 0px 0px 5px $gray-900;
+                    font-size: $spacer * 3;
+                    opacity: 0.9;
+                    cursor: pointer;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    .live-cam-info-content{
+        &[rel='statistic'] {
+            margin-bottom: $spacer ;
+            .statistic-item{
+                &[rel="statistic-info"]{
+                    font-size: $spacer * 1.2;
+                    margin-right: $spacer * 0.5;
+                }
+                &[rel="local-info"] {
+                    font-size: $spacer * 1.2;
+                }
+            }
+        }
+        &[rel='title'] {
+            font-size: $spacer * 1.75;
+            display: flex;
+            align-items: center;
+            margin-bottom: $spacer * 1.5;
+            .live-icon{
+                width: $spacer * 1.5;
+                flex: none;
+                display: flex;
+                align-items: center;
+                .icon{
+
+                    font-size: $spacer * 1;
+                    color: $red-800;
+                    margin-right: $spacer * 0.5;
+                    &.live{
+                        animation-name: BreathingLight;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: ease-in-out
+                    }
+                }
+            }
+            .video-title{
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &[rel='map']{
+            height: 100%;
+            min-height: $spacer * 16;
+            .live-cam-info-map-square{
+                position: relative;
+                margin-bottom: $spacer /2;
+                height: 100%;
+                // @include aspect-ratio(percentage(1));
+
+                .map{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: $spacer * 0.25;
+                    overflow: hidden;
+                }
+                .live-cam-info-map-title{
+                    position: absolute;
+                    color: $gray-900;
+                    font-size: $spacer * 1;
+                    padding: $spacer * 0.35;
+                    z-index: 2000;
+                    color: $gray-100;
+                    bottom: 0;
+                    right: 0;
+                    background: rgba($gray-900, 0.7);
+                    margin-bottom: 0px;
+                    border-top-left-radius: $spacer * 0.25;
+                }
+            }
+        }
+        &[rel='weather-info']{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: $spacer * 20;
+            margin: 0 auto $spacer * 1.25;
+
+
+            .live-cam-info-weather-info{
+                flex: 50%;
+                font-size: $spacer * 2;
+                .live-cam-info-weather-info-icon {
+                    text-align: center;
+                    font-size: $spacer * 6;
+                }
+                .live-cam-info-weather-info-content{
+                    text-align: center;
+                    font-size: $spacer * 1.5;
+                }
+                // &:first-child{
+                //     flex: 100%;
+                // }
+            }
+        }
+    }
+
+}
+
+@keyframes BreathingLight {
+    0%   {
+        opacity: 1;
+        font-size: $spacer * 1;
+    }
+    50%  {
+        opacity: 0.5;
+        font-size: $spacer * 0.95;
+    }
+    100% {
+        opacity: 1;
+        font-size: $spacer * 1;
+    }
+}

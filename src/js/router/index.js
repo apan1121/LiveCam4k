@@ -23,6 +23,20 @@ const routes = [
         component: () => import('components/TravelPage/main.vue'),
         meta: { title: '旅行' },
     },
+    {
+        path: '/live_cam/:LiveCamKey([a-zA-Z0-9_-]{1,20})',
+        name: 'LiveCamPage',
+        component: () => import('components/LiveCamPage/main.vue'),
+        meta: { title: '攝影機' },
+        props: true,
+    },
+
+    {
+        path: '*',
+        redirect: {
+            name: 'ListPage',
+        },
+      }
 ];
 
 const router = new VueRouter({

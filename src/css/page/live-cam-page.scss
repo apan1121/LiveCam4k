@@ -1,0 +1,30 @@
+@import '../common/_variable.scss';
+
+body[page-name="LiveCamPage"] {
+    .live-cam-4k-page{
+        padding-top: $spacer * 1;
+        header {
+            display: none;
+        }
+        .alert-geo-box{
+            display: none;
+        }
+
+        .live-cam-page{
+            position: relative;
+            padding-top: $spacer * 1.5;
+            .live-cam-page-back{
+                position: absolute;
+                top: $spacer * -2;
+                left: $spacer * -1;
+                display: inline-block;
+                color: $white;
+                font-size: $spacer * 1.75;
+                cursor: pointer;
+                z-index: 1000;
+                text-shadow: 0px 0px 5px $gray-900;
+                padding: $spacer * 1;
+            }
+        }
+    }
+}

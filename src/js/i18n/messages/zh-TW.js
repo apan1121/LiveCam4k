@@ -4,6 +4,7 @@ export default {
         List: '列表模式',
         Map: '地圖模式',
         Travel: '環遊世界',
+        LiveCam: '攝影機',
     },
     LangModal: {
         ChooseLanguage: '選擇語言',
@@ -269,5 +270,22 @@ export default {
 
     MapPage: {
         YourCurrentPosition: '您目前的位置',
+    },
+    WeatherStatus: {
+        Thunderstorm: '雷雨',
+        Drizzle: '細雨',
+        Rain: '雨',
+        Snow: '雪',
+        Mist: '薄霧',
+        Smoke: '霧',
+        Haze: '陰霾',
+        Dust: '灰塵',
+        Fog: '多霧路段',
+        Sand: '沙',
+        Ash: '灰',
+        Squall: '狂風',
+        Tornado: '龍捲風',
+        Clear: '晴空',
+        Clouds: '雲',
     },
 };

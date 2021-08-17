@@ -1,5 +1,5 @@
 <template>
-    <div>TravelPage</div>
+    <div>開發中</div>
 </template>
 <script>
 import { mapActions, mapMutations, mapGetters } from 'vuex';

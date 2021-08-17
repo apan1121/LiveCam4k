@@ -33,8 +33,8 @@ $OPEN_WEATHER_KEY_COUNT = count(array_values(array_filter($API_KEYS, function($A
 /**
  * 從 sheet 中取出 list
  */
-$LivCamSheet = $spreadSheet->get("LiveCamList", "A", 1, "Z");
-$SheetTmpLivCamList = (array) formatSheetToArr($LivCamSheet->values);
+$LiveCamSheet = $spreadSheet->get("LiveCamList", "A", 1, "Z");
+$SheetTmpLiveCamList = (array) formatSheetToArr($LiveCamSheet->values);
 
 /**
  * Sheet LiveCam 內容
@@ -64,8 +64,9 @@ $YoutubeIdMapToLiveCamKey = [];
 /**
  * 格式化內容
  */
-showMsg("從 sheet 中取得 ".count($SheetTmpLivCamList)." 筆資料");
-foreach($SheetTmpLivCamList AS $liveCamInfo) {
+showMsg("從 sheet 中取得 ".count($SheetTmpLiveCamList)." 筆資料");
+foreach($SheetTmpLiveCamList AS $liveCamInfo) {
+
     /**
      * 格式化 error 訊息成 arr
      */
@@ -100,6 +101,69 @@ foreach($SheetTmpLivCamList AS $liveCamInfo) {
     }
 }
 
+
+/**
+ * 取得表單新增的內容
+ */
+$LiveCamInputSheet = $spreadSheet->get("LiveCamListInput", "A", 1, "Z");
+$LiveCamInputSheetCount = count($LiveCamInputSheet->values);
+$LiveCameInputList = (array) formatSheetToArr($LiveCamInputSheet->values);
+
+$LiveCameInputListUsedIndex = [];
+/**
+ *  檢查放入 empty
+ */
+foreach ($LiveCameInputList AS $LiveCameInputListIndex => $_LiveCameInputList) {
+    $youtube_url = $_LiveCameInputList['Youtube 影片'];
+    $youtube_id = parseYoutubeId($youtube_url);
+    $gps = $_LiveCameInputList['GPS 座標'];
+    if (empty($gps)) {
+        $gps = [];
+    } else {
+        $gps = explode(',', $gps);
+        foreach ($gps AS $index => $val) {
+            $gps[$index] = (float)trim($val);
+        }
+    }
+
+    if (!empty($youtube_id)) {
+        if (!in_array($youtube_id, $youtube_ids)) {
+            if (count($gps) === 2) {
+                $tmp = [
+                    'key' => '',
+                    'local' => '',
+                    'city' => '',
+                    'youtube' => $youtube_url,
+                    'gps' => $gps,
+                    'embed' => 1,
+                    'error' => [],
+                    'created_at' => '',
+                    'updated_at' => '',
+                    'youtube_id' => $youtube_id,
+                ];
+                $SheetEmptyLiveCamList[] = $tmp;
+                $LiveCameInputListUsedIndex[] = $LiveCameInputListIndex;
+                $youtube_ids[] = $youtube_id;
+            }
+        } else {
+            $LiveCameInputListUsedIndex[] = $LiveCameInputListIndex;
+        }
+    }
+}
+/**
+ * 移除表單內容
+ */
+if (!empty($LiveCameInputListUsedIndex)) {
+    foreach ($LiveCameInputListUsedIndex AS $index) {
+        unset($LiveCameInputList[$index]);
+    }
+    $LiveCameInputList = array_values($LiveCameInputList);
+    $LiveCameInputList = formatArrToSheet($LiveCameInputList, ['時間戳記', 'Youtube 影片', 'GPS 座標']);
+    $spreadSheet->clear("LiveCamListInput", "A", 1, "Z", $LiveCamInputSheetCount);
+    $spreadSheet->set("LiveCamListInput", $LiveCameInputList);
+}
+
+
 /**
  * 如果有 empty key，產生亂碼 key 值
  */
@@ -128,8 +192,10 @@ $youtubeList = [];
 showMsg("------ START: 開始處理 Youtube 影片 ------");
 do{
     $tmp_youtube_ids = array_splice($youtube_ids, 0, 20);
+    // showMsg($tmp_youtube_ids );
     showMsg("查找 Youtube data ". count($tmp_youtube_ids) ." 筆");
     $tmp_youtubeList = getYoutubeInfoByIds($tmp_youtube_ids);
+    // showMsg(array_keys($tmp_youtubeList));
     $youtubeList = $youtubeList + $tmp_youtubeList;
 } while ( count($youtube_ids) > 0 );
 
@@ -216,6 +282,7 @@ $LiveCamList = [];
 
 $ResponseMailError = [];
 foreach ($SheetLiveCamList AS &$liveCamInfo) {
+    $orgLiveCamInfo = json_decode(json_encode($liveCamInfo), true);
     $key = $liveCamInfo['key'];
     showMsg("執行 Live Cam Key: {$key}");
 
@@ -234,7 +301,9 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
     /**
      *  重建網址
      */
+
     $liveCamInfo['youtube'] = "https://www.youtube.com/watch?v={$youtube_id}";
+
 
     /**
      * 取得影片資訊
@@ -248,7 +317,6 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
     $weatherGroupKey = $pointGroupMapping[$key];
     $weatherInfo = $GPSGroupInfo[$weatherGroupKey]['weather'];
 
-
     $gps = false;
     $timezone = false;
     if (isset($liveCamInfo['gps']) && isset($liveCamInfo['gps'][0]) && isset($liveCamInfo['gps'][1])) {
@@ -259,7 +327,7 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
         list("timezone" => $code, "hour" => $hour) = $gpsMapper->latLngToTimezoneString($gps['lat'], $gps['lng']);
         $timezone = [
             "code" => $code,
-            "hour" => $hour * 3600,
+            "sec" => $hour * 3600,
         ];
     }
 
@@ -282,8 +350,7 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
         /**
          * 重設時區
          */
-        $timezone['hour'] = $weatherInfo['timezone'];
-
+        $timezone['sec'] = $weatherInfo['timezone'];
         $weather = [
             'sunrise' => $weatherInfo['sys']['sunrise'],
             'sunset' => $weatherInfo['sys']['sunset'],
@@ -291,6 +358,8 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
             'wind_deg' => $weatherInfo['wind']['deg'],
             // 'wind_gust' => $weatherInfo['wind']['gust'],
             'weather_desc' => $weatherInfo['weather'][0]['description'],
+            'weather_icon' => $weatherInfo['weather'][0]['icon'],
+            'weather_status' => $weatherInfo['weather'][0]['main'],
             'base' => $weatherInfo['base'],
             'temp' => $weatherInfo['main']['temp'],
             'feels_like' => $weatherInfo['main']['feels_like'],
@@ -328,7 +397,7 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
         "embed" => $liveCamInfo['embed'],
         "timezone" => $timezone,
 
-        "video_info" => $video_info,
+        "video" => $video_info,
 
         "weather" => $weather,
     ];
@@ -354,6 +423,14 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
     }
 
     $LiveCamList[] = $tmp;
+
+    if (empty($liveCamInfo['created_at'])) {
+        $liveCamInfo['created_at'] = date('Y-m-d H:i:s');
+    }
+
+    if (json_encode($orgLiveCamInfo) !== json_encode($liveCamInfo)) {
+        $liveCamInfo['updated_at'] = date('Y-m-d H:i:s');
+    }
 }
 
 
@@ -366,7 +443,7 @@ save(LIVE_CAM_LIST, $LiveCamList, true);
 showMsg("寫回 Sheet 中");
 $SheetLiveCamList = array_values($SheetLiveCamList);
 $SheetLiveCamList = array_orderby($SheetLiveCamList, "local", SORT_ASC, "city", SORT_ASC);
-$SheetLiveCamList = formatArrToSheet($SheetLiveCamList, ['key','local', 'city', 'youtube', 'gps', 'embed', 'error']);
+$SheetLiveCamList = formatArrToSheet($SheetLiveCamList, ['key','local', 'city', 'youtube', 'gps', 'embed', 'error', 'created_at', 'updated_at']);
 $spreadSheet->set("LiveCamList", $SheetLiveCamList);
 
 /**
@@ -398,7 +475,7 @@ if (!empty($ResponseMailError)) {
     </tr>";
     foreach ($ResponseMailError AS $index => $_ResponseMailError) {
         $style = [];
-        $style[] = ($i % 2) ? 'background:#DDD': '';
+        $style[] = ($index % 2) ? 'background:#DDD': '';
         $style = implode(";", $style);
 
 
@@ -418,6 +495,8 @@ if (!empty($ResponseMailError)) {
 
     sendMail("[警告] 有影片處理失敗", $content, OWNER_MAIL);
 }
+
+
 
 
 
@@ -470,10 +549,10 @@ function formatSheetToArr(array $data) {
  */
 function formatArrToSheet($data, $columns) {
     $list = [];
+    $list[] = $columns;
     if (!empty($data)) {
         // $columns = array_keys($data[0]);
         // $columns = ['key','local', 'city', 'youtube', 'gps', 'embed', 'error'];
-        $list[] = $columns;
         foreach ($data AS $_data) {
             $tmp = [];
             if (isset($_data['error'])) {

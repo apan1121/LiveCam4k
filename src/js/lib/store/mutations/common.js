@@ -20,10 +20,10 @@ export default {
     setLiveCamList(state, data){
         const LiveCamList = {};
         data.forEach((item) => {
-            const key = `${item.local}_${item.serial_number}`;
-            item.key = key;
-            LiveCamList[key] = item;
+            LiveCamList[item.key] = item;
         });
         state.LiveCamList = LiveCamList;
+
+        state.LiveCamListFlag = true;
     },
 };

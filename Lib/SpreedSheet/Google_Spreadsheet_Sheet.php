@@ -205,6 +205,30 @@ class Google_Spreadsheet_Sheet {
     return $result;
   }
 
+  public function clear($name, $fromCol, $fromRow, $toCol = null, $toRow = null) {
+    $to = false;
+    $fromCol = is_string($fromCol) ? $fromCol : $this->getColumnLetter(intval($fromCol));
+    $toCol = is_string($toCol) ? $toCol : $this->getColumnLetter(intval($toCol));
+
+    $from = $fromCol . $fromRow;
+    if ($toCol && $toRow) {
+      $to = $toCol . $toRow;
+    } else if ($toCol) {
+      $to = $toCol;
+    }
+
+    if ($to) {
+      $target = $from . ":" . $to;
+    } else {
+      $target = $from;
+    }
+
+    $range = implode('!', array($name, $target));
+    $requestBody = new \Google_Service_Sheets_ClearValuesRequest();
+
+    return $this->sheet->spreadsheets_values->clear($this->id, $range, $requestBody);
+  }
+
   /**
    * Update cells' value by row and column number
    *

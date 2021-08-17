@@ -1,9 +1,5 @@
 <template>
     <div>
-        <h2 class="page-title-header">
-            {{ $t("Menu.List") }}
-        </h2>
-
         <template v-for="LiveCamGroup in LiveCamGroupList">
             <live-cam-group-box
                 :key="LiveCamGroup.local"
@@ -14,6 +10,7 @@
                         <div :key="LiveCamInfo.key" class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <live-cam-card
                                 v-bind="LiveCamInfo"
+                                :live-cam-key="LiveCamInfo.key"
                             >
                             </live-cam-card>
                         </div>
@@ -56,16 +53,24 @@ export default {
         return {};
     },
     computed: {
+        ...mapGetters([
+            'PageSetting_scrollTop',
+        ]),
         ...mapGetters(module_name, [
+            'scrollTop',
             'LiveCamGroupList',
         ]),
     },
     watch: {
+        PageSetting_scrollTop(newVal){
+            const that = this;
+            that.setScrollTop(newVal);
+        },
     },
     beforeCreate(){
         const module_name_array = module_name.split('/');
         if (!this.$store.hasModule([module_name_array[0]])) {
-            this.$store.registerModule([module_name_array[0]], { state: { a: '' }, mutations: { a: () => {} }, getter: { b: () => {} }, action: {}, namespaced: true });
+            this.$store.registerModule([module_name_array[0]], { state: { }, mutations: { }, getter: { }, action: {}, namespaced: true });
         }
 
         if (!this.$store.hasModule(module_name_array)) {
@@ -75,13 +80,20 @@ export default {
     },
     created(){},
     mounted(){
-        this.setPageTitle(this.$t('Menu.List'));
+        const that = this;
+        that.setPageTitle('');
+        // that.setPageTitle(this.$t('Menu.List'));
+        that.$nextTick(() => {
+            $(window).scrollTop(that.scrollTop);
+        });
     },
     updated(){},
     destroyed(){},
     methods: {
         ...mapActions({}),
-        ...mapMutations({}),
+        ...mapMutations(module_name, [
+            'setScrollTop',
+        ]),
     },
 };
 </script>

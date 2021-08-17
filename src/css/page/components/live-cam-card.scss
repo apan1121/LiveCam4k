@@ -9,22 +9,32 @@
     border-radius: $spacer / 2;
     box-shadow: 0px 0px $spacer / 3 $gray-200;
     color: $gray-900;
+
     user-select: none;
     .live-cam-thumb{
-        @include aspect-ratio(percentage(9/16));
         position: relative;
+        @include aspect-ratio(percentage(9/16));
+        background-color: $gray-800;
         .icon{
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: $spacer * 3;
             color: $white;
             text-shadow: 0 0 5px $gray-600;
+            font-size: $spacer * 3;
             cursor: pointer;
+            transform: translate(-50%, -50%);
+            opacity: 0.9;
+            transition: all 0.2s;
             &:active{
                 font-size: $spacer * 3.2;
                 transition: all 0.2s;
+            }
+            @media (hover: hover) {
+                opacity: 0.3;
+                &:hover{
+                    opacity: 0.9;
+                }
             }
         }
     }
@@ -33,11 +43,13 @@
         position: absolute;
         top: 0px;
         right: 0px;
+        display: none;
         padding: $spacer /4 $spacer /2;
+        border-radius: $spacer / 8;
         background: rgba($gray-900, 0.6);
         color: $white;
         font-size: 11px;
-        border-radius: $spacer / 8;
+        cursor: pointer;
         transition: all 0.3s;
         .statistic-item{
             &:not(:first-child) {
@@ -55,12 +67,12 @@
         position: absolute;
         bottom: 0px;
         padding: $spacer /4;
-        min-height: $spacer * 2;
+        min-height: $spacer * 1;
         width: 100%;
         background: rgba($gray-900, 0.6);
         color: $white;
         text-align: right;
-        font-size: $spacer * 1;
+        font-size: $spacer * 0.75;
         @media (hover: hover) {
             &:hover{
                 background: rgba($gray-900, 0.8);
@@ -71,5 +83,16 @@
     &.live{
         // box-shadow: 0px 0px $spacer / 3 $red-300;
         border: 1px solid $red-800;
+    }
+
+    &[statistics-type='video'] {
+        .live-cam-statistics[rel='video'] {
+            display: block;
+        }
+    }
+    &[statistics-type='weather'] {
+        .live-cam-statistics[rel='weather'] {
+            display: block;
+        }
     }
 }

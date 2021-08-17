@@ -1,3 +1,6 @@
+import convert from 'convert-units';
+
+
 const deepDiffMapper_func = (function(){
     return {
         VALUE_CREATED: 'created',
@@ -373,6 +376,101 @@ const carryFormatter_func = function(num, digits){
 };
 
 
+const calVincentyCircleDistance_func = function(lat1, lon1, lat2, lon2){
+    const R = 6371e3; // metres
+    const Phi1 = lat1 * Math.PI / 180; // Phi, Lambda in radians
+    const Phi2 = lat2 * Math.PI / 180;
+    const DeltaPhi = (lat2 - lat1) * Math.PI / 180;
+    const DeltaLambda = (lon2 - lon1) * Math.PI / 180;
+
+    const a = Math.sin(DeltaPhi / 2) * Math.sin(DeltaPhi / 2)
+              + Math.cos(Phi1) * Math.cos(Phi2)
+              * Math.sin(DeltaLambda / 2) * Math.sin(DeltaLambda / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    const d = R * c; // in metres
+    return d;
+};
+
+const getRandomInRange_func = function(from, to, fixed){
+    return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+    // .toFixed() returns string, so ' * 1' is a trick to convert to number
+};
+
+const calcTemperatureUnit_func = function(value, Unit, fixed = 2){
+    let val = parseFloat(value);
+    switch (Unit.toLowerCase()) {
+        case 'c': {
+            val = convert(val).from('K').to('C');
+            const valObj = convert(val).from('C').toBest();
+            val = `${valObj.val.toFixed(fixed)} °${valObj.unit}`;
+            break;
+        }
+
+        case 'f': {
+            val = convert(val).from('K').to('F');
+            const valObj = convert(val).from('F').toBest();
+            val = `${valObj.val.toFixed(fixed)} °${valObj.unit}`;
+            break;
+        }
+        default:
+            break;
+    }
+    return val;
+};
+
+
+const calcLengthUnit_func = function(value, Unit, fixed = 2){
+    let val = parseFloat(value);
+    switch (Unit.toLowerCase()) {
+        case 'metric': {
+            val = convert(val).from('m').to('m');
+            // eslint-disable-next-line no-case-declarations
+            const valObj = convert(val).from('m').toBest();
+
+            val = `${valObj.val.toFixed(fixed)} ${valObj.unit}`;
+            break;
+        }
+
+        case 'imperial': {
+            val = convert(val).from('m').to('ft');
+            // eslint-disable-next-line no-case-declarations
+            const valObj = convert(val).from('ft').toBest();
+            val = `${valObj.val.toFixed(fixed)} ${valObj.unit}`;
+            break;
+        }
+        default:
+            break;
+    }
+    return val;
+};
+
+const calcSpeedUnit_func = function(value, Unit, fixed = 2){
+    let val = parseFloat(value);
+    switch (Unit.toLowerCase()) {
+        case 'metric': {
+            val = convert(val).from('m/s').to('m/s');
+            // eslint-disable-next-line no-case-declarations
+            const valObj = convert(val).from('m/s').toBest();
+
+            val = `${valObj.val.toFixed(fixed)} ${valObj.unit}`;
+            break;
+        }
+
+        case 'imperial': {
+            val = convert(val).from('m/s').to('m/h');
+            // eslint-disable-next-line no-case-declarations
+            const valObj = convert(val).from('m/h').toBest();
+            val = `${valObj.val.toFixed(fixed)} ${valObj.unit}`;
+            break;
+        }
+        default:
+            break;
+    }
+    return val;
+};
+
+
 const main = {
     deepDiffMapper: deepDiffMapper_func,
 
@@ -401,6 +499,13 @@ const main = {
     uuid: uuid_func,
 
     carryFormatter: carryFormatter_func,
+
+    calVincentyCircleDistance: calVincentyCircleDistance_func,
+
+    getRandomInRange: getRandomInRange_func,
+    calcTemperatureUnit: calcTemperatureUnit_func,
+    calcLengthUnit: calcLengthUnit_func,
+    calcSpeedUnit: calcSpeedUnit_func,
 };
 
 export const deepDiffMapper = deepDiffMapper_func;

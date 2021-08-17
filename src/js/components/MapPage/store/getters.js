@@ -4,4 +4,6 @@ export default {
         const { LiveCamList } = rootState;
         return Object.values(LiveCamList);
     },
+
+    currentPoint: state => state.currentPoint,
 };

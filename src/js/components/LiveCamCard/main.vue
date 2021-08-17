@@ -1,30 +1,49 @@
 <template>
-    <div class="live-cam-card" :class="{
-        live,
-    }"
-    >
-        <div class="live-cam-thumb lazyload" :data-src="thumb_img">
+    <router-link :to="{ name: 'LiveCamPage', params: { LiveCamKey: liveCamKey } }">
+        <div class="live-cam-card" :class="{
+            live: video.live,
+        }
+        " :statistics-type="StatisticsType"
+        >
+            <div class="live-cam-thumb lazyload" :data-src="thumb_img">
+                <i class="icon far fa-play-circle"></i>
+            </div>
+            <div :rel="StatisticsType" class="live-cam-statistics" @click.stop="changeStatisticsType">
+                <template v-if="StatisticsType === 'video'">
+                    <span class="statistic-item">
+                        <i class="fas fa-eye"></i>
+                        {{ carryFormatter(StatisticsFormat.view_count) }}
+                    </span>
+                    <span class="statistic-item">
+                        <i class="fas fa-thumbs-up"></i>
+                        {{ carryFormatter(StatisticsFormat.like_count) }}
+                    </span>
+                </template>
+                <template v-if="StatisticsType === 'weather'">
+                    <span class="statistic-item">
+                        <i class="fas fa-thermometer-half"></i>
+                        {{ transTemp(StatisticsFormat.temp, 0) }}
+                    </span>
+                    <span class="statistic-item">
+                        <i class="fas fa-tint"></i>
+                        {{ StatisticsFormat.humidity }}
+                    </span>
+                    <span class="statistic-item">
+                        <i class="fas fa-wind"></i>
+                        {{ StatisticsFormat.wind_speed }}
+                    </span>
+                </template>
+            </div>
+            <div class="live-cam-title ellipsis" v-text="video.title"></div>
         </div>
-        <div class="live-cam-statistics">
-            <span class="statistic-item">
-                <i class="fas fa-eye"></i>
-                {{ carryFormatter(StatisticsFormat.view_count) }}
-            </span>
-            <span class="statistic-item">
-                <i class="fas fa-thumbs-up"></i>
-                {{ carryFormatter(StatisticsFormat.like_count) }}
-            </span>
-            <!-- <span class="statistic-item">
-                <i class="fas fa-comment-alt"></i>
-                {{ carryFormatter(StatisticsFormat.comment_count) }}
-            </span> -->
-        </div>
-        <div class="live-cam-title ellipsis" v-text="title"></div>
-    </div>
+    </router-link>
 </template>
 <script>
 import { mapActions, mapMutations, mapGetters } from 'vuex';
 import { linkRegister, string } from 'lib/common/util';
+import CalUnits from 'lib/common/mixins/CalUnits';
+import { module_name, module_store } from './store/index';
+
 
 linkRegister.register([
     {
@@ -44,7 +63,12 @@ linkRegister.register([
 export default {
     components: {},
     filters: {},
+    mixins: [CalUnits],
     props: {
+        liveCamKey: {
+            type: String,
+            default: '',
+        },
         thumbnail: {
             type: [Boolean, Object],
             default: false,
@@ -53,11 +77,11 @@ export default {
             type: String,
             default: '',
         },
-        live: {
-            type: Boolean,
-            default: false,
+        video: {
+            type: Object,
+            default: () => {},
         },
-        statistics: {
+        weather: {
             type: Object,
             default: () => {},
         },
@@ -66,26 +90,42 @@ export default {
         return {};
     },
     computed: {
+        ...mapGetters({
+            StatisticsType: `${module_name}/StatisticsType`,
+        }),
         thumb_img(){
             let thumb_img = '';
-            if (!!this.thumbnail && !!this.thumbnail.url) {
-                thumb_img = this.thumbnail.url;
+            if (!!this.video.thumbnail && !!this.video.thumbnail.url) {
+                thumb_img = this.video.thumbnail.url;
             }
 
             return thumb_img;
         },
         StatisticsFormat(){
             return {
-                view_count: 0,
-                like_count: 0,
-                dislike_count: 0,
-                favorite_count: 0,
-                comment_count: 0,
-                ...this.statistics,
+                view_count: this.video.statistics.view_count,
+                like_count: this.video.statistics.like_count,
+                dislike_count: this.video.statistics.dislike_count,
+                favorite_count: this.video.statistics.favorite_count,
+                comment_count: this.video.statistics.comment_count,
+
+                temp: this.weather.temp,
+                humidity: this.weather.humidity,
+                wind_speed: this.weather.wind_speed,
             };
         },
     },
     watch: {
+    },
+    beforeCreate(){
+        const module_name_array = module_name.split('/');
+        if (!this.$store.hasModule([module_name_array[0]])) {
+            this.$store.registerModule([module_name_array[0]], { state: { }, mutations: { }, getter: { }, action: {}, namespaced: true });
+        }
+
+        if (!this.$store.hasModule(module_name_array)) {
+            this.$store.registerModule(module_name_array, module_store);
+        }
     },
     created(){},
     mounted(){
@@ -95,8 +135,16 @@ export default {
     destroyed(){},
     methods: {
         ...mapActions({}),
-        ...mapMutations({}),
+        ...mapMutations({
+            changeStatisticsType: `${module_name}/changeStatisticsType`,
+        }),
         carryFormatter: string.carryFormatter,
+//         openLiveCam(){
+//             const that = this;
+//             const { liveCamKey } = this;
+// ;
+//             that.$router.push({ name: 'LiveCamPage', params: { LiveCamKey: liveCamKey } });
+//         },
     },
 };
 </script>
