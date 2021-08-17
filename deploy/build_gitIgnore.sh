@@ -13,7 +13,7 @@ package-lock.json
 composer.lock
 /dist
 /config/config.php
-
+/config/credentials.json
 " > $PUBLIC_GIT_IGNORE_PATH
 else
     echo "設定 git ignore prod 模式"
@@ -27,7 +27,7 @@ else
 package-lock.json
 composer.lock
 /config/config.php
-
+/config/credentials.json
 " > $PUBLIC_GIT_IGNORE_PATH
 
     rm "$ABS_DIR/dist/.gitignore"
