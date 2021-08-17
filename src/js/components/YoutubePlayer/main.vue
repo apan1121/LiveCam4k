@@ -106,6 +106,7 @@ export default {
                             showinfo: 0,
                             modestbranding: 0,
                             rel: 0,
+                            playsinline: 1,
                         },
                         events: {
                             onReady: that.onPlayerReady,
