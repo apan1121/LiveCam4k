@@ -9,7 +9,7 @@
         </div>
 
         <div class="row live-cam-info-content" rel="statistic">
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                 <span class="statistic-item" rel="local-info">
                     <!-- <i class="icon fas fa-map-marker-alt"></i>
                     {{ LiveCamInfo.city }}, {{ LiveCamInfo.local }} -->
@@ -17,7 +17,7 @@
                     {{ LocalDateTime }}
                 </span>
             </div>
-            <div class="col-6 text-right">
+            <div class="col-12 col-sm-6 text-right">
                 <span class="statistic-item" rel="statistic-info">
                     <i class="icon fas fa-eye"></i>
                     {{ carryFormatter(StatisticsFormat.view_count) }}
