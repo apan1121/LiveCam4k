@@ -138,6 +138,7 @@ export default {
 
                 const localStorageLatLng = localStorage.get('MapLatLng', false);
 
+
                 if (typeof query.lat !== 'undefined' && typeof query.lng !== 'undefined') {
                     console.log(11111);
                     that.$router.replace({ name: 'MapPage' });
@@ -158,7 +159,7 @@ export default {
                     this.setYourPoint(lat, lng, that.currentPoint.zoom);
                 } else {
                     console.log(44444);
-                    that.map.setView(new L.LatLng(25.049234259657265, 121.52369884103936), that.currentPoint.zoom);
+                    that.map.setView(new L.LatLng(that.currentPoint.lat, that.currentPoint.lng), that.currentPoint.zoom);
                 }
 
                 if (that.LiveCamList.length > 0) {

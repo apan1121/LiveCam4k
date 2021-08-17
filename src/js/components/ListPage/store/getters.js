@@ -4,8 +4,8 @@ const distance = string.calVincentyCircleDistance(24.793158479457, 121.375402096
 
 
 const defaultGPS = {
-    lat: string.getRandomInRange(90, -90, 10),
-    lng: string.getRandomInRange(180, -180, 10),
+    lat: 24.624803114217567,
+    lng: 153.80933628077693,
 };
 
 
