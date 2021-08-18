@@ -44,6 +44,7 @@ export default {
             'CurrentPosition',
             'WeatherStatus',
             'WeatherIcon',
+            'MapProviderUrl',
         ]),
         ...mapGetters(module_name, ['LiveCamList', 'currentPoint']),
         locale(){
@@ -125,9 +126,8 @@ export default {
                 that.map = L.map('map', {
                     // zoomControl: false,
                 }).fitWorld();
-                const mapPath = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-                // const mapPath = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGl2ZWNhbTRrIiwiYSI6ImNrc2FuN2JnODA5cnEyd3MyanZtbmJldGoifQ.Wsh6Un3PV_8eUA7EgecozA';
-                L.tileLayer(mapPath, {
+
+                L.tileLayer(that.MapProviderUrl, {
                     maxZoom: 18,
                     attribution: '  ',
                     id: 'mapbox/streets-v11',

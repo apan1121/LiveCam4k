@@ -11,4 +11,6 @@ export default {
     LiveCamListFlag: state => state.LiveCamListFlag,
 
     WeatherIcon: state => state.WeatherIcon,
+
+    MapProviderUrl: state => state.MapProviderUrl,
 };

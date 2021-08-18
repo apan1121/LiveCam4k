@@ -47,6 +47,7 @@ export default {
     },
     computed: {
         ...mapGetters([
+            'MapProviderUrl',
         ]),
     },
     watch: {
@@ -86,9 +87,8 @@ export default {
                     zoomControl: that.zoomControl,
                 }).fitWorld();
 
-                const mapPath = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-                // const mapPath = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGl2ZWNhbTRrIiwiYSI6ImNrc2FuN2JnODA5cnEyd3MyanZtbmJldGoifQ.Wsh6Un3PV_8eUA7EgecozA';
-                L.tileLayer(mapPath, {
+
+                L.tileLayer(that.MapProviderUrl, {
                     maxZoom: that.zoom,
                     attribution: '   ',
                     id: 'static-mapbox/streets-v11',
