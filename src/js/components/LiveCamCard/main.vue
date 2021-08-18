@@ -4,35 +4,35 @@
             live: video.live,
         }
         " :statistics-type="StatisticsType"
+
         >
             <div class="live-cam-thumb lazyload" :data-src="thumb_img">
                 <i class="icon far fa-play-circle"></i>
             </div>
-            <div :rel="StatisticsType" class="live-cam-statistics" @click.stop="changeStatisticsType">
-                <template v-if="StatisticsType === 'video'">
-                    <span class="statistic-item">
-                        <i class="fas fa-eye"></i>
-                        {{ carryFormatter(StatisticsFormat.view_count) }}
-                    </span>
-                    <span class="statistic-item">
-                        <i class="fas fa-thumbs-up"></i>
-                        {{ carryFormatter(StatisticsFormat.like_count) }}
-                    </span>
-                </template>
-                <template v-if="StatisticsType === 'weather'">
-                    <span class="statistic-item">
-                        <i class="fas fa-thermometer-half"></i>
-                        {{ transTemp(StatisticsFormat.temp, 0) }}
-                    </span>
-                    <span class="statistic-item">
-                        <i class="fas fa-tint"></i>
-                        {{ StatisticsFormat.humidity }}
-                    </span>
-                    <span class="statistic-item">
-                        <i class="fas fa-wind"></i>
-                        {{ StatisticsFormat.wind_speed }}
-                    </span>
-                </template>
+
+            <div rel="video" class="live-cam-statistics" @click.stop.prevent="changeStatisticsType">
+                <span class="statistic-item" :title="$t('Video.view_count') + ': ' + StatisticsFormat.view_count">
+                    <i class="fas fa-eye"></i>
+                    {{ carryFormatter(StatisticsFormat.view_count) }}
+                </span>
+                <span class="statistic-item" :title="$t('Video.like_count') + ': ' + StatisticsFormat.like_count">
+                    <i class="fas fa-thumbs-up"></i>
+                    {{ carryFormatter(StatisticsFormat.like_count) }}
+                </span>
+            </div>
+
+            <div rel="weather" class="live-cam-statistics" @click.stop.prevent="changeStatisticsType">
+                <span class="statistic-item" :title="$t('Weather.temp') + ': ' + StatisticsFormat.temp">
+                    <i class="fas fa-thermometer-half"></i>
+                    {{ StatisticsFormat.temp }}
+                </span>
+                <span class="statistic-item" :title="$t('Weather.humidity') + ': ' + StatisticsFormat.humidity + '%'">
+                    <i class="fas fa-tint"></i>
+                    {{ StatisticsFormat.humidity }} %
+                </span>
+                <span class="statistic-item" :title="$t('Weather.weather_status') + ': ' + $t(`WeatherStatus.${StatisticsFormat.weather_status}`)">
+                    <i class="icon" :class="WeatherIcon[StatisticsFormat.weather_icon]"></i>
+                </span>
             </div>
             <div class="live-cam-title ellipsis" v-text="video.title"></div>
         </div>
@@ -92,6 +92,7 @@ export default {
     computed: {
         ...mapGetters({
             StatisticsType: `${module_name}/StatisticsType`,
+            WeatherIcon: 'WeatherIcon',
         }),
         thumb_img(){
             let thumb_img = '';
@@ -102,6 +103,7 @@ export default {
             return thumb_img;
         },
         StatisticsFormat(){
+
             return {
                 view_count: this.video.statistics.view_count,
                 like_count: this.video.statistics.like_count,
@@ -109,9 +111,12 @@ export default {
                 favorite_count: this.video.statistics.favorite_count,
                 comment_count: this.video.statistics.comment_count,
 
-                temp: this.weather.temp,
+                temp: this.transTemp(this.weather.temp, 0),
                 humidity: this.weather.humidity,
                 wind_speed: this.weather.wind_speed,
+
+                weather_icon: this.weather.weather_icon,
+                weather_status: this.weather.weather_status,
             };
         },
     },

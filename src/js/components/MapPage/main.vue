@@ -42,6 +42,8 @@ export default {
     computed: {
         ...mapGetters([
             'CurrentPosition',
+            'WeatherStatus',
+            'WeatherIcon',
         ]),
         ...mapGetters(module_name, ['LiveCamList', 'currentPoint']),
         locale(){
@@ -218,7 +220,7 @@ export default {
                     if (!!LiveCamInfo.gps && !!LiveCamInfo.gps.lat && !!LiveCamInfo.gps.lng) {
                         const { url } = LiveCamInfo.video.thumbnail;
                         const { lat, lng } = LiveCamInfo.gps;
-                        const { key, youtube_id, video, weather } = LiveCamInfo;
+                        const { key, city, youtube_id, video, weather } = LiveCamInfo;
                         const StatisticsFormat = {
                             view_count: 0,
                             like_count: 0,
@@ -229,16 +231,30 @@ export default {
 
                             temp: weather.temp,
                             humidity: weather.humidity,
-                            wind_speed: weather.wind_speed,
+                            wind_speed: that.transSpeed(weather.wind_speed),
+                            weather_icon: weather.weather_icon,
+                            weather_status: weather.weather_status,
                         };
                         const view_count = string.carryFormatter(StatisticsFormat.view_count);
                         const like_count = string.carryFormatter(StatisticsFormat.like_count);
 
                         const temp = that.transTemp(StatisticsFormat.temp, 0);
-                        const { humidity, wind_speed } = StatisticsFormat;
+                        const { humidity, wind_speed, weather_icon, weather_status } = StatisticsFormat;
 
                         const route_obj = that.$router.matcher.match({ name: 'LiveCamPage', params: { LiveCamKey: LiveCamInfo.key } });
                         const liveCamPageUrl = `${ASSETS_HOST}#${route_obj.fullPath}`;
+
+                        const vidoe_view_title = `${this.$t('Video.view_count')}: ${StatisticsFormat.view_count}`;
+                        const vidoe_like_title = `${this.$t('Video.like_count')}: ${StatisticsFormat.like_count}`;
+
+                        const weather_temp_title = `${this.$t('Weather.temp')}: ${temp}`;
+                        const weather_humidity_title = `${this.$t('Weather.humidity')}: ${StatisticsFormat.humidity} %`;
+                        const weather_status_title = `${this.$t('Weather.weather_status')}: ${this.$t('WeatherStatus.' + weather_status)}`;
+
+                        const weather_icon_i = this.WeatherIcon[weather_icon];
+
+
+
                         const html = `
                             <a href='${liveCamPageUrl}'>
                                 <div class="live-cam-card video" statistics-type="video">
@@ -246,30 +262,29 @@ export default {
                                         <i class="icon far fa-play-circle"></i>
                                     </div>
                                     <div rel='video' class="live-cam-statistics">
-                                        <span class="statistic-item">
+                                        <span class="statistic-item" title="${vidoe_view_title}">
                                             <i class="fas fa-eye"></i>
                                             ${view_count}
                                         </span>
-                                        <span class="statistic-item">
+                                        <span class="statistic-item" title="${vidoe_like_title}">
                                             <i class="fas fa-thumbs-up"></i>
                                             ${like_count}
                                         </span>
                                     </div>
                                     <div rel='weather' class="live-cam-statistics">
-                                        <span class="statistic-item">
+                                        <span class="statistic-item" title="${weather_temp_title}">
                                             <i class="fas fa-thermometer-half"></i>
                                             ${temp}
                                         </span>
-                                        <span class="statistic-item">
+                                        <span class="statistic-item" title="${weather_humidity_title}">
                                             <i class="fas fa-tint"></i>
-                                            ${humidity}
+                                            ${humidity} %
                                         </span>
-                                        <span class="statistic-item">
-                                            <i class="fas fa-wind"></i>
-                                            ${wind_speed}
+                                        <span class="statistic-item" title="${weather_status_title}">
+                                            <i class="icon ${weather_icon_i}"></i>
                                         </span>
                                     </div>
-                                    <div class="live-cam-title ellipsis">${video.title}</div>
+                                    <div class="live-cam-title ellipsis">${city} ${video.title}</div>
                                 </div>
                             </a>
                         `;
@@ -286,6 +301,7 @@ export default {
                                 const type = ['video', 'weather'];
                                 $('.leaflet-popup-content-wrapper').find('.live-cam-statistics').off('click').on('click', function(e){
                                     e.stopPropagation();
+                                    e.preventDefault();
                                     const liveCamCard = $(this).parents('.live-cam-card');
                                     let statisticsType = liveCamCard.attr('statistics-type');
                                     let statisticsIndex = type.indexOf(statisticsType);

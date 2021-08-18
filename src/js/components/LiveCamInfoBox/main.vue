@@ -49,7 +49,10 @@
         <div class="row weather-wrapper">
             <div class="col-12 col-sm-6 col-md-4 order-2 order-sm-1">
                 <div class="live-cam-info-content" rel="weather-info">
-                    <div class="live-cam-info-weather-info" style="flex: 100%">
+                    <div class="live-cam-info-weather-info"
+                        style="flex: 100%"
+                        :title="$t('Weather.weather_status') + ': ' + $t(`WeatherStatus.${LiveCamInfo.weather.weather_status}`)"
+                    >
                         <div class="live-cam-info-weather-info-icon">
                             <i :class="WeatherIcon[LiveCamInfo.weather.weather_icon]"></i>
                         </div>
@@ -57,7 +60,7 @@
                             {{ $t('WeatherStatus.' + LiveCamInfo.weather.weather_status) }}
                         </div>
                     </div>
-                    <div class="live-cam-info-weather-info">
+                    <div class="live-cam-info-weather-info" :title="$t('Weather.temp') + ': ' + transTemp(LiveCamInfo.weather.temp, 2)">
                         <div class="live-cam-info-weather-info-icon">
                             <i class="fas fa-thermometer-half"></i>
                         </div>
@@ -65,7 +68,7 @@
                             {{ transTemp(LiveCamInfo.weather.temp, 2) }}
                         </div>
                     </div>
-                    <div class="live-cam-info-weather-info">
+                    <div class="live-cam-info-weather-info" :title="$t('Weather.humidity') + ': ' + LiveCamInfo.weather.humidity + '%'">
                         <div class="live-cam-info-weather-info-icon">
                             <i class="fas fa-tint"></i>
                         </div>
@@ -77,7 +80,7 @@
             </div>
             <div class="col-12 col-sm-6 col-md-4 order-3 order-sm-2">
                 <div class="live-cam-info-content" rel="weather-info">
-                    <div class="live-cam-info-weather-info">
+                    <div class="live-cam-info-weather-info" :title="$t('Weather.sunrise') + ': ' + SunInfo.sunrise">
                         <div class="live-cam-info-weather-info-icon">
                             <i class="icon icon-sunrise"></i>
                         </div>
@@ -85,7 +88,7 @@
                             {{ SunInfo.sunrise }}
                         </div>
                     </div>
-                    <div class="live-cam-info-weather-info">
+                    <div class="live-cam-info-weather-info" :title="$t('Weather.sunset') + ': ' + SunInfo.sunset">
                         <div class="live-cam-info-weather-info-icon">
                             <i class="icon icon-sunset"></i>
                         </div>
@@ -93,7 +96,7 @@
                             {{ SunInfo.sunset }}
                         </div>
                     </div>
-                    <div class="live-cam-info-weather-info">
+                    <div class="live-cam-info-weather-info" :title="$t('Weather.wind_speed') + ': ' + transSpeed(LiveCamInfo.weather.wind_speed)">
                         <div class="live-cam-info-weather-info-icon">
                             <i class="fas fa-wind"></i>
                         </div>
@@ -101,7 +104,7 @@
                             {{ transSpeed(LiveCamInfo.weather.wind_speed) }}
                         </div>
                     </div>
-                    <div class="live-cam-info-weather-info">
+                    <div class="live-cam-info-weather-info" :title="$t('Weather.pressure') + ': ' + LiveCamInfo.weather.pressure + 'hPa'">
                         <div class="live-cam-info-weather-info-icon">
                             <i class="fas fa-tachometer-alt"></i>
                         </div>

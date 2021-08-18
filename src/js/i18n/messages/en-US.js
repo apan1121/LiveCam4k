@@ -286,4 +286,18 @@ export default {
         Clear: 'Clear',
         Clouds: 'Clouds',
     },
+
+
+    Video: {
+        view_count: 'View',
+        like_count: 'Like',
+        dislike_count: 'Dislike',
+        comment_count: 'Comment',
+    },
+    Weather: {
+        weather_status: 'Status',
+        humidity: 'Humidity',
+        wind_speed: 'Wind Speed',
+        temp: 'Temperature',
+    },
 };

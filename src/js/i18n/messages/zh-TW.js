@@ -288,4 +288,20 @@ export default {
         Clear: '晴空',
         Clouds: '雲',
     },
+
+    Video: {
+        view_count: '瀏覽',
+        like_count: '喜歡',
+        dislike_count: '不喜歡',
+        comment_count: '留言',
+    },
+    Weather: {
+        weather_status: '天氣',
+        humidity: '濕度',
+        wind_speed: '風速',
+        temp: '溫度',
+        sunrise: '日出',
+        sunset: '日落',
+        pressure: '氣壓',
+    },
 };
