@@ -48,7 +48,11 @@
                         <i class="icon" :class="WeatherIcon[StatisticsFormat.weather_icon]"></i>
                     </span>
                 </div>
-                <div class="live-cam-title ellipsis" v-text="video.title"></div>
+                <div ref="title" class="live-cam-title"
+                    :class="{ ellipsis: !hoverTitle }"
+                    @mouseover="setHoverTitle(true)"
+                    @mouseleave="setHoverTitle(false)"
+                    v-text="video.title"></div>
             </div>
         </router-link>
     </div>
@@ -110,6 +114,7 @@ export default {
     data(){
         return {
             hoverPreview: false,
+            hoverTitle: false,
             preview: false,
         };
     },
@@ -178,11 +183,23 @@ export default {
                 if (bool) {
                     this.setHoverPreviewTimer = setTimeout(() => {
                         this.preview = true;
-                    }, 1000);
+                    }, 100);
                 } else {
                     this.preview = false;
                 }
                 this.hoverPreview = bool;
+            }
+        },
+        setHoverTitle(bool){
+            clearInterval(this.setHoverTitleTimer);
+            if (bool) {
+                this.hoverTitle = true;
+                this.setHoverTitleTimer = setInterval(() => {
+                    this.$refs.title.scrollLeft += 1;
+                }, 20);
+            } else {
+                this.hoverTitle = false;
+                this.$refs.title.scrollLeft = 0;
             }
         },
     },

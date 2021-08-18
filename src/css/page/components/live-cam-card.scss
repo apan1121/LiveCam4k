@@ -98,6 +98,7 @@
             cursor: pointer;
             transition: all 0.3s;
             transition: opacity 0.3s;
+            opacity: 1;
             .statistic-item{
                 &:not(:first-child) {
                     padding-left: $spacer /8;
@@ -106,6 +107,7 @@
             @media (hover: hover) {
                 &:hover{
                     background: rgba($gray-900, 0.8);
+                    opacity: 1!important;
                 }
             }
         }
@@ -122,9 +124,12 @@
             text-align: right;
             font-size: $spacer * 0.75;
             transition: opacity 0.3s;
+            overflow: hidden;
+            white-space: nowrap;
             @media (hover: hover) {
                 &:hover{
                     background: rgba($gray-900, 0.8);
+                    opacity: 1!important;
                 }
             }
         }
