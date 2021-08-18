@@ -178,7 +178,7 @@ export default {
         }),
         carryFormatter: string.carryFormatter,
         setHoverPreview(bool){
-            if (this.embed) {
+            if (!!parseInt(this.embed) && 1) {
                 clearTimeout(this.setHoverPreviewTimer);
                 if (bool) {
                     this.setHoverPreviewTimer = setTimeout(() => {

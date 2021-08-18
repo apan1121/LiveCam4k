@@ -123,6 +123,11 @@ export default {
                         },
                         events: {
                             onReady: that.onPlayerReady,
+                            onStateChange: (status) => {
+                                if (status.data === 1) {
+                                    YoutubePlayerObj.setVolume(0);
+                                }
+                            },
                             // onPlaybackQualityChange: onPlayerPlaybackQualityChange,
                             // onStateChange: onPlayerStateChange,
                             // onError: onPlayerError,
@@ -139,14 +144,12 @@ export default {
             YoutubePlayerObj.setVolume(0);
             if (this.autoplay) {
                 setTimeout(() => {
-                    if (that.player.getCurrentTime() === 0) {
+                    if (YoutubePlayerObj.getCurrentTime() === 0) {
                         $(window).one('focus', () => {
-                            console.log('window focus');
-                            that.player.playVideo();
+                            YoutubePlayerObj.playVideo();
                         });
                         $('body').one('touch click', () => {
-                            console.log('body touch');
-                            that.player.playVideo();
+                            YoutubePlayerObj.playVideo();
                         });
                     }
                 }, 1000);
