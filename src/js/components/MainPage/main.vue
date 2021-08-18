@@ -97,7 +97,8 @@ export default {
         }),
         init(){
             const that = this;
-            $(window).bind('resize', () => {
+            /* 偵測瀏覽器寬度決定 mode  */
+            $(window).on('resize', () => {
                 clearTimeout(that.windowResizeTimer);
                 that.windowResizeTimer = setTimeout(() => {
                     let mode_type = 'pc';
@@ -110,9 +111,9 @@ export default {
             }).trigger('resize');
 
 
-            $(window).bind('scroll', () => {
+            $(window).on('scroll', () => {
                 that.SetPageSetting({ scrollTop: $(window).scrollTop() });
-            })
+            });
 
 
             /* 偵測 adblocker */

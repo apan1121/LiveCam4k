@@ -294,6 +294,7 @@ export default {
         like_count: '喜歡',
         dislike_count: '不喜歡',
         comment_count: '留言',
+        loading: '影片讀取中',
     },
     Weather: {
         weather_status: '天氣',

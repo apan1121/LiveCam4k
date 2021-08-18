@@ -43,6 +43,18 @@ export default {
             type: [Number, String],
             default: 0,
         },
+        autoplay: {
+            type: Boolean,
+            default: true,
+        },
+        controls: {
+            type: Boolean,
+            default: true,
+        },
+        disablekb: {
+            type: Boolean,
+            default: false,
+        },
     },
     data(){
         return {
@@ -101,8 +113,9 @@ export default {
                     that.player = new window.YT.Player('player', {
                         videoId: that.youtubeId,
                         playerVars: {
-                            autoplay: 1,
-                            controls: 1,
+                            autoplay: that.autoplay ? 1 : 0,
+                            controls: that.controls ? 1 : 0,
+                            disablekb: that.disablekb ? 1 : 0,
                             showinfo: 0,
                             modestbranding: 0,
                             rel: 0,
@@ -122,7 +135,22 @@ export default {
             }, 1000);
         },
         onPlayerReady(){
+            const that = this;
             YoutubePlayerObj.setVolume(0);
+            if (this.autoplay) {
+                setTimeout(() => {
+                    if (that.player.getCurrentTime() === 0) {
+                        $(window).one('focus', () => {
+                            console.log('window focus');
+                            that.player.playVideo();
+                        });
+                        $('body').one('touch click', () => {
+                            console.log('body touch');
+                            that.player.playVideo();
+                        });
+                    }
+                }, 1000);
+            }
         },
     },
 };

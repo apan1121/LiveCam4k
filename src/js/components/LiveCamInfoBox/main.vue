@@ -120,7 +120,7 @@
                         <static-map-box
                             :lat="LiveCamInfo.gps.lat"
                             :lng="LiveCamInfo.gps.lng"
-                            :zoom="18"
+                            :zoom="16"
                             :zoom-control="true"
                             :dragging="false"
                             @click-point="clickPoint"

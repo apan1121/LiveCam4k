@@ -74,7 +74,6 @@ export default {
         }
 
         if (!this.$store.hasModule(module_name_array)) {
-            console.log('here', module_name_array);
             this.$store.registerModule(module_name_array, module_store);
         }
     },

@@ -293,6 +293,7 @@ export default {
         like_count: 'Like',
         dislike_count: 'Dislike',
         comment_count: 'Comment',
+        loading: 'Video Loading',
     },
     Weather: {
         weather_status: 'Status',

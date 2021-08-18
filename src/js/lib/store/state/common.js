@@ -2,6 +2,8 @@ export default {
     PageSetting_width: 0,
     PageSetting_scrollTop: 0,
     PageSetting_mode_type: 'pc',
+    PageSetting_device: '',
+    PageSetting_browser: {},
 
     CurrentPosition: false,
 

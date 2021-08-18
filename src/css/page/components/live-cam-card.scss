@@ -1,98 +1,179 @@
 @import '../../common/_variable.scss';
 
-
 .live-cam-card{
     position: relative;
-    overflow: hidden;
-    box-sizing: content-box;
-    margin-bottom: $spacer * 2;
-    border-radius: $spacer / 2;
-    box-shadow: 0px 0px $spacer / 3 $gray-200;
-    color: $gray-900;
-
-    user-select: none;
-    .live-cam-thumb{
+    .live-cam-card-wrapper{
         position: relative;
+        overflow: hidden;
+        box-sizing: content-box;
+        margin-bottom: $spacer * 2;
+        border-radius: $spacer / 2;
+        box-shadow: 0px 0px $spacer / 3 $gray-200;
+        color: $gray-900;
+
         @include aspect-ratio(percentage(9/16));
-        background-color: $gray-800;
-        .icon{
+        user-select: none;
+        .live-cam-thumb{
             position: absolute;
-            top: 50%;
-            left: 50%;
-            color: $white;
-            text-shadow: 0 0 5px $gray-600;
-            font-size: $spacer * 3;
-            cursor: pointer;
-            transform: translate(-50%, -50%);
-            opacity: 0.9;
-            transition: all 0.2s;
-            &:active{
-                font-size: $spacer * 3.2;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: $gray-800;
+            opacity: 1;
+            transition: opacity 0.3s;
+            .icon{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: $white;
+                text-shadow: 0 0 5px $gray-600;
+                font-size: $spacer * 3;
+                opacity: 0.9;
+                cursor: pointer;
                 transition: all 0.2s;
-            }
-            @media (hover: hover) {
-                opacity: 0.3;
-                &:hover{
-                    opacity: 0.9;
+                transform: translate(-50%, -50%);
+                &:active{
+                    font-size: $spacer * 3.2;
+                    transition: all 0.2s;
+                }
+                @media (hover: hover) {
+                    opacity: 0.3;
+                    &:hover{
+                        opacity: 0.9;
+                    }
                 }
             }
         }
-    }
 
-    .live-cam-statistics{
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        display: none;
-        padding: $spacer /4 $spacer /2;
-        border-radius: $spacer / 8;
-        background: rgba($gray-900, 0.6);
-        color: $white;
-        font-size: 11px;
-        cursor: pointer;
-        transition: all 0.3s;
-        .statistic-item{
-            &:not(:first-child) {
-                padding-left: $spacer /8;
+        .live-cam-thumb-video{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            opacity: 0;
+            transition: opacity 0.3s;
+            &::before{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                content: attr(data-loading);
+                color: $gray-400;
+                animation-name: PreviewVideoLoading;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out
+            }
+
+            .youtube-player-box{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                iframe {
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
-        @media (hover: hover) {
-            &:hover{
-                background: rgba($gray-900, 0.8);
+
+        .live-cam-statistics{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 3;
+            display: none;
+            padding: $spacer /4 $spacer /2;
+            border-radius: $spacer / 8;
+            background: rgba($gray-900, 0.6);
+            color: $white;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.3s;
+            transition: opacity 0.3s;
+            .statistic-item{
+                &:not(:first-child) {
+                    padding-left: $spacer /8;
+                }
+            }
+            @media (hover: hover) {
+                &:hover{
+                    background: rgba($gray-900, 0.8);
+                }
+            }
+        }
+
+        .live-cam-title{
+            position: absolute;
+            bottom: 0px;
+            z-index: 4;
+            padding: $spacer /4;
+            min-height: $spacer * 1;
+            width: 100%;
+            background: rgba($gray-900, 0.6);
+            color: $white;
+            text-align: right;
+            font-size: $spacer * 0.75;
+            transition: opacity 0.3s;
+            @media (hover: hover) {
+                &:hover{
+                    background: rgba($gray-900, 0.8);
+                }
+            }
+        }
+
+        &.live{
+            // box-shadow: 0px 0px $spacer / 3 $red-300;
+            border: 1px solid $red-800;
+        }
+
+        &[statistics-type='video'] {
+            .live-cam-statistics[rel='video'] {
+                display: block;
+            }
+        }
+        &[statistics-type='weather'] {
+            .live-cam-statistics[rel='weather'] {
+                display: block;
             }
         }
     }
-
-    .live-cam-title{
-        position: absolute;
-        bottom: 0px;
-        padding: $spacer /4;
-        min-height: $spacer * 1;
-        width: 100%;
-        background: rgba($gray-900, 0.6);
-        color: $white;
-        text-align: right;
-        font-size: $spacer * 0.75;
-        @media (hover: hover) {
-            &:hover{
-                background: rgba($gray-900, 0.8);
+    &.preview{
+        .live-cam-card-wrapper{
+            .live-cam-thumb{
+                opacity: 0;
+            }
+            .live-cam-thumb-video{
+                opacity: 1;
+            }
+            .live-cam-statistics{
+                opacity: 0.3;
+            }
+            .live-cam-title{
+                opacity: 0.3;
             }
         }
     }
-
-    &.live{
-        // box-shadow: 0px 0px $spacer / 3 $red-300;
-        border: 1px solid $red-800;
+}
+@keyframes PreviewVideoLoading {
+    0%   {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    30%  {
+        transform: translate(-50%, -50%) rotate(2deg);
     }
 
-    &[statistics-type='video'] {
-        .live-cam-statistics[rel='video'] {
-            display: block;
-        }
+    60%  {
+        transform: translate(-50%, -50%) rotate(-2deg);
     }
-    &[statistics-type='weather'] {
-        .live-cam-statistics[rel='weather'] {
-            display: block;
-        }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 }
