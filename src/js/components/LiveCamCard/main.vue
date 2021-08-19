@@ -11,6 +11,7 @@
                 <div class="live-cam-thumb-video" :data-loading="$t('Video.loading')">
                     <template v-if="preview">
                         <youtube-player
+                            :key="video.youtube_id"
                             :youtube-id="video.youtube_id"
                             :thumbnail="video.thumbnail.url"
                             :embed="embed"

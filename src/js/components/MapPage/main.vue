@@ -142,14 +142,11 @@ export default {
 
 
                 if (typeof query.lat !== 'undefined' && typeof query.lng !== 'undefined') {
-                    console.log(11111);
                     that.$router.replace({ name: 'MapPage' });
                     that.map.setView(new L.LatLng(query.lat, query.lng), that.currentPoint.zoom);
                 } else if (!!localStorageLatLng && 1) {
-                    console.log(22222);
                     that.localStorageFlag = true;
                     const { lat, lng, zoom } = localStorageLatLng;
-                    console.log(lat, lng, zoom);
                     that.map.setView(new L.LatLng(lat, lng), (zoom || 13));
                     if (!!that.CurrentPosition && that.CurrentPosition.status === 'success') {
                         const { lat, lng } = that.CurrentPosition;
@@ -256,8 +253,9 @@ export default {
 
 
                         const html = `
+                        <div class="live-cam-card">
                             <a href='${liveCamPageUrl}'>
-                                <div class="live-cam-card video" statistics-type="video">
+                                <div class="live-cam-card-wrapper" statistics-type="video">
                                     <div class="live-cam-thumb lazyload" data-src="${url}">
                                         <i class="icon far fa-play-circle"></i>
                                     </div>
@@ -287,6 +285,7 @@ export default {
                                     <div class="live-cam-title ellipsis">${city} ${video.title}</div>
                                 </div>
                             </a>
+                        </div>
                         `;
                         const marker = L.marker(new L.LatLng(lat, lng), { icon: greenIcon })
                             .bindPopup(html)
@@ -302,7 +301,7 @@ export default {
                                 $('.leaflet-popup-content-wrapper').find('.live-cam-statistics').off('click').on('click', function(e){
                                     e.stopPropagation();
                                     e.preventDefault();
-                                    const liveCamCard = $(this).parents('.live-cam-card');
+                                    const liveCamCard = $(this).parents('.live-cam-card-wrapper');
                                     let statisticsType = liveCamCard.attr('statistics-type');
                                     let statisticsIndex = type.indexOf(statisticsType);
                                     statisticsIndex = (statisticsIndex + 1) % type.length;
