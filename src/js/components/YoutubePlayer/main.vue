@@ -100,7 +100,12 @@ export default {
     mounted(){
     },
     updated(){},
-    destroyed(){},
+    destroyed(){
+        if (this.player) {
+            this.player.stopVideo();
+            this.player.destroy();
+        }
+    },
     methods: {
         ...mapActions({}),
         ...mapMutations({}),
