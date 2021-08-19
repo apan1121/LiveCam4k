@@ -2,13 +2,14 @@
     <div>
         <template v-for="LiveCamGroup in LiveCamGroupList">
             <live-cam-group-box
-                :key="LiveCamGroup.local"
+                :key="`live_cam_group_${LiveCamGroup.local}`"
                 :title="$t(`LocalName.${LiveCamGroup.local}`)"
             >
                 <div class="row">
                     <template v-for="LiveCamInfo in LiveCamGroup.list">
                         <div :key="LiveCamInfo.key" class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <live-cam-card
+                                :key="`live_cam_card_${LiveCamInfo.key}`"
                                 v-bind="LiveCamInfo"
                                 :live-cam-key="LiveCamInfo.key"
                             >

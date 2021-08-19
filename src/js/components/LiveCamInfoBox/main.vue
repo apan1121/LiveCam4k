@@ -2,6 +2,8 @@
     <div :key="LiveCamKey" class="live-cam-info-box">
         <div class="live-cam-player-wrapper">
             <youtube-player
+                v-if="LiveCamInfo.video"
+                :key="`live_cam_info_video_${LiveCamInfo.video.youtube_id}` + LiveCamInfo.video.youtube_id"
                 :youtube-id="LiveCamInfo.video.youtube_id"
                 :thumbnail="LiveCamInfo.video.thumbnail.url"
                 :embed="LiveCamInfo.embed"
@@ -11,8 +13,6 @@
         <div class="row live-cam-info-content" rel="statistic">
             <div class="col-12 col-sm-6">
                 <span class="statistic-item" rel="local-info">
-                    <!-- <i class="icon fas fa-map-marker-alt"></i>
-                    {{ LiveCamInfo.city }}, {{ LiveCamInfo.local }} -->
                     <i class="far fa-clock"></i>
                     {{ LocalDateTime }}
                 </span>
@@ -38,8 +38,8 @@
         </div>
 
         <h3 class="live-cam-info-content" rel="title">
-            <div class="live-icon">
-                <i class="icon fas fa-circle live"></i>
+            <div class="live-icon" :class="{ live: LiveCamInfo.video.live }">
+                <i class="icon fas fa-circle"></i>
             </div>
             <div class="video-title">
                 {{ LiveCamInfo.video.title }}
@@ -211,10 +211,10 @@ export default {
             return dateTime;
         },
         SunInfo(){
-            console.log(this.utc_timestamp);
-            console.log('sunrise', this.LiveCamInfo.weather.sunrise * 1000);
-            console.log('sunset', this.LiveCamInfo.weather.sunset * 1000);
-            console.log('timezone', this.LiveCamInfo.timezone.sec * 1000);
+            // console.log(this.utc_timestamp);
+            // console.log('sunrise', this.LiveCamInfo.weather.sunrise * 1000);
+            // console.log('sunset', this.LiveCamInfo.weather.sunset * 1000);
+            // console.log('timezone', this.LiveCamInfo.timezone.sec * 1000);
             let sunrise = this.LiveCamInfo.weather.sunrise * 1000;
             sunrise = parseInt(moment(sunrise).utc().format('x'));
             sunrise += this.LiveCamInfo.timezone.sec * 1000;

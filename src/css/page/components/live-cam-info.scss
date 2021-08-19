@@ -65,11 +65,15 @@
                 display: flex;
                 align-items: center;
                 .icon{
-
                     font-size: $spacer * 1;
-                    color: $red-800;
+                    color: $gray-500;
                     margin-right: $spacer * 0.5;
-                    &.live{
+
+                    opacity: 0.5;
+                    font-size: $spacer * 0.95;
+                }
+                &.live{
+                    .icon{
                         animation-name: BreathingLight;
                         animation-duration: 2s;
                         animation-iteration-count: infinite;

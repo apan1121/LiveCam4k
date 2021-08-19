@@ -5,6 +5,7 @@
         </div>
 
         <live-cam-info-box
+            :key="`live_cam_info_${LiveCamKey}`"
             :live-cam-key="LiveCamKey"
         >
         </live-cam-info-box>
@@ -64,7 +65,10 @@ export default {
                 if (newVal === false) {
                     this.$router.push(this.prevRoute);
                 } else {
-                    const title = this.LiveCamInfo.video.title.substr(1, 30);
+                    let title = '';
+                    if (!!this.LiveCamInfo && !!this.LiveCamInfo.video) {
+                        title = this.LiveCamInfo.video.title.substr(0, 30);
+                    }
                     this.setPageTitle(`${this.$t('Menu.LiveCam')}: ${title}`);
                 }
             },

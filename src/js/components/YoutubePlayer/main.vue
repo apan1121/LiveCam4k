@@ -21,11 +21,10 @@
 import { mapActions, mapMutations, mapGetters } from 'vuex';
 import { module_name, module_store } from './store/index';
 
-import 'jquery.mb.ytplayer';
-import YTPlayer from 'yt-player';
+// import 'jquery.mb.ytplayer';
+import 'yt-player';
 
 // import { string, jsVars, popup, trackJS, localStorage, ppPanel } from 'lib/common/util';
-let YoutubePlayerObj = null;
 
 export default {
     components: {},
@@ -110,6 +109,18 @@ export default {
             clearTimeout(that.initTimer);
             that.initTimer = setTimeout(() => {
                 if (parseInt(that.embed) === 1) {
+                    console.log({
+                        videoId: that.youtubeId,
+                        playerVars: {
+                            autoplay: that.autoplay ? 1 : 0,
+                            controls: that.controls ? 1 : 0,
+                            disablekb: that.disablekb ? 1 : 0,
+                            showinfo: 0,
+                            modestbranding: 0,
+                            rel: 0,
+                            playsinline: 1,
+                        },
+                    });
                     that.player = new window.YT.Player('player', {
                         videoId: that.youtubeId,
                         playerVars: {
@@ -122,10 +133,27 @@ export default {
                             playsinline: 1,
                         },
                         events: {
-                            onReady: that.onPlayerReady,
-                            onStateChange: (status) => {
+                            onReady(){
+                                that.player.setVolume(0);
+                                if (that.autoplay) {
+                                    setTimeout(() => {
+                                        console.log(that.player.getCurrentTime());
+                                        if (that.player.getCurrentTime() === 0) {
+                                            $(window).one('focus', () => {
+                                                that.player.setVolume(0);
+                                                that.player.playVideo();
+                                            });
+                                            $('body').one('touch click', () => {
+                                                that.player.setVolume(0);
+                                                that.player.playVideo();
+                                            });
+                                        }
+                                    }, 1000);
+                                }
+                            },
+                            onStateChange(status){
                                 if (status.data === 1) {
-                                    YoutubePlayerObj.setVolume(0);
+                                    that.player.setVolume(0);
                                 }
                             },
                             // onPlaybackQualityChange: onPlayerPlaybackQualityChange,
@@ -133,27 +161,11 @@ export default {
                             // onError: onPlayerError,
                         },
                     });
-                    YoutubePlayerObj = that.player;
+                    window.YoutubePlayerObj = that.player;
                 } else {
                     $('body').trigger('lazyImg');
                 }
             }, 1000);
-        },
-        onPlayerReady(){
-            const that = this;
-            YoutubePlayerObj.setVolume(0);
-            if (this.autoplay) {
-                setTimeout(() => {
-                    if (YoutubePlayerObj.getCurrentTime() === 0) {
-                        $(window).one('focus', () => {
-                            YoutubePlayerObj.playVideo();
-                        });
-                        $('body').one('touch click', () => {
-                            YoutubePlayerObj.playVideo();
-                        });
-                    }
-                }, 1000);
-            }
         },
     },
 };
