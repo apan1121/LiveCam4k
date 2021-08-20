@@ -74,6 +74,7 @@
                 }
                 &.live{
                     .icon{
+                        color: $red-800;
                         animation-name: BreathingLight;
                         animation-duration: 2s;
                         animation-iteration-count: infinite;

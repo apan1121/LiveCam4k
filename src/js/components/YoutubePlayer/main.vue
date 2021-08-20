@@ -1,7 +1,7 @@
 <template>
     <div class="youtube-player-box">
         <template v-if="parseInt(embed)">
-            <div id="player"
+            <div :id="`player_${playerId}`"
                 class="youtube-player"
                 :data-src="thumbnail"
             ></div>
@@ -18,9 +18,9 @@
     </div>
 </template>
 <script>
+import { string } from 'lib/common/util';
 import { mapActions, mapMutations, mapGetters } from 'vuex';
 import { module_name, module_store } from './store/index';
-
 // import 'jquery.mb.ytplayer';
 import 'yt-player';
 
@@ -57,6 +57,7 @@ export default {
     },
     data(){
         return {
+            playerId: '',
             player: null,
             youtube_api_loaded: false,
         };
@@ -69,6 +70,7 @@ export default {
         youtubeId: {
             immediate: true,
             handler(){
+
                 this.$nextTick(() => {
                     this.init();
                 });
@@ -80,6 +82,8 @@ export default {
         if (!this.$store.state[module_name]) {
             this.$store.registerModule(module_name, module_store);
         }
+
+        this.playerId = string.getRandomString(5);
 
         if (document.querySelectorAll('script[src="https://www.youtube.com/iframe_api"]').length > 0) {
             that.youtube_api_loaded = true;
@@ -101,7 +105,7 @@ export default {
     },
     updated(){},
     destroyed(){
-        if (this.player) {
+        if (!!this.player && typeof this.player.stopVideo === 'function') {
             this.player.stopVideo();
             this.player.destroy();
         }
@@ -112,7 +116,18 @@ export default {
         init(){
             const that = this;
             clearTimeout(that.initTimer);
+
             that.initTimer = setTimeout(() => {
+
+                /**
+                 * YT 還沒載入好，不要執行
+                 */
+                if (!(typeof window.YT === 'object' && typeof window.YT.Player === 'function')) {
+                    that.init();
+                    return false;
+                }
+
+
                 if (parseInt(that.embed) === 1) {
                     console.log({
                         videoId: that.youtubeId,
@@ -126,7 +141,7 @@ export default {
                             playsinline: 1,
                         },
                     });
-                    that.player = new window.YT.Player('player', {
+                    that.player = new window.YT.Player(`player_${that.playerId}`, {
                         videoId: that.youtubeId,
                         playerVars: {
                             autoplay: that.autoplay ? 1 : 0,
@@ -138,27 +153,26 @@ export default {
                             playsinline: 1,
                         },
                         events: {
-                            onReady(){
-                                that.player.setVolume(0);
+                            onReady(event){
+                                event.target.setVolume(0);
                                 if (that.autoplay) {
                                     setTimeout(() => {
-                                        console.log(that.player.getCurrentTime());
-                                        if (that.player.getCurrentTime() === 0) {
+                                        if (event.target.getCurrentTime() === 0) {
                                             $(window).one('focus', () => {
-                                                that.player.setVolume(0);
-                                                that.player.playVideo();
+                                                event.target.setVolume(0);
+                                                event.target.playVideo();
                                             });
                                             $('body').one('touch click', () => {
-                                                that.player.setVolume(0);
-                                                that.player.playVideo();
+                                                event.target.setVolume(0);
+                                                event.target.playVideo();
                                             });
                                         }
                                     }, 1000);
                                 }
                             },
-                            onStateChange(status){
-                                if (status.data === 1) {
-                                    that.player.setVolume(0);
+                            onStateChange(event){
+                                if (event.data === 1 && !!event.target && typeof event.target.setVolume === 'function') {
+                                    event.target.setVolume(0);
                                 }
                             },
                             // onPlaybackQualityChange: onPlayerPlaybackQualityChange,
@@ -170,7 +184,8 @@ export default {
                 } else {
                     $('body').trigger('lazyImg');
                 }
-            }, 1000);
+                return true;
+            }, 100);
         },
     },
 };

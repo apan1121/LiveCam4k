@@ -18,8 +18,10 @@
             top: 0px;
             left: 0px;
             z-index: 1;
+            overflow: hidden;
             width: 100%;
             height: 100%;
+            border-radius: $spacer / 2;
             background-color: $gray-800;
             opacity: 1;
             transition: opacity 0.3s;
@@ -61,19 +63,19 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
-                content: attr(data-loading);
                 color: $gray-400;
+                content: attr(data-loading);
+                transform: translate(-50%, -50%);
                 animation-name: PreviewVideoLoading;
                 animation-duration: 2s;
+                animation-timing-function: ease-in-out;
                 animation-iteration-count: infinite;
-                animation-timing-function: ease-in-out
             }
 
             .youtube-player-box{
+                position: relative;
                 width: 100%;
                 height: 100%;
-                position: relative;
                 iframe {
                     position: absolute;
                     top: 0%;
@@ -91,14 +93,16 @@
             z-index: 3;
             display: none;
             padding: $spacer /4 $spacer /2;
-            border-radius: $spacer / 8;
+            border-top-right-radius: $spacer / 2;
+            border-bottom-left-radius: $spacer / 2;
             background: rgba($gray-900, 0.6);
             color: $white;
             font-size: 11px;
+            opacity: 1;
             cursor: pointer;
             transition: all 0.3s;
             transition: opacity 0.3s;
-            opacity: 1;
+            overflow: hidden;
             .statistic-item{
                 &:not(:first-child) {
                     padding-left: $spacer /8;
@@ -116,16 +120,18 @@
             position: absolute;
             bottom: 0px;
             z-index: 4;
+            overflow: hidden;
             padding: $spacer /4;
             min-height: $spacer * 1;
             width: 100%;
             background: rgba($gray-900, 0.6);
             color: $white;
             text-align: right;
+            white-space: nowrap;
             font-size: $spacer * 0.75;
             transition: opacity 0.3s;
-            overflow: hidden;
-            white-space: nowrap;
+            border-bottom-left-radius: $spacer / 2;
+            border-bottom-right-radius: $spacer / 2;
             @media (hover: hover) {
                 &:hover{
                     background: rgba($gray-900, 0.8);

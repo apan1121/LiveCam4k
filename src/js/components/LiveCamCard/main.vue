@@ -137,7 +137,6 @@ export default {
             return thumb_img;
         },
         StatisticsFormat(){
-
             return {
                 view_count: this.video.statistics.view_count,
                 like_count: this.video.statistics.like_count,
@@ -179,7 +178,7 @@ export default {
         }),
         carryFormatter: string.carryFormatter,
         setHoverPreview(bool){
-            if (!!parseInt(this.embed) && 1) {
+            if (!!parseInt(this.embed) && !['iOS', 'Android'].includes(this.PageSetting_device)) {
                 clearTimeout(this.setHoverPreviewTimer);
                 if (bool) {
                     this.setHoverPreviewTimer = setTimeout(() => {
@@ -193,14 +192,16 @@ export default {
         },
         setHoverTitle(bool){
             clearInterval(this.setHoverTitleTimer);
-            if (bool) {
-                this.hoverTitle = true;
-                this.setHoverTitleTimer = setInterval(() => {
-                    this.$refs.title.scrollLeft += 1;
-                }, 20);
-            } else {
-                this.hoverTitle = false;
-                this.$refs.title.scrollLeft = 0;
+            if (typeof this.$refs.title !== 'undefined' && typeof this.$refs.title.scrollLeft !== 'undefined') {
+                if (bool) {
+                    this.hoverTitle = true;
+                    this.setHoverTitleTimer = setInterval(() => {
+                        this.$refs.title.scrollLeft += 1;
+                    }, 20);
+                } else {
+                    this.hoverTitle = false;
+                    this.$refs.title.scrollLeft = 0;
+                }
             }
         },
     },
