@@ -63,11 +63,11 @@
             </div>
             <div class="live-cam-info-video-detail">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                         <div class="video-description" v-html="VideoDescription">
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <div class="video-hashtag">
                             <template v-for="(tag, tagIndex) in LiveCamInfo.video.tags">
                                 <router-link :key="tagIndex" class="hashtag" :to="{ name: 'ListPage', query: {'hashtag': tag} }">
@@ -273,7 +273,7 @@ export default {
             return { sunrise, sunset };
         },
         VideoDescription(){
-            return this.formatDesciption(this.LiveCamInfo.video.description);
+            return this.formatDesciption(this.LiveCamInfo.video.description ?? '無詳細訊息');
         },
     },
     watch: {
