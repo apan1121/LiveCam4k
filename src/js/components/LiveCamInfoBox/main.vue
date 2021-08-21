@@ -46,6 +46,48 @@
             </div>
         </h3>
 
+        <div class="live-cam-info-content" rel="video-info" :class="{ 'detail-open': detailOpen }">
+            <div class="live-cam-info-provider">
+                <h4>
+                    <div class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+
+                    <a :href="`https://www.youtube.com/channel/${LiveCamInfo.video.channel_id}`" target="_blank">
+                        {{ LiveCamInfo.video.channel_title }}
+                    </a>
+                    <div class="icon-handler" @click="triggerDetail">
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </h4>
+            </div>
+            <div class="live-cam-info-video-detail">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="video-description" v-html="VideoDescription">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="video-hashtag">
+                            <template v-for="(tag, tagIndex) in LiveCamInfo.video.tags">
+                                <router-link :key="tagIndex" class="hashtag" :to="{ name: 'ListPage', query: {'hashtag': tag} }">
+                                    #{{ tag }}
+                                </router-link>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="close-description" @click="triggerDetail">
+                            <i class="fas fa-caret-up"></i>
+                            關閉資訊
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row weather-wrapper">
             <div class="col-12 col-sm-6 col-md-4 order-2 order-sm-1">
                 <div class="live-cam-info-content" rel="weather-info">
@@ -137,10 +179,12 @@
 </template>
 <script>
 import CalUnits from 'lib/common/mixins/CalUnits';
-import { linkRegister, string } from 'lib/common/util';
+import { linkRegister, string, jsVars } from 'lib/common/util';
 import moment from 'moment';
+import twitter from 'twitter-text';
 import { mapActions, mapMutations, mapGetters } from 'vuex';
 import { module_name, module_store } from './store/index';
+
 
 // import $ from 'jquery';
 // import 'bootstrap';
@@ -175,6 +219,7 @@ export default {
     data(){
         return {
             utc_timestamp: 0,
+            detailOpen: false,
         };
     },
     computed: {
@@ -227,8 +272,31 @@ export default {
 
             return { sunrise, sunset };
         },
+        VideoDescription(){
+            return this.formatDesciption(this.LiveCamInfo.video.description);
+        },
     },
     watch: {
+        VideoDescription: {
+            immediate: true,
+            deep: true,
+            handler(){
+                const that = this;
+                that.$nextTick(() => {
+                    $(that.$el).find('.video-description')
+                        .find('.hashtag')
+                        .unbind('click')
+                        .bind('click', function(e){
+                            e.stopPropagation();
+                            e.preventDefault();
+                            const hashtag = $(this).attr('title').substr(1);
+                            that.$router.push({ name: 'ListPage', query: { hashtag } });
+                        });
+                    console.log($(that.$el).find('.video-description')
+                        .find('.hashtag').length);
+                });
+            },
+        }
     },
     beforeCreate(){
         if (!this.$store.state[module_name]) {
@@ -251,9 +319,27 @@ export default {
         ...mapActions({}),
         ...mapMutations({}),
         carryFormatter: string.carryFormatter,
+        triggerDetail(){
+            this.detailOpen = !this.detailOpen;
+        },
         clickPoint(point){
             const that = this;
             that.$router.push({ name: 'MapPage', query: point });
+        },
+        formatDesciption(content){
+            const that = this;
+            const ASSETS_HOST = jsVars.get('ASSETS_HOST');
+            let html = content;
+            const route_obj = that.$router.matcher.match({ name: 'LiveCamPage', query: { hashtag: '' } });
+            const hashtagUrl = `${ASSETS_HOST}#${route_obj.fullPath}`;
+
+            const options = {
+                hashtagUrlBase: hashtagUrl,
+            };
+
+            html = twitter.autoLink(twitter.htmlEscape(content), options);
+            html = html.replace(/\n/ig, '<br>');
+            return html;
         },
     },
 };

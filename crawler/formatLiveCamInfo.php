@@ -377,6 +377,7 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
         $video_info = [
             "youtube_id" => $youtube_id,
             "title" => $youtubeInfo["title"],
+            "description" => $youtubeInfo["description"],
             "channel_id" => $youtubeInfo["channel_id"],
             "channel_title" => $youtubeInfo["channel_title"],
             "tags" => $youtubeInfo["tags"],
@@ -613,13 +614,13 @@ function getYoutubeInfoByIds(array $youtube_ids)
     showMsg("執行： {$url}");
 
     $data = @json_decode(file_get_contents($url), true);
-
     $youtubeList = [];
     foreach ($data['items'] AS $item) {
         $thumbnail = array_pop($item['snippet']['thumbnails']);
         $tmp = [
             'id' => $item['id'],
             'title' => $item['snippet']['title'] ?? '',
+            'description' => $item['snippet']['description'] ?? '',
             'channel_id' => $item['snippet']['channelId'] ?? '',
             'channel_title' => $item['snippet']['channelTitle'] ?? '',
             'tags' => $item['snippet']['tags'] ?? '',

@@ -58,7 +58,7 @@
             font-size: $spacer * 1.75;
             display: flex;
             align-items: center;
-            margin-bottom: $spacer * 1.5;
+            margin-bottom: $spacer * 0.75;
             .live-icon{
                 width: $spacer * 1.5;
                 flex: none;
@@ -86,6 +86,68 @@
                 overflow:hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+            }
+        }
+
+        &[rel='video-info'] {
+            padding-left: $spacer * 1.5;
+            .live-cam-info-provider{
+                color: $gray-300;
+                max-width: 100%;
+                h4 {
+                    display: inline-flex;
+                    font-size: $spacer ;
+                    max-width: 100%;
+                    align-items: center;
+                    .icon {
+                        padding: $spacer * 0.25;
+                    }
+                    a{
+                        color: $gray-300;
+                        overflow:hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    .icon-handler{
+                        padding: $spacer * 0.25;
+                        cursor: pointer;
+                        transform: rotate(0deg);
+                        transition: transform 0.3s;
+                    }
+                }
+            }
+            .live-cam-info-video-detail{
+                max-height: 0;
+                transition: all 0.3s;
+                overflow: hidden;
+                .video-hashtag{
+                    word-wrap: break-word;
+                    white-space:initial;
+                    .hashtag{
+                        margin-right: $spacer * 0.5;
+                        color: $blue-600;
+                    }
+                }
+                .close-description{
+                    margin-top: $spacer;
+                    margin-bottom: $spacer;
+                    display: inline-block;
+                    margin: 0 auto;
+                    color: $gray-100;
+                    cursor: pointer;
+                }
+            }
+            &.detail-open{
+                .live-cam-info-provider{
+                    h4 {
+                        .icon-handler{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                .live-cam-info-video-detail{
+                    max-height: 10000px;
+                }
             }
         }
 
