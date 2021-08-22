@@ -199,23 +199,34 @@ do{
     $youtubeList = $youtubeList + $tmp_youtubeList;
 } while ( count($youtube_ids) > 0 );
 
-
 /**
  * 取出沒有 live 的 youtube
  */
 $notLiveYoutubeFind = [];
+$now = time();
 foreach ($youtubeList AS $youtubeInfo) {
     $youtube_id = $youtubeInfo['id'];
 
     $LiveCameKey = $YoutubeIdMapToLiveCamKey[$youtube_id];
     $errorInfo = $SheetLiveCamList[$LiveCameKey]['error'];
+    $offline_timestamp = strtotime($SheetLiveCamList[$LiveCameKey]['offline_at']);
 
     if (!$youtubeInfo['live']) {
-        if (!in_array("NOT_FOUND_NEW_VIDEO", $errorInfo)) {
+        if (!in_array("NOT_FOUND_NEW_VIDEO", $errorInfo) || ($now - $offline_timestamp) > 3600 * 3 ) {
+            $title = '';
+            if (!empty($SheetLiveCamList[$LiveCameKey]['title'])) {
+                $title = $SheetLiveCamList[$LiveCameKey]['title'];
+            } else if (!empty($youtubeInfo['localized']['title'])) {
+                $title =  $youtubeInfo['localized']['title'];
+            } else if (!empty($youtubeInfo['title'])) {
+                $title = $youtubeInfo['title'];
+            }
+
+
             $notLiveYoutubeFind[] = [
                 'youtube_id' => $youtubeInfo['id'],
                 'channel_id' => $youtubeInfo['channel_id'],
-                'title' => $youtubeInfo['localized']['title'] ?? $youtubeInfo['title'],
+                'title' => $title,
             ];
         }
     }
@@ -236,8 +247,19 @@ foreach ($notLiveYoutubeFind AS $_notLiveYoutubeFind) {
     if (!empty($search_list)) {
         showMsg("發現： {$search_list[0]['title']}");
         showMsg("相似度：{$search_list[0]['similar']}");
-        if ($search_list[0]['similar'] > 70) {
-            $transNewYoutubeIdsMapping[$_notLiveYoutubeFind['youtube_id']] = $search_list[0]['id'];
+
+        $find_youtube_ids = [];
+
+        $similar_ids = array_filter($search_list, function($search_item){
+            return $search_item['similar'] > 90;
+        });
+
+        $similar_ids = array_map(function($item){
+            return $item['id'];
+        }, $similar_ids);
+
+        if (!empty($similar_ids)) {
+            $transNewYoutubeIdsMapping[$_notLiveYoutubeFind['youtube_id']] = implode(',', $similar_ids);
         }
     } else {
         showMsg("查無資料相似影片");
@@ -246,6 +268,11 @@ foreach ($notLiveYoutubeFind AS $_notLiveYoutubeFind) {
 
 showMsg("查詢新查到的影片");
 if (!empty($transNewYoutubeIdsMapping)) {
+    $transNewYoutubeIds = [];
+    foreach ($transNewYoutubeIdsMapping AS $similar_ids) {
+        $similar_ids = explode(',', $similar_ids);
+        $transNewYoutubeIds = array_merge($transNewYoutubeIds, $similar_ids);
+    }
     $transNewYoutubeIds = array_values($transNewYoutubeIdsMapping);
     do{
         $tmp_youtube_ids = array_splice($transNewYoutubeIds, 0, 10);
@@ -295,7 +322,15 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
      * 檢查是否有被換過
      */
     if (isset($transNewYoutubeIdsMapping[$youtube_id])) {
-        $youtube_id = $transNewYoutubeIdsMapping[$youtube_id];
+        $tmp_youtube_ids = explode(',', $transNewYoutubeIdsMapping[$youtube_id]);
+        foreach ($tmp_youtube_ids AS $tmp_youtube_id) {
+            $tmpVideoInfo = $youtubeList[$tmp_youtube_id];
+            if ($tmpVideoInfo['live']) {
+                $youtube_id = $tmp_youtube_id;
+            }
+
+        }
+        // $youtube_id = $transNewYoutubeIdsMapping[$youtube_id];
     }
 
     /**
@@ -405,6 +440,7 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
 
     if (!$video_info['live']) {
         if (!in_array("NOT_FOUND_NEW_VIDEO", $SheetLiveCamList[$key]['error'])) {
+            $SheetLiveCamList[$key]['offline_at'] = date('Y-m-d H:i:s');
             $SheetLiveCamList[$key]['error'][] = "NOT_FOUND_NEW_VIDEO";
 
             $ResponseMailError[] = [
@@ -421,6 +457,8 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
             return $info !== 'NOT_FOUND_NEW_VIDEO';
         }));
         $SheetLiveCamList[$key]['error'] = $error;
+        $SheetLiveCamList[$key]['title'] = $video_info['title'];
+        $SheetLiveCamList[$key]['offline_at'] = '';
     }
 
     $LiveCamList[] = $tmp;
@@ -444,7 +482,7 @@ save(LIVE_CAM_LIST, $LiveCamList, true);
 showMsg("寫回 Sheet 中");
 $SheetLiveCamList = array_values($SheetLiveCamList);
 $SheetLiveCamList = array_orderby($SheetLiveCamList, "local", SORT_ASC, "city", SORT_ASC);
-$SheetLiveCamList = formatArrToSheet($SheetLiveCamList, ['key','local', 'city', 'youtube', 'gps', 'embed', 'error', 'created_at', 'updated_at']);
+$SheetLiveCamList = formatArrToSheet($SheetLiveCamList, ['key','local', 'city', 'youtube', 'gps', 'embed', 'title', 'error', 'offline_at', 'created_at', 'updated_at']);
 $spreadSheet->set("LiveCamList", $SheetLiveCamList);
 
 /**
@@ -561,7 +599,7 @@ function formatArrToSheet($data, $columns) {
             }
 
             foreach ($columns AS $key => $column) {
-                $value = $_data[$column];
+                $value = $_data[$column] ?? '';
                 if (is_array($value)) {
                     $value = implode(",", $value);
                 }
@@ -666,7 +704,6 @@ function searchYoutubeByKeyword(string $keyword, $channelId)
     showMsg("執行： {$url}");
 
     $data = @json_decode(file_get_contents($url), true);
-
     $youtubeList = [];
     if (!empty($data['items'])) {
         foreach ($data['items'] AS $item) {
