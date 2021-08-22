@@ -209,7 +209,7 @@ foreach ($youtubeList AS $youtubeInfo) {
 
     $LiveCameKey = $YoutubeIdMapToLiveCamKey[$youtube_id];
     $errorInfo = $SheetLiveCamList[$LiveCameKey]['error'];
-    $offline_timestamp = strtotime($SheetLiveCamList[$LiveCameKey]['offline_at']);
+    $offline_timestamp = strtotime($SheetLiveCamList[$LiveCameKey]['offline_at'] ?? time());
 
     if (!$youtubeInfo['live']) {
         if (!in_array("NOT_FOUND_NEW_VIDEO", $errorInfo) || ($now - $offline_timestamp) > 3600 * 3 ) {
