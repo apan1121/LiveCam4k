@@ -482,7 +482,7 @@ save(LIVE_CAM_LIST, $LiveCamList, true);
 showMsg("寫回 Sheet 中");
 $SheetLiveCamList = array_values($SheetLiveCamList);
 $SheetLiveCamList = array_orderby($SheetLiveCamList, "local", SORT_ASC, "city", SORT_ASC);
-$SheetLiveCamList = formatArrToSheet($SheetLiveCamList, ['key','local', 'city', 'youtube', 'gps', 'embed', 'title', 'error', 'offline_at', 'created_at', 'updated_at']);
+$SheetLiveCamList = formatArrToSheet($SheetLiveCamList, ['key','local', 'city', 'youtube', 'gps', 'embed', 'error', 'offline_at', 'title', 'created_at', 'updated_at']);
 $spreadSheet->set("LiveCamList", $SheetLiveCamList);
 
 /**
