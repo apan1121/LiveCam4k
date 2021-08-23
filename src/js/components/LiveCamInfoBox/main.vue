@@ -306,10 +306,10 @@ export default {
     created(){},
     mounted(){
         this.utc_timestamp = parseInt(moment.utc().format('x'));
-        // clearInterval(this.utcTimer);
-        // this.utcTimer = setInterval(() => {
-        //     this.utc_timestamp += 1000;
-        // }, 1000);
+        clearInterval(this.utcTimer);
+        this.utcTimer = setInterval(() => {
+            this.utc_timestamp += 1000;
+        }, 1000);
     },
     updated(){},
     destroyed(){
