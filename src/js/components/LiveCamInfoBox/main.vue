@@ -307,11 +307,13 @@ export default {
     },
     updated(){},
     destroyed(){
-        clearInterval(this.utcTimer);
+        this.setShareUrlInfo(false);
     },
     methods: {
         ...mapActions({}),
-        ...mapMutations({}),
+        ...mapMutations({
+            setShareUrlInfo: 'setShareUrlInfo',
+        }),
         carryFormatter: string.carryFormatter,
         triggerDetail(){
             this.detailOpen = !this.detailOpen;

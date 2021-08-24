@@ -140,7 +140,9 @@ export default {
         this.ShareUrlTriggerAct();
     },
     updated(){},
-    destroyed(){},
+    destroyed(){
+        this.setShareUrlInfo(false);
+    },
     methods: {
         ...mapActions({}),
         ...mapMutations({
