@@ -129,18 +129,6 @@ export default {
 
 
                 if (parseInt(that.embed) === 1) {
-                    console.log({
-                        videoId: that.youtubeId,
-                        playerVars: {
-                            autoplay: that.autoplay ? 1 : 0,
-                            controls: that.controls ? 1 : 0,
-                            disablekb: that.disablekb ? 1 : 0,
-                            showinfo: 0,
-                            modestbranding: 0,
-                            rel: 0,
-                            playsinline: 1,
-                        },
-                    });
                     that.player = new window.YT.Player(`player_${that.playerId}`, {
                         videoId: that.youtubeId,
                         playerVars: {

@@ -86,11 +86,7 @@ export default {
                 if (newVal === false) {
                     this.$router.push(this.prevRoute);
                 } else {
-                    let title = '';
-                    if (!!this.LiveCamInfo && !!this.LiveCamInfo.video) {
-                        title = this.LiveCamInfo.video.title.substr(0, 30);
-                    }
-                    this.setPageTitle(`${this.$t('Menu.LiveCam')}: ${title}`);
+                    this.setTitle();
                 }
             },
         },
@@ -115,6 +111,7 @@ export default {
     },
     mounted(){
         this.setPageTitle(this.$t('Menu.LiveCam'));
+        this.setTitle();
     },
     updated(){},
     destroyed(){},
@@ -123,6 +120,15 @@ export default {
         ...mapMutations({
             setShareUrlInfo: 'setShareUrlInfo',
         }),
+        setTitle(){
+            if (!!this.LiveCamInfo) {
+                let title = '';
+                if (!!this.LiveCamInfo && !!this.LiveCamInfo.video) {
+                    title = this.LiveCamInfo.video.title.substr(0, 30);
+                }
+                this.setPageTitle(`${this.$t('Menu.LiveCam')}: ${title}`);
+            }
+        },
         goBack(){
             if (this.prevRoute) {
                 this.$router.push(this.prevRoute);
