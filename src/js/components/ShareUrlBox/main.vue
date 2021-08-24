@@ -179,7 +179,9 @@ export default {
                 };
                 if (!!window.navigator && !!window.navigator.share) {
                     window.navigator.share(params).then((response) => {
+                        that.closeSharBox();
                     }).catch((error) => {
+                        that.closeSharBox();
                     });
                 } else {
                     this.canShare = true;
