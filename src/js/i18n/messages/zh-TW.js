@@ -271,6 +271,11 @@ export default {
     MapPage: {
         YourCurrentPosition: '您目前的位置',
     },
+
+    LiveCamPage: {
+        ReportUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScxdmjNg1ZkMbGwgfizYU4lJrYx_6fVnIyqzHf3K28ek14ohg/viewform?entry.1539737227={liveCamKey}',
+    },
+
     WeatherStatus: {
         Thunderstorm: '雷雨',
         Drizzle: '細雨',

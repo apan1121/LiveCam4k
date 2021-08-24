@@ -44,6 +44,10 @@
         <template v-if="triggerLangModal">
             <lang-modal :trigger="triggerLangModal"></lang-modal>
         </template>
+
+        <template v-if="ShareUrlInfo">
+            <share-url-box></share-url-box>
+        </template>
     </div>
 </template>
 <script>
@@ -62,6 +66,7 @@ export default {
     components: {
         LangModal: () => import('components/LangModal/main.vue'),
         AlertGeoBox: () => import('components/AlertGeoBox/main.vue'),
+        ShareUrlBox: () => import('components/ShareUrlBox/main.vue'),
     },
     filters: {},
     props: {},
@@ -73,6 +78,7 @@ export default {
     computed: {
         ...mapGetters([
             'CurrentPosition',
+            'ShareUrlInfo',
         ]),
         route(){
             return this.$route;

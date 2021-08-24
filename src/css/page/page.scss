@@ -44,7 +44,7 @@ body{
     padding-bottom: $spacer * 4;
     overflow: hidden;
     color: $gray-100;
-    header{
+    > header{
         nav.navbar{
             .container{
                 justify-content: start;

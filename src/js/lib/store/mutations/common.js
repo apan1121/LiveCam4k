@@ -26,4 +26,16 @@ export default {
 
         state.LiveCamListFlag = true;
     },
+
+    setShareUrlInfo(state, data){
+        if (data !== false && !!data.url) {
+            state.ShareUrlInfo = {
+                title: '',
+                url: '',
+                ...data,
+            };
+        } else {
+            state.ShareUrlInfo = false;
+        }
+    },
 };

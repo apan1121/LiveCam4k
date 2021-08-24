@@ -1,5 +1,5 @@
 <template>
-    <div class="live-cam-card" :class="{ preview }">
+    <div v-if="cssLoaded" class="live-cam-card" :class="{ preview }">
         <router-link :to="{ name: 'LiveCamPage', params: { LiveCamKey: liveCamKey } }">
             <div class="live-cam-card-wrapper" :class="{
                 live: video.live,
@@ -65,13 +65,6 @@ import CalUnits from 'lib/common/mixins/CalUnits';
 import { module_name, module_store } from './store/index';
 
 
-linkRegister.register([
-    {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: '/dist/css/page/components/live-cam-card.css',
-    },
-]);
 
 // import { module_name, module_store } from './store/index';
 // import $ from 'jquery';
@@ -114,6 +107,7 @@ export default {
     },
     data(){
         return {
+            cssLoaded: false,
             hoverPreview: false,
             hoverTitle: false,
             preview: false,
@@ -165,7 +159,20 @@ export default {
             this.$store.registerModule(module_name_array, module_store);
         }
     },
-    created(){},
+    created(){
+        const that = this;
+
+        linkRegister.register([
+            {
+                rel: 'stylesheet',
+                type: 'text/css',
+                href: '/dist/css/page/components/live-cam-card.css',
+                onload(){
+                    that.cssLoaded = true;
+                },
+            },
+        ]);
+    },
     mounted(){
         $('body').trigger('lazyImg');
     },

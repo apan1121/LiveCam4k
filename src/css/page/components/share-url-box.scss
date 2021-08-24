@@ -1,0 +1,80 @@
+@import '../../common/_variable.scss';
+
+.share-url-box{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba($gray-700, 0.4);
+    .share-url-wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 400px;
+        width: 100%;
+        border-radius: $spacer * 0.5;
+        background: $white;
+        color: $gray-900;
+        transform: translate(-50%, -50%);
+        .share-url-content {
+            position: relative;
+            width: 100%;
+            padding: $spacer;
+            .share-url-close{
+                position: absolute;
+                // background: $white;
+                color: $gray-900;
+                top: 0;
+                right: 0;
+                top: $spacer * 0.5;
+                right: $spacer * 0.5;
+                // border-radius: 50%;
+                font-size: $spacer * 1.5;
+                width: $spacer * 1.75;
+                height: $spacer * 1.75;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                // transform: translate(-50%, -50%);
+            }
+            .share-url-title{
+                margin-bottom: $spacer * 0.5;
+                font-weight: 800;
+                font-size: $spacer * 1.25;
+            }
+
+            .share-url-box-footer{
+                .share-url-box-footer-wrapper{
+                    display: flex;
+                    .share-url-box-footer-item{
+                        &[rel="input"] {
+                            flex: 1;
+                            input {
+                                width: 100%;
+                                height: 100%;
+                                border: 1px solid $gray-900;
+                                border-top-left-radius: $spacer * 0.25;
+                                border-bottom-left-radius: $spacer * 0.25;
+                                border-top-right-radius: 0px;
+                                border-bottom-right-radius: 0px;
+                                padding-left: $spacer * 0.5;
+                            }
+                        }
+                        &[rel="copy-url-btn"] {
+                            flex: none;
+                            height: 100%;
+                            .btn{
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                                border-top-right-radius: $spacer * 0.25;
+                                border-bottom-right-radius: $spacer * 0.25;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

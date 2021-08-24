@@ -1,6 +1,7 @@
 @import '../../common/_variable.scss';
 
 .live-cam-info-box{
+    position: relative;
     .live-cam-player-wrapper{
         margin-bottom: $spacer * 1.5;
         .youtube-player-box{
@@ -208,7 +209,6 @@
             }
         }
     }
-
 }
 
 @keyframes BreathingLight {

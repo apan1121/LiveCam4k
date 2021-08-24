@@ -1,8 +1,28 @@
 <template>
-    <div v-if="LiveCamInfo" class="live-cam-page">
-        <div class="live-cam-page-back" @click="goBack">
-            <i class="fas fa-chevron-left"></i>
-        </div>
+    <div v-if="cssLoaded && LiveCamInfo" class="live-cam-page">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container">
+                <ul class="navbar-nav">
+                    <li class="nav-item live-cam-page-back" @click="goBack">
+                        <i class="fas fa-chevron-left"></i>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"
+                        @click="shareUrl"
+                    >
+                        <i class="fas fa-share-alt"></i>
+                    </li>
+                    <li v-if="ReportUrl" class="nav-item">
+                        <a :href="ReportUrl"
+                            target="_blank"
+                        >
+                            <i class="far fa-paper-plane"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
         <live-cam-info-box
             :key="`live_cam_info_${LiveCamKey}`"
@@ -18,14 +38,6 @@ import { mapActions, mapMutations, mapGetters } from 'vuex';
 import { module_name, module_store } from './store/index';
 
 
-linkRegister.register([
-    {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: '/dist/css/page/live-cam-page.css',
-    },
-]);
-
 
 export default {
     components: {
@@ -40,7 +52,9 @@ export default {
         },
     },
     data(){
-        return {};
+        return {
+            cssLoaded: false,
+        };
     },
     computed: {
         ...mapGetters([
@@ -55,6 +69,13 @@ export default {
                 return this.LiveCamList[this.LiveCamKey];
             }
             return false;
+        },
+        ReportUrl(){
+            let url = '';
+            if (!!this.LiveCamInfo) {
+                url = this.$t('LiveCamPage.ReportUrl', { liveCamKey: this.LiveCamInfo.key });
+            }
+            return url;
         },
     },
     watch: {
@@ -79,7 +100,19 @@ export default {
             this.$store.registerModule(module_name, module_store);
         }
     },
-    created(){},
+    created(){
+        const that = this;
+        linkRegister.register([
+            {
+                rel: 'stylesheet',
+                type: 'text/css',
+                href: '/dist/css/page/live-cam-page.css',
+                onload(){
+                    that.cssLoaded = true;
+                },
+            },
+        ]);
+    },
     mounted(){
         this.setPageTitle(this.$t('Menu.LiveCam'));
     },
@@ -87,11 +120,20 @@ export default {
     destroyed(){},
     methods: {
         ...mapActions({}),
-        ...mapMutations({}),
+        ...mapMutations({
+            setShareUrlInfo: 'setShareUrlInfo',
+        }),
         goBack(){
             if (this.prevRoute) {
                 this.$router.push(this.prevRoute);
             }
+        },
+        shareUrl(){
+            const params = {
+                title: document.title,
+                url: window.location.href,
+            };
+            this.setShareUrlInfo(params);
         },
     },
 };

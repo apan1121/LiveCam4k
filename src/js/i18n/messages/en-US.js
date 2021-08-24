@@ -4,6 +4,7 @@ export default {
         List: 'List',
         Map: 'Map',
         Travel: 'Travel',
+        LiveCam: 'Camera',
     },
     LangModal: {
         ChooseLanguage: 'Choose Language',
@@ -267,6 +268,10 @@ export default {
     },
     MapPage: {
         YourCurrentPosition: 'Your Current Position',
+    },
+
+    LiveCamPage: {
+        ReportUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSctqk4YCsKe1i3YmJ9tOc6ZizhgzneyoyUhmHwGZ550tgSeAQ/viewform?usp=pp_url&entry.1747969396={liveCamKey}',
     },
 
     WeatherStatus: {

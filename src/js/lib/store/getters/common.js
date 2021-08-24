@@ -15,4 +15,6 @@ export default {
     WeatherIcon: state => state.WeatherIcon,
 
     MapProviderUrl: state => state.MapProviderUrl,
+
+    ShareUrlInfo: state => state.ShareUrlInfo,
 };

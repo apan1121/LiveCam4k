@@ -1,5 +1,5 @@
 <template>
-    <div :key="LiveCamKey" class="live-cam-info-box">
+    <div v-if="styleLoader" :key="LiveCamKey" class="live-cam-info-box">
         <div class="live-cam-player-wrapper">
             <youtube-player
                 v-if="LiveCamInfo.video"
@@ -14,7 +14,7 @@
             <div class="col-12 col-sm-6">
                 <span class="statistic-item" rel="local-info">
                     <i class="far fa-clock"></i>
-                    {{ LocalDateTime }}
+                    <current-time-zone :timezone_sec="LiveCamInfo.timezone.sec"></current-time-zone>
                 </span>
             </div>
             <div class="col-12 col-sm-6 text-right">
@@ -186,26 +186,14 @@ import { mapActions, mapMutations, mapGetters } from 'vuex';
 import { module_name, module_store } from './store/index';
 
 
-// import $ from 'jquery';
-// import 'bootstrap';
 
-// import 'app';
-// import { string, jsVars, popup, trackJS, localStorage, ppPanel } from 'lib/common/util';
-
-
-linkRegister.register([
-    {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: '/dist/css/page/components/live-cam-info.css',
-    },
-]);
 
 
 export default {
     components: {
         YoutubePlayer: () => import('components/YoutubePlayer/main.vue'),
         StaticMapBox: () => import('components/StaticMapBox/main.vue'),
+        CurrentTimeZone: () => import('components/CurrentTimeZone/main.vue'),
     },
     filters: {
     },
@@ -218,7 +206,8 @@ export default {
     },
     data(){
         return {
-            utc_timestamp: 0,
+            styleLoader: false,
+            // utc_timestamp: 0,
             detailOpen: false,
         };
     },
@@ -237,6 +226,7 @@ export default {
             }
             return false;
         },
+
         StatisticsFormat(){
             return {
                 view_count: this.LiveCamInfo.video.statistics.view_count,
@@ -246,15 +236,7 @@ export default {
                 comment_count: this.LiveCamInfo.video.statistics.comment_count,
             };
         },
-        LocalDateTime(){
-            let dateTime = '--';
-            if (!!this.LiveCamInfo && 1) {
-                const timestamp = this.utc_timestamp + this.LiveCamInfo.timezone.sec * 1000;
-                dateTime = moment(timestamp).utc().format('YYYY-MM-DD HH:mm:ss');
-            }
 
-            return dateTime;
-        },
         SunInfo(){
             // console.log(this.utc_timestamp);
             // console.log('sunrise', this.LiveCamInfo.weather.sunrise * 1000);
@@ -303,13 +285,25 @@ export default {
             this.$store.registerModule(module_name, module_store);
         }
     },
-    created(){},
+    created(){
+        const that = this;
+        linkRegister.register([
+            {
+                rel: 'stylesheet',
+                type: 'text/css',
+                href: '/dist/css/page/components/live-cam-info.css',
+                onload(){
+                    that.styleLoader = true;
+                },
+            },
+        ]);
+    },
     mounted(){
-        this.utc_timestamp = parseInt(moment.utc().format('x'));
-        clearInterval(this.utcTimer);
-        this.utcTimer = setInterval(() => {
-            this.utc_timestamp += 1000;
-        }, 1000);
+        // this.utc_timestamp = parseInt(moment.utc().format('x'));
+        // clearInterval(this.utcTimer);
+        // this.utcTimer = setInterval(() => {
+        //     this.utc_timestamp += 1000;
+        // }, 1000);
     },
     updated(){},
     destroyed(){

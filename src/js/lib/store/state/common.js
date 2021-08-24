@@ -53,4 +53,6 @@ export default {
         '50d': 'icon icon-mist',
         '50n': 'icon icon-mist',
     },
+
+    ShareUrlInfo: false,
 };
