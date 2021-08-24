@@ -28,7 +28,7 @@
             },
             "published_at": "2019-01-24T06:33:04Z",
             "statistics": {
-                "view_count": 1950491,
+                "view_count": 1950543,
                 "like_count": 9569,
                 "dislike_count": 376,
                 "favorite_count": 0,
@@ -44,8 +44,8 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 286.31,
-            "feels_like": 286.19,
+            "temp": 286.22,
+            "feels_like": 286.09,
             "temp_min": 284.54,
             "temp_max": 290.51,
             "pressure": 1022,
@@ -112,7 +112,7 @@
             },
             "published_at": "2021-08-11T19:49:48Z",
             "statistics": {
-                "view_count": 10388,
+                "view_count": 10397,
                 "like_count": 139,
                 "dislike_count": 1,
                 "favorite_count": 0,
@@ -122,18 +122,18 @@
         "weather": {
             "sunrise": 1629836577,
             "sunset": 1629876729,
-            "wind_speed": 0.89,
-            "wind_deg": 167,
+            "wind_speed": 1.34,
+            "wind_deg": 159,
             "weather_desc": "light intensity drizzle",
             "weather_icon": "09n",
             "weather_status": "Drizzle",
             "base": "stations",
-            "temp": 282.56,
-            "feels_like": 282.56,
-            "temp_min": 281.75,
+            "temp": 282.69,
+            "feels_like": 282.45,
+            "temp_min": 282.06,
             "temp_max": 284.96,
             "pressure": 1006,
-            "humidity": 77
+            "humidity": 76
         }
     },
     {
@@ -165,7 +165,7 @@
             },
             "published_at": "2021-05-21T13:52:29Z",
             "statistics": {
-                "view_count": 349122,
+                "view_count": 349178,
                 "like_count": 582,
                 "dislike_count": 15,
                 "favorite_count": 0,
@@ -175,18 +175,18 @@
         "weather": {
             "sunrise": 1629780628,
             "sunset": 1629831215,
-            "wind_speed": 7.72,
-            "wind_deg": 30,
+            "wind_speed": 7.2,
+            "wind_deg": 20,
             "weather_desc": "few clouds",
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 292.96,
-            "feels_like": 292.85,
-            "temp_min": 291.51,
-            "temp_max": 295.67,
+            "temp": 292.78,
+            "feels_like": 292.68,
+            "temp_min": 291.16,
+            "temp_max": 295.49,
             "pressure": 1027,
-            "humidity": 71
+            "humidity": 72
         }
     },
     {
@@ -246,7 +246,7 @@
             },
             "published_at": "2021-08-18T16:06:20Z",
             "statistics": {
-                "view_count": 10938,
+                "view_count": 10960,
                 "like_count": 230,
                 "dislike_count": 2,
                 "favorite_count": 0,
@@ -264,7 +264,7 @@
             "base": "stations",
             "temp": 296.17,
             "feels_like": 296.43,
-            "temp_min": 294.85,
+            "temp_min": 296.17,
             "temp_max": 296.17,
             "pressure": 1009,
             "humidity": 73
@@ -330,7 +330,7 @@
             },
             "published_at": "2019-11-26T18:51:02Z",
             "statistics": {
-                "view_count": 5980776,
+                "view_count": 5980838,
                 "like_count": 17624,
                 "dislike_count": 545,
                 "favorite_count": 0,
@@ -383,7 +383,7 @@
             },
             "published_at": "2021-06-30T16:39:50Z",
             "statistics": {
-                "view_count": 48533,
+                "view_count": 48552,
                 "like_count": 379,
                 "dislike_count": 5,
                 "favorite_count": 0,
@@ -399,10 +399,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 283.02,
-            "feels_like": 283.02,
+            "temp": 283.07,
+            "feels_like": 283.07,
             "temp_min": 282.41,
-            "temp_max": 283.29,
+            "temp_max": 285.08,
             "pressure": 1023,
             "humidity": 71
         }
@@ -438,7 +438,7 @@
             },
             "published_at": "2018-09-04T20:11:05Z",
             "statistics": {
-                "view_count": 1010805,
+                "view_count": 1010813,
                 "like_count": 4522,
                 "dislike_count": 103,
                 "favorite_count": 0,
@@ -454,8 +454,8 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 285.63,
-            "feels_like": 284.79,
+            "temp": 285.74,
+            "feels_like": 284.91,
             "temp_min": 283.07,
             "temp_max": 290.26,
             "pressure": 1020,
@@ -491,7 +491,7 @@
             },
             "published_at": "2020-06-22T08:37:32Z",
             "statistics": {
-                "view_count": 340063,
+                "view_count": 340076,
                 "like_count": 1186,
                 "dislike_count": 49,
                 "favorite_count": 0,
@@ -501,18 +501,18 @@
         "weather": {
             "sunrise": 1629779866,
             "sunset": 1629829598,
-            "wind_speed": 1.34,
-            "wind_deg": 82,
+            "wind_speed": 0.45,
+            "wind_deg": 177,
             "weather_desc": "scattered clouds",
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 293.83,
-            "feels_like": 293.49,
-            "temp_min": 291.88,
+            "temp": 293.64,
+            "feels_like": 293.31,
+            "temp_min": 290.53,
             "temp_max": 295.48,
             "pressure": 1020,
-            "humidity": 59
+            "humidity": 60
         }
     },
     {
@@ -544,7 +544,7 @@
             },
             "published_at": "2019-11-18T16:25:21Z",
             "statistics": {
-                "view_count": 2135009,
+                "view_count": 2135042,
                 "like_count": 8534,
                 "dislike_count": 213,
                 "favorite_count": 0,
@@ -556,12 +556,12 @@
             "sunset": 1629829525,
             "wind_speed": 8.23,
             "wind_deg": 260,
-            "weather_desc": "few clouds",
-            "weather_icon": "02d",
-            "weather_status": "Clouds",
+            "weather_desc": "light rain",
+            "weather_icon": "10d",
+            "weather_status": "Rain",
             "base": "stations",
-            "temp": 288.18,
-            "feels_like": 287.12,
+            "temp": 288.13,
+            "feels_like": 287.07,
             "temp_min": 282.34,
             "temp_max": 290.62,
             "pressure": 1014,
@@ -639,7 +639,7 @@
             },
             "published_at": "2021-04-19T12:56:56Z",
             "statistics": {
-                "view_count": 324123,
+                "view_count": 324159,
                 "like_count": 676,
                 "dislike_count": 36,
                 "favorite_count": 0,
@@ -649,18 +649,18 @@
         "weather": {
             "sunrise": 1629778675,
             "sunset": 1629830042,
-            "wind_speed": 0.89,
-            "wind_deg": 9,
+            "wind_speed": 3.69,
+            "wind_deg": 320,
             "weather_desc": "broken clouds",
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 294.57,
-            "feels_like": 294.31,
-            "temp_min": 293.89,
+            "temp": 294.14,
+            "feels_like": 294.23,
+            "temp_min": 293.31,
             "temp_max": 294.94,
-            "pressure": 1027,
-            "humidity": 59
+            "pressure": 1028,
+            "humidity": 74
         }
     },
     {
@@ -737,7 +737,7 @@
             },
             "published_at": "2021-04-01T11:19:55Z",
             "statistics": {
-                "view_count": 52326,
+                "view_count": 52330,
                 "like_count": 290,
                 "dislike_count": 6,
                 "favorite_count": 0,
@@ -753,10 +753,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 290.56,
-            "feels_like": 290.24,
-            "temp_min": 290.56,
-            "temp_max": 290.56,
+            "temp": 292.28,
+            "feels_like": 292.13,
+            "temp_min": 292.28,
+            "temp_max": 292.28,
             "pressure": 1028,
             "humidity": 72
         }
@@ -790,7 +790,7 @@
             },
             "published_at": "2021-05-27T14:44:37Z",
             "statistics": {
-                "view_count": 41999,
+                "view_count": 42010,
                 "like_count": 222,
                 "dislike_count": 5,
                 "favorite_count": 0,
@@ -801,17 +801,17 @@
             "sunrise": 1629778372,
             "sunset": 1629829868,
             "wind_speed": 2.06,
-            "wind_deg": 70,
+            "wind_deg": 90,
             "weather_desc": "overcast clouds",
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 293.8,
-            "feels_like": 293.28,
+            "temp": 293.58,
+            "feels_like": 293.14,
             "temp_min": 293.23,
-            "temp_max": 294.9,
+            "temp_max": 294.55,
             "pressure": 1028,
-            "humidity": 52
+            "humidity": 56
         }
     },
     {
@@ -881,7 +881,7 @@
             },
             "published_at": "2021-06-16T08:02:14Z",
             "statistics": {
-                "view_count": 37138,
+                "view_count": 37143,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -891,17 +891,17 @@
         "weather": {
             "sunrise": 1629779345,
             "sunset": 1629829356,
-            "wind_speed": 3.6,
+            "wind_speed": 4.63,
             "wind_deg": 20,
             "weather_desc": "few clouds",
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 292.7,
-            "feels_like": 292.56,
-            "temp_min": 292.02,
-            "temp_max": 294.04,
-            "pressure": 1024,
+            "temp": 292.34,
+            "feels_like": 292.17,
+            "temp_min": 291.47,
+            "temp_max": 292.96,
+            "pressure": 1023,
             "humidity": 71
         }
     },
@@ -943,7 +943,7 @@
             },
             "published_at": "2021-06-28T15:28:49Z",
             "statistics": {
-                "view_count": 205242,
+                "view_count": 205272,
                 "like_count": 424,
                 "dislike_count": 18,
                 "favorite_count": 0,
@@ -953,17 +953,17 @@
         "weather": {
             "sunrise": 1629787046,
             "sunset": 1629833531,
-            "wind_speed": 2.24,
-            "wind_deg": 248,
+            "wind_speed": 1.34,
+            "wind_deg": 219,
             "weather_desc": "clear sky",
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 298.98,
-            "feels_like": 299.32,
-            "temp_min": 298.98,
-            "temp_max": 299.06,
-            "pressure": 1014,
+            "temp": 299.53,
+            "feels_like": 299.53,
+            "temp_min": 299.06,
+            "temp_max": 299.53,
+            "pressure": 1013,
             "humidity": 65
         }
     },
@@ -1007,8 +1007,8 @@
             },
             "published_at": "2021-03-28T11:04:46Z",
             "statistics": {
-                "view_count": 1211622,
-                "like_count": 2865,
+                "view_count": 1211722,
+                "like_count": 2866,
                 "dislike_count": 95,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -1018,15 +1018,15 @@
             "sunrise": 1629786516,
             "sunset": 1629833148,
             "wind_speed": 8.23,
-            "wind_deg": 350,
+            "wind_deg": 360,
             "weather_desc": "few clouds",
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.12,
-            "feels_like": 300.99,
+            "temp": 299.12,
+            "feels_like": 299.12,
             "temp_min": 298.17,
-            "temp_max": 300.12,
+            "temp_max": 299.12,
             "pressure": 1015,
             "humidity": 57
         }
@@ -1060,7 +1060,7 @@
             },
             "published_at": "2020-02-28T12:05:04Z",
             "statistics": {
-                "view_count": 2185167,
+                "view_count": 2185206,
                 "like_count": 6319,
                 "dislike_count": 196,
                 "favorite_count": 0,
@@ -1070,16 +1070,16 @@
         "weather": {
             "sunrise": 1629773747,
             "sunset": 1629827383,
-            "wind_speed": 0.89,
-            "wind_deg": 52,
+            "wind_speed": 1.54,
+            "wind_deg": 0,
             "weather_desc": "scattered clouds",
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 287.34,
-            "feels_like": 286.41,
-            "temp_min": 287.09,
-            "temp_max": 288.27,
+            "temp": 287.27,
+            "feels_like": 286.33,
+            "temp_min": 286.95,
+            "temp_max": 287.71,
             "pressure": 1023,
             "humidity": 61
         }
@@ -1118,7 +1118,7 @@
             },
             "published_at": "2020-02-19T06:50:35Z",
             "statistics": {
-                "view_count": 1050353,
+                "view_count": 1050371,
                 "like_count": 1763,
                 "dislike_count": 92,
                 "favorite_count": 0,
@@ -1129,17 +1129,17 @@
             "sunrise": 1629772014,
             "sunset": 1629826809,
             "wind_speed": 1.54,
-            "wind_deg": 340,
+            "wind_deg": 320,
             "weather_desc": "overcast clouds",
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
             "temp": 283.93,
-            "feels_like": 282.89,
+            "feels_like": 282.94,
             "temp_min": 282.65,
             "temp_max": 284.41,
             "pressure": 1020,
-            "humidity": 70
+            "humidity": 72
         }
     },
     {
@@ -1171,7 +1171,7 @@
             },
             "published_at": "2020-10-19T10:42:48Z",
             "statistics": {
-                "view_count": 937757,
+                "view_count": 937769,
                 "like_count": 5173,
                 "dislike_count": 107,
                 "favorite_count": 0,
@@ -1181,18 +1181,18 @@
         "weather": {
             "sunrise": 1629771515,
             "sunset": 1629829683,
-            "wind_speed": 4.63,
+            "wind_speed": 5.14,
             "wind_deg": 180,
-            "weather_desc": "clear sky",
-            "weather_icon": "01d",
-            "weather_status": "Clear",
+            "weather_desc": "scattered clouds",
+            "weather_icon": "03d",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 284.54,
-            "feels_like": 283.25,
+            "temp": 283.54,
+            "feels_like": 282.25,
             "temp_min": 282.42,
-            "temp_max": 284.54,
-            "pressure": 1017,
-            "humidity": 58
+            "temp_max": 283.54,
+            "pressure": 1016,
+            "humidity": 62
         }
     },
     {
@@ -1224,7 +1224,7 @@
             },
             "published_at": "2020-11-12T06:50:38Z",
             "statistics": {
-                "view_count": 9597643,
+                "view_count": 9597741,
                 "like_count": 46956,
                 "dislike_count": 1152,
                 "favorite_count": 0,
@@ -1234,18 +1234,18 @@
         "weather": {
             "sunrise": 1629771515,
             "sunset": 1629829683,
-            "wind_speed": 4.63,
+            "wind_speed": 5.14,
             "wind_deg": 180,
-            "weather_desc": "clear sky",
-            "weather_icon": "01d",
-            "weather_status": "Clear",
+            "weather_desc": "scattered clouds",
+            "weather_icon": "03d",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 284.54,
-            "feels_like": 283.25,
+            "temp": 283.54,
+            "feels_like": 282.25,
             "temp_min": 282.42,
-            "temp_max": 284.54,
-            "pressure": 1017,
-            "humidity": 58
+            "temp_max": 283.54,
+            "pressure": 1016,
+            "humidity": 62
         }
     },
     {
@@ -1277,7 +1277,7 @@
             },
             "published_at": "2021-06-17T12:51:31Z",
             "statistics": {
-                "view_count": 49611,
+                "view_count": 49614,
                 "like_count": 253,
                 "dislike_count": 5,
                 "favorite_count": 0,
@@ -1287,18 +1287,18 @@
         "weather": {
             "sunrise": 1629782187,
             "sunset": 1629831557,
-            "wind_speed": 3.58,
-            "wind_deg": 58,
+            "wind_speed": 6.83,
+            "wind_deg": 33,
             "weather_desc": "few clouds",
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 298.16,
-            "feels_like": 298.26,
-            "temp_min": 298.16,
+            "temp": 298.23,
+            "feels_like": 298.39,
+            "temp_min": 298.23,
             "temp_max": 298.23,
-            "pressure": 1018,
-            "humidity": 59
+            "pressure": 1016,
+            "humidity": 61
         }
     },
     {
@@ -1330,7 +1330,7 @@
             },
             "published_at": "2021-07-11T14:29:35Z",
             "statistics": {
-                "view_count": 148942,
+                "view_count": 148989,
                 "like_count": 1108,
                 "dislike_count": 22,
                 "favorite_count": 0,
@@ -1340,18 +1340,18 @@
         "weather": {
             "sunrise": 1629780349,
             "sunset": 1629829278,
-            "wind_speed": 10.29,
-            "wind_deg": 330,
+            "wind_speed": 4.12,
+            "wind_deg": 290,
             "weather_desc": "light rain",
             "weather_icon": "10d",
             "weather_status": "Rain",
             "base": "stations",
-            "temp": 293.38,
-            "feels_like": 293.39,
-            "temp_min": 292.12,
-            "temp_max": 298.47,
+            "temp": 293.93,
+            "feels_like": 293.92,
+            "temp_min": 293.12,
+            "temp_max": 299.02,
             "pressure": 1013,
-            "humidity": 74
+            "humidity": 71
         }
     },
     {
@@ -1421,7 +1421,7 @@
             },
             "published_at": "2021-05-02T14:00:56Z",
             "statistics": {
-                "view_count": 705816,
+                "view_count": 705888,
                 "like_count": 3229,
                 "dislike_count": 74,
                 "favorite_count": 0,
@@ -1437,12 +1437,12 @@
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 295.9,
-            "feels_like": 295.77,
+            "temp": 295.89,
+            "feels_like": 295.71,
             "temp_min": 294.61,
             "temp_max": 296.79,
             "pressure": 1017,
-            "humidity": 59
+            "humidity": 57
         }
     },
     {
@@ -1474,7 +1474,7 @@
             },
             "published_at": "2019-12-12T13:43:55Z",
             "statistics": {
-                "view_count": 469407,
+                "view_count": 469417,
                 "like_count": 4287,
                 "dislike_count": 149,
                 "favorite_count": 0,
@@ -1484,18 +1484,18 @@
         "weather": {
             "sunrise": 1629781238,
             "sunset": 1629831924,
-            "wind_speed": 5.14,
+            "wind_speed": 6.69,
             "wind_deg": 90,
-            "weather_desc": "broken clouds",
-            "weather_icon": "04d",
+            "weather_desc": "scattered clouds",
+            "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 295.18,
-            "feels_like": 294.93,
+            "temp": 295.02,
+            "feels_like": 294.78,
             "temp_min": 292.78,
-            "temp_max": 297.2,
+            "temp_max": 296.73,
             "pressure": 1028,
-            "humidity": 57
+            "humidity": 58
         }
     },
     {
@@ -1527,8 +1527,8 @@
             },
             "published_at": "2021-06-30T08:32:28Z",
             "statistics": {
-                "view_count": 487477,
-                "like_count": 1048,
+                "view_count": 487643,
+                "like_count": 1049,
                 "dislike_count": 35,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -1543,10 +1543,10 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 295.66,
-            "feels_like": 295.59,
+            "temp": 295.55,
+            "feels_like": 295.46,
             "temp_min": 294.5,
-            "temp_max": 297.33,
+            "temp_max": 296.62,
             "pressure": 1027,
             "humidity": 62
         }
@@ -1580,7 +1580,7 @@
             },
             "published_at": "2021-08-19T08:38:06Z",
             "statistics": {
-                "view_count": 24598,
+                "view_count": 24684,
                 "like_count": 143,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -1590,14 +1590,14 @@
         "weather": {
             "sunrise": 1629782162,
             "sunset": 1629832607,
-            "wind_speed": 6.17,
-            "wind_deg": 50,
+            "wind_speed": 5.14,
+            "wind_deg": 60,
             "weather_desc": "few clouds",
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 295.16,
-            "feels_like": 294.38,
+            "temp": 294.94,
+            "feels_like": 294.14,
             "temp_min": 293.71,
             "temp_max": 296.62,
             "pressure": 1027,
@@ -1664,7 +1664,7 @@
             },
             "published_at": "2021-04-08T11:57:22Z",
             "statistics": {
-                "view_count": 387119,
+                "view_count": 387176,
                 "like_count": 646,
                 "dislike_count": 28,
                 "favorite_count": 0,
@@ -1680,12 +1680,12 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 291.54,
-            "feels_like": 291.6,
+            "temp": 291.55,
+            "feels_like": 291.64,
             "temp_min": 290.51,
-            "temp_max": 294.62,
+            "temp_max": 294.8,
             "pressure": 1030,
-            "humidity": 83
+            "humidity": 84
         }
     },
     {
@@ -1748,7 +1748,7 @@
             },
             "published_at": "2021-07-01T14:54:58Z",
             "statistics": {
-                "view_count": 137873,
+                "view_count": 137943,
                 "like_count": 212,
                 "dislike_count": 7,
                 "favorite_count": 0,
@@ -1764,10 +1764,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 291.87,
-            "feels_like": 291.55,
+            "temp": 291.91,
+            "feels_like": 291.59,
             "temp_min": 290.52,
-            "temp_max": 294.63,
+            "temp_max": 294.81,
             "pressure": 1030,
             "humidity": 67
         }
@@ -1801,7 +1801,7 @@
             },
             "published_at": "2018-12-17T04:49:39Z",
             "statistics": {
-                "view_count": 1372044,
+                "view_count": 1372063,
                 "like_count": 6498,
                 "dislike_count": 240,
                 "favorite_count": 0,
@@ -1811,18 +1811,18 @@
         "weather": {
             "sunrise": 1629781478,
             "sunset": 1629832231,
-            "wind_speed": 1.34,
-            "wind_deg": 332,
+            "wind_speed": 0.45,
+            "wind_deg": 228,
             "weather_desc": "scattered clouds",
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 294.96,
-            "feels_like": 294.5,
-            "temp_min": 293.26,
+            "temp": 294.8,
+            "feels_like": 294.38,
+            "temp_min": 293.02,
             "temp_max": 296.36,
             "pressure": 1027,
-            "humidity": 50
+            "humidity": 52
         }
     },
     {
@@ -1856,7 +1856,7 @@
             },
             "published_at": "2021-07-29T20:03:30Z",
             "statistics": {
-                "view_count": 61675,
+                "view_count": 61719,
                 "like_count": 337,
                 "dislike_count": 7,
                 "favorite_count": 0,
@@ -1866,17 +1866,17 @@
         "weather": {
             "sunrise": 1629782512,
             "sunset": 1629832954,
-            "wind_speed": 3.6,
+            "wind_speed": 3.09,
             "wind_deg": 140,
             "weather_desc": "few clouds",
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 294.52,
-            "feels_like": 294.38,
+            "temp": 295.14,
+            "feels_like": 295.07,
             "temp_min": 292.63,
-            "temp_max": 296.52,
-            "pressure": 1028,
+            "temp_max": 297.08,
+            "pressure": 1027,
             "humidity": 64
         }
     },
@@ -1910,7 +1910,7 @@
             "published_at": "2021-06-01T08:19:28Z",
             "statistics": {
                 "view_count": 393896,
-                "like_count": 1434,
+                "like_count": 1433,
                 "dislike_count": 26,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -1919,18 +1919,18 @@
         "weather": {
             "sunrise": 1629781568,
             "sunset": 1629832070,
-            "wind_speed": 2.68,
-            "wind_deg": 34,
+            "wind_speed": 6.52,
+            "wind_deg": 70,
             "weather_desc": "clear sky",
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 295.67,
-            "feels_like": 295.39,
-            "temp_min": 294.24,
-            "temp_max": 296.59,
-            "pressure": 1026,
-            "humidity": 54
+            "temp": 294.97,
+            "feels_like": 294.7,
+            "temp_min": 293.9,
+            "temp_max": 296.7,
+            "pressure": 1027,
+            "humidity": 57
         }
     },
     {
@@ -2001,7 +2001,7 @@
             },
             "published_at": "2021-08-18T16:16:37Z",
             "statistics": {
-                "view_count": 208187,
+                "view_count": 208691,
                 "like_count": 801,
                 "dislike_count": 14,
                 "favorite_count": 0,
@@ -2017,12 +2017,12 @@
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 295.75,
-            "feels_like": 295.37,
-            "temp_min": 294.25,
-            "temp_max": 297.49,
+            "temp": 295.2,
+            "feels_like": 294.82,
+            "temp_min": 293.9,
+            "temp_max": 296.8,
             "pressure": 1026,
-            "humidity": 50
+            "humidity": 52
         }
     },
     {
@@ -2054,7 +2054,7 @@
             },
             "published_at": "2021-05-06T20:30:08Z",
             "statistics": {
-                "view_count": 385004,
+                "view_count": 385034,
                 "like_count": 1473,
                 "dislike_count": 36,
                 "favorite_count": 0,
@@ -2070,12 +2070,12 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 292.16,
+            "temp": 292.13,
             "feels_like": 292.02,
             "temp_min": 290.4,
-            "temp_max": 295.12,
+            "temp_max": 294.38,
             "pressure": 1030,
-            "humidity": 73
+            "humidity": 74
         }
     },
     {
@@ -2114,8 +2114,8 @@
             },
             "published_at": "2021-01-19T16:57:47Z",
             "statistics": {
-                "view_count": 2456783,
-                "like_count": 7618,
+                "view_count": 2456861,
+                "like_count": 7619,
                 "dislike_count": 177,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -2186,7 +2186,7 @@
             },
             "published_at": "2020-12-11T16:00:38Z",
             "statistics": {
-                "view_count": 5210623,
+                "view_count": 5210685,
                 "like_count": 55590,
                 "dislike_count": 6719,
                 "favorite_count": 0,
@@ -2196,18 +2196,18 @@
         "weather": {
             "sunrise": 1629774588,
             "sunset": 1629821610,
-            "wind_speed": 3.13,
-            "wind_deg": 26,
+            "wind_speed": 2.24,
+            "wind_deg": 344,
             "weather_desc": "clear sky",
             "weather_icon": "01n",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 299.36,
-            "feels_like": 299.36,
+            "temp": 298.81,
+            "feels_like": 299.21,
             "temp_min": 296.5,
-            "temp_max": 299.45,
+            "temp_max": 298.9,
             "pressure": 1005,
-            "humidity": 67
+            "humidity": 68
         }
     },
     {
@@ -2258,7 +2258,7 @@
             },
             "published_at": "2021-01-08T15:25:25Z",
             "statistics": {
-                "view_count": 91113,
+                "view_count": 91119,
                 "like_count": 474,
                 "dislike_count": 16,
                 "favorite_count": 0,
@@ -2274,12 +2274,12 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 301.54,
-            "feels_like": 300.88,
-            "temp_min": 296.64,
-            "temp_max": 304.29,
+            "temp": 301.5,
+            "feels_like": 300.91,
+            "temp_min": 296.43,
+            "temp_max": 303.74,
             "pressure": 1011,
-            "humidity": 36
+            "humidity": 37
         }
     },
     {
@@ -2327,8 +2327,8 @@
             },
             "published_at": "2021-05-26T15:51:23Z",
             "statistics": {
-                "view_count": 262426,
-                "like_count": 1564,
+                "view_count": 262460,
+                "like_count": 1565,
                 "dislike_count": 27,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -2343,10 +2343,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 292.7,
-            "feels_like": 292.15,
+            "temp": 292.42,
+            "feels_like": 291.84,
             "temp_min": 289.69,
-            "temp_max": 294.72,
+            "temp_max": 294.17,
             "pressure": 1014,
             "humidity": 55
         }
@@ -2409,7 +2409,7 @@
             },
             "published_at": "2021-06-14T17:31:14Z",
             "statistics": {
-                "view_count": 263737,
+                "view_count": 263765,
                 "like_count": 546,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -2425,10 +2425,10 @@
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.2,
-            "feels_like": 300.32,
+            "temp": 300.02,
+            "feels_like": 300.17,
             "temp_min": 296.4,
-            "temp_max": 303.15,
+            "temp_max": 302.59,
             "pressure": 1013,
             "humidity": 45
         }
@@ -2486,7 +2486,7 @@
             },
             "published_at": "2021-06-27T09:31:58Z",
             "statistics": {
-                "view_count": 403194,
+                "view_count": 403238,
                 "like_count": 677,
                 "dislike_count": 29,
                 "favorite_count": 0,
@@ -2502,10 +2502,10 @@
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.2,
-            "feels_like": 300.32,
+            "temp": 300.02,
+            "feels_like": 300.17,
             "temp_min": 296.4,
-            "temp_max": 303.15,
+            "temp_max": 302.59,
             "pressure": 1013,
             "humidity": 45
         }
@@ -2569,17 +2569,17 @@
             "sunrise": 1629779694,
             "sunset": 1629828693,
             "wind_speed": 0.89,
-            "wind_deg": 358,
+            "wind_deg": 1,
             "weather_desc": "few clouds",
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 301.03,
-            "feels_like": 300.52,
-            "temp_min": 296.53,
-            "temp_max": 304.18,
+            "temp": 300.98,
+            "feels_like": 300.54,
+            "temp_min": 296.32,
+            "temp_max": 303.63,
             "pressure": 1010,
-            "humidity": 37
+            "humidity": 38
         }
     },
     {
@@ -2619,7 +2619,7 @@
             },
             "published_at": "2018-09-25T15:49:57Z",
             "statistics": {
-                "view_count": 7346415,
+                "view_count": 7346473,
                 "like_count": 26261,
                 "dislike_count": 725,
                 "favorite_count": 0,
@@ -2630,15 +2630,15 @@
             "sunrise": 1629778956,
             "sunset": 1629828233,
             "wind_speed": 2.57,
-            "wind_deg": 130,
+            "wind_deg": 100,
             "weather_desc": "clear sky",
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 301.5,
-            "feels_like": 301.2,
+            "temp": 301.41,
+            "feels_like": 301.12,
             "temp_min": 299,
-            "temp_max": 302.38,
+            "temp_max": 302.58,
             "pressure": 1014,
             "humidity": 41
         }
@@ -2691,8 +2691,8 @@
             },
             "published_at": "2021-02-06T10:33:56Z",
             "statistics": {
-                "view_count": 395082,
-                "like_count": 3484,
+                "view_count": 395113,
+                "like_count": 3485,
                 "dislike_count": 33,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -2707,8 +2707,8 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 299.94,
-            "feels_like": 300.21,
+            "temp": 299.85,
+            "feels_like": 300.14,
             "temp_min": 295.12,
             "temp_max": 301.19,
             "pressure": 1012,
@@ -2744,7 +2744,7 @@
             },
             "published_at": "2021-08-18T16:04:03Z",
             "statistics": {
-                "view_count": 17951,
+                "view_count": 17989,
                 "like_count": 142,
                 "dislike_count": 2,
                 "favorite_count": 0,
@@ -2756,9 +2756,9 @@
             "sunset": 1629883668,
             "wind_speed": 0.91,
             "wind_deg": 224,
-            "weather_desc": "moderate rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "weather_desc": "overcast clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
             "temp": 291,
             "feels_like": 291.37,
@@ -2812,7 +2812,7 @@
             },
             "published_at": "2021-08-23T22:52:34Z",
             "statistics": {
-                "view_count": 5973,
+                "view_count": 6017,
                 "like_count": 86,
                 "dislike_count": 1,
                 "favorite_count": 0,
@@ -2824,9 +2824,9 @@
             "sunset": 1629884204,
             "wind_speed": 6.01,
             "wind_deg": 180,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "weather_desc": "overcast clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
             "temp": 301.17,
             "feels_like": 307.5,
@@ -2880,7 +2880,7 @@
             },
             "published_at": "2021-08-23T23:00:02Z",
             "statistics": {
-                "view_count": 1681,
+                "view_count": 1702,
                 "like_count": 31,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -2892,9 +2892,9 @@
             "sunset": 1629884204,
             "wind_speed": 6.01,
             "wind_deg": 180,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "weather_desc": "overcast clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
             "temp": 301.17,
             "feels_like": 307.5,
@@ -2939,7 +2939,7 @@
             },
             "published_at": "2021-02-25T13:56:46Z",
             "statistics": {
-                "view_count": 175805,
+                "view_count": 175812,
                 "like_count": 1066,
                 "dislike_count": 23,
                 "favorite_count": 0,
@@ -2949,16 +2949,16 @@
         "weather": {
             "sunrise": 1629835645,
             "sunset": 1629883139,
-            "wind_speed": 0.89,
-            "wind_deg": 215,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.34,
+            "wind_deg": 214,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.74,
-            "feels_like": 303.62,
+            "temp": 300.9,
+            "feels_like": 303.96,
             "temp_min": 298.32,
-            "temp_max": 301.13,
+            "temp_max": 301.47,
             "pressure": 1009,
             "humidity": 75
         }
@@ -2992,7 +2992,7 @@
             },
             "published_at": "2020-10-25T07:00:20Z",
             "statistics": {
-                "view_count": 166724,
+                "view_count": 166725,
                 "like_count": 991,
                 "dislike_count": 8,
                 "favorite_count": 0,
@@ -3004,7 +3004,7 @@
             "sunset": 1629883374,
             "wind_speed": 1.8,
             "wind_deg": 251,
-            "weather_desc": "light rain",
+            "weather_desc": "moderate rain",
             "weather_icon": "10n",
             "weather_status": "Rain",
             "base": "stations",
@@ -3091,7 +3091,7 @@
             },
             "published_at": "2020-11-24T06:10:28Z",
             "statistics": {
-                "view_count": 2417200,
+                "view_count": 2417244,
                 "like_count": 11614,
                 "dislike_count": 182,
                 "favorite_count": 0,
@@ -3103,7 +3103,7 @@
             "sunset": 1629883374,
             "wind_speed": 1.8,
             "wind_deg": 251,
-            "weather_desc": "light rain",
+            "weather_desc": "moderate rain",
             "weather_icon": "10n",
             "weather_status": "Rain",
             "base": "stations",
@@ -3144,7 +3144,7 @@
             },
             "published_at": "2021-08-19T00:10:26Z",
             "statistics": {
-                "view_count": 35291,
+                "view_count": 35304,
                 "like_count": 299,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -3156,7 +3156,7 @@
             "sunset": 1629883374,
             "wind_speed": 1.8,
             "wind_deg": 251,
-            "weather_desc": "light rain",
+            "weather_desc": "moderate rain",
             "weather_icon": "10n",
             "weather_status": "Rain",
             "base": "stations",
@@ -3197,7 +3197,7 @@
             },
             "published_at": "2021-08-19T12:48:03Z",
             "statistics": {
-                "view_count": 89466,
+                "view_count": 89545,
                 "like_count": 280,
                 "dislike_count": 14,
                 "favorite_count": 0,
@@ -3209,9 +3209,9 @@
             "sunset": 1629884037,
             "wind_speed": 1.61,
             "wind_deg": 159,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "weather_desc": "overcast clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
             "temp": 294.27,
             "feels_like": 294.63,
@@ -3274,7 +3274,7 @@
             },
             "published_at": "2021-08-23T03:54:57Z",
             "statistics": {
-                "view_count": 5090,
+                "view_count": 5115,
                 "like_count": 85,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -3286,9 +3286,9 @@
             "sunset": 1629883405,
             "wind_speed": 8.26,
             "wind_deg": 92,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "weather_desc": "overcast clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
             "temp": 294.16,
             "feels_like": 294.88,
@@ -3380,7 +3380,7 @@
             },
             "published_at": "2021-05-14T05:54:58Z",
             "statistics": {
-                "view_count": 62678,
+                "view_count": 62679,
                 "like_count": 220,
                 "dislike_count": 4,
                 "favorite_count": 0,
@@ -3443,7 +3443,7 @@
             },
             "published_at": "2020-12-08T00:57:27Z",
             "statistics": {
-                "view_count": 183822,
+                "view_count": 183827,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -3455,9 +3455,9 @@
             "sunset": 1629883263,
             "wind_speed": 5.72,
             "wind_deg": 250,
-            "weather_desc": "overcast clouds",
-            "weather_icon": "04n",
-            "weather_status": "Clouds",
+            "weather_desc": "light rain",
+            "weather_icon": "10n",
+            "weather_status": "Rain",
             "base": "stations",
             "temp": 300.17,
             "feels_like": 304.05,
@@ -3556,7 +3556,7 @@
             },
             "published_at": "2021-05-16T13:51:36Z",
             "statistics": {
-                "view_count": 595080,
+                "view_count": 595102,
                 "like_count": 2246,
                 "dislike_count": 33,
                 "favorite_count": 0,
@@ -3568,7 +3568,7 @@
             "sunset": 1629885133,
             "wind_speed": 5.14,
             "wind_deg": 210,
-            "weather_desc": "moderate rain",
+            "weather_desc": "heavy intensity rain",
             "weather_icon": "10n",
             "weather_status": "Rain",
             "base": "stations",
@@ -3645,7 +3645,7 @@
             },
             "published_at": "2021-01-03T09:28:05Z",
             "statistics": {
-                "view_count": 168887,
+                "view_count": 168894,
                 "like_count": 920,
                 "dislike_count": 15,
                 "favorite_count": 0,
@@ -3775,8 +3775,8 @@
             },
             "published_at": "2021-07-21T22:31:10Z",
             "statistics": {
-                "view_count": 73121,
-                "like_count": 529,
+                "view_count": 73144,
+                "like_count": 530,
                 "dislike_count": 3,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -3785,16 +3785,16 @@
         "weather": {
             "sunrise": 1629835645,
             "sunset": 1629883139,
-            "wind_speed": 0.89,
-            "wind_deg": 215,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.34,
+            "wind_deg": 214,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.74,
-            "feels_like": 303.62,
+            "temp": 300.9,
+            "feels_like": 303.96,
             "temp_min": 298.32,
-            "temp_max": 301.13,
+            "temp_max": 301.47,
             "pressure": 1009,
             "humidity": 75
         }
@@ -3860,7 +3860,7 @@
             },
             "published_at": "2020-08-09T02:14:20Z",
             "statistics": {
-                "view_count": 491431,
+                "view_count": 491457,
                 "like_count": 2753,
                 "dislike_count": 58,
                 "favorite_count": 0,
@@ -3870,16 +3870,16 @@
         "weather": {
             "sunrise": 1629835645,
             "sunset": 1629883139,
-            "wind_speed": 0.89,
-            "wind_deg": 215,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.34,
+            "wind_deg": 214,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.74,
-            "feels_like": 303.62,
+            "temp": 300.9,
+            "feels_like": 303.96,
             "temp_min": 298.32,
-            "temp_max": 301.13,
+            "temp_max": 301.47,
             "pressure": 1009,
             "humidity": 75
         }
@@ -3913,8 +3913,8 @@
             },
             "published_at": "2021-07-21T01:37:21Z",
             "statistics": {
-                "view_count": 128721,
-                "like_count": 965,
+                "view_count": 128800,
+                "like_count": 964,
                 "dislike_count": 24,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -3923,16 +3923,16 @@
         "weather": {
             "sunrise": 1629835656,
             "sunset": 1629883142,
-            "wind_speed": 0.45,
-            "wind_deg": 225,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.79,
+            "wind_deg": 200,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.77,
-            "feels_like": 303.69,
+            "temp": 300.88,
+            "feels_like": 303.92,
             "temp_min": 298.4,
-            "temp_max": 301.21,
+            "temp_max": 301.55,
             "pressure": 1009,
             "humidity": 75
         }
@@ -3976,16 +3976,16 @@
         "weather": {
             "sunrise": 1629835656,
             "sunset": 1629883142,
-            "wind_speed": 0.45,
-            "wind_deg": 225,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.79,
+            "wind_deg": 200,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.77,
-            "feels_like": 303.69,
+            "temp": 300.88,
+            "feels_like": 303.92,
             "temp_min": 298.4,
-            "temp_max": 301.21,
+            "temp_max": 301.55,
             "pressure": 1009,
             "humidity": 75
         }
@@ -4019,7 +4019,7 @@
             },
             "published_at": "2021-08-20T17:02:18Z",
             "statistics": {
-                "view_count": 15944,
+                "view_count": 15949,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -4149,7 +4149,7 @@
             },
             "published_at": "2019-01-08T00:22:21Z",
             "statistics": {
-                "view_count": 4621481,
+                "view_count": 4621498,
                 "like_count": 11467,
                 "dislike_count": 216,
                 "favorite_count": 0,
@@ -4161,7 +4161,7 @@
             "sunset": 1629883395,
             "wind_speed": 3.62,
             "wind_deg": 234,
-            "weather_desc": "light rain",
+            "weather_desc": "moderate rain",
             "weather_icon": "10n",
             "weather_status": "Rain",
             "base": "stations",
@@ -4210,7 +4210,7 @@
             },
             "published_at": "2019-02-01T23:40:43Z",
             "statistics": {
-                "view_count": 2522943,
+                "view_count": 2522945,
                 "like_count": 4645,
                 "dislike_count": 226,
                 "favorite_count": 0,
@@ -4222,9 +4222,9 @@
             "sunset": 1629883499,
             "wind_speed": 1.36,
             "wind_deg": 220,
-            "weather_desc": "overcast clouds",
-            "weather_icon": "04n",
-            "weather_status": "Clouds",
+            "weather_desc": "light rain",
+            "weather_icon": "10n",
+            "weather_status": "Rain",
             "base": "stations",
             "temp": 290.31,
             "feels_like": 290.56,
@@ -4316,7 +4316,7 @@
             },
             "published_at": "2021-04-08T02:20:08Z",
             "statistics": {
-                "view_count": 270244,
+                "view_count": 270259,
                 "like_count": 412,
                 "dislike_count": 9,
                 "favorite_count": 0,
@@ -4391,8 +4391,8 @@
             },
             "published_at": "2020-11-16T02:38:43Z",
             "statistics": {
-                "view_count": 3519616,
-                "like_count": 8438,
+                "view_count": 3519847,
+                "like_count": 8439,
                 "dislike_count": 275,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -4401,18 +4401,18 @@
         "weather": {
             "sunrise": 1629835669,
             "sunset": 1629883161,
-            "wind_speed": 0.45,
-            "wind_deg": 225,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.79,
+            "wind_deg": 200,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.36,
-            "feels_like": 303.05,
+            "temp": 300.47,
+            "feels_like": 303.17,
             "temp_min": 298.14,
-            "temp_max": 300.96,
+            "temp_max": 301.29,
             "pressure": 1008,
-            "humidity": 77
+            "humidity": 76
         }
     },
     {
@@ -4444,8 +4444,8 @@
             },
             "published_at": "2021-04-20T14:30:03Z",
             "statistics": {
-                "view_count": 16162376,
-                "like_count": 22641,
+                "view_count": 16164155,
+                "like_count": 22645,
                 "dislike_count": 2957,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -4454,18 +4454,18 @@
         "weather": {
             "sunrise": 1629835669,
             "sunset": 1629883161,
-            "wind_speed": 0.45,
-            "wind_deg": 225,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.79,
+            "wind_deg": 200,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.36,
-            "feels_like": 303.05,
+            "temp": 300.47,
+            "feels_like": 303.17,
             "temp_min": 298.14,
-            "temp_max": 300.96,
+            "temp_max": 301.29,
             "pressure": 1008,
-            "humidity": 77
+            "humidity": 76
         }
     },
     {
@@ -4497,7 +4497,7 @@
             },
             "published_at": "2021-05-11T04:51:05Z",
             "statistics": {
-                "view_count": 1171240,
+                "view_count": 1171340,
                 "like_count": 7413,
                 "dislike_count": 138,
                 "favorite_count": 0,
@@ -4507,16 +4507,16 @@
         "weather": {
             "sunrise": 1629835645,
             "sunset": 1629883139,
-            "wind_speed": 0.89,
-            "wind_deg": 215,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.34,
+            "wind_deg": 214,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.74,
-            "feels_like": 303.62,
+            "temp": 300.9,
+            "feels_like": 303.96,
             "temp_min": 298.32,
-            "temp_max": 301.13,
+            "temp_max": 301.47,
             "pressure": 1009,
             "humidity": 75
         }
@@ -4560,7 +4560,7 @@
             },
             "published_at": "2021-01-08T04:11:43Z",
             "statistics": {
-                "view_count": 4957837,
+                "view_count": 4958092,
                 "like_count": 42595,
                 "dislike_count": 954,
                 "favorite_count": 0,
@@ -4570,16 +4570,16 @@
         "weather": {
             "sunrise": 1629835656,
             "sunset": 1629883142,
-            "wind_speed": 0.45,
-            "wind_deg": 225,
-            "weather_desc": "light rain",
-            "weather_icon": "10n",
-            "weather_status": "Rain",
+            "wind_speed": 1.79,
+            "wind_deg": 200,
+            "weather_desc": "broken clouds",
+            "weather_icon": "04n",
+            "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.77,
-            "feels_like": 303.69,
+            "temp": 300.88,
+            "feels_like": 303.92,
             "temp_min": 298.4,
-            "temp_max": 301.21,
+            "temp_max": 301.55,
             "pressure": 1009,
             "humidity": 75
         }
@@ -4630,7 +4630,7 @@
             },
             "published_at": "2020-10-09T03:43:09Z",
             "statistics": {
-                "view_count": 308041,
+                "view_count": 308044,
                 "like_count": 863,
                 "dislike_count": 34,
                 "favorite_count": 0,
@@ -4642,14 +4642,14 @@
             "sunset": 1629883164,
             "wind_speed": 8.9,
             "wind_deg": 227,
-            "weather_desc": "overcast clouds",
-            "weather_icon": "04n",
-            "weather_status": "Clouds",
+            "weather_desc": "light rain",
+            "weather_icon": "10n",
+            "weather_status": "Rain",
             "base": "stations",
-            "temp": 300.65,
-            "feels_like": 304.41,
+            "temp": 300.66,
+            "feels_like": 304.44,
             "temp_min": 299,
-            "temp_max": 301.21,
+            "temp_max": 301.55,
             "pressure": 1008,
             "humidity": 83
         }
@@ -4683,8 +4683,8 @@
             },
             "published_at": "2021-08-24T10:56:52Z",
             "statistics": {
-                "view_count": 1035,
-                "like_count": 31,
+                "view_count": 1088,
+                "like_count": 32,
                 "dislike_count": 0,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -4742,7 +4742,7 @@
             },
             "published_at": "2021-07-01T14:14:43Z",
             "statistics": {
-                "view_count": 784800,
+                "view_count": 785016,
                 "like_count": 8205,
                 "dislike_count": 149,
                 "favorite_count": 0,
@@ -4761,7 +4761,7 @@
             "temp": 297.75,
             "feels_like": 298.51,
             "temp_min": 296.9,
-            "temp_max": 298.23,
+            "temp_max": 298.71,
             "pressure": 1005,
             "humidity": 86
         }
@@ -4808,7 +4808,7 @@
             },
             "published_at": "2021-05-08T12:43:41Z",
             "statistics": {
-                "view_count": 29449,
+                "view_count": 29451,
                 "like_count": 102,
                 "dislike_count": 5,
                 "favorite_count": 0,
@@ -4826,8 +4826,8 @@
             "base": "stations",
             "temp": 298.17,
             "feels_like": 299.18,
-            "temp_min": 298.16,
-            "temp_max": 299.12,
+            "temp_min": 298.12,
+            "temp_max": 298.29,
             "pressure": 1012,
             "humidity": 94
         }
@@ -4878,7 +4878,7 @@
             },
             "published_at": "2021-04-19T09:09:12Z",
             "statistics": {
-                "view_count": 121721,
+                "view_count": 121737,
                 "like_count": 845,
                 "dislike_count": 15,
                 "favorite_count": 0,
@@ -4894,12 +4894,12 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 293.8,
-            "feels_like": 293.57,
+            "temp": 293.58,
+            "feels_like": 293.35,
             "temp_min": 291.98,
             "temp_max": 295.45,
             "pressure": 1027,
-            "humidity": 63
+            "humidity": 64
         }
     },
     {
@@ -4946,7 +4946,7 @@
             },
             "published_at": "2021-01-26T15:44:27Z",
             "statistics": {
-                "view_count": 410206,
+                "view_count": 410221,
                 "like_count": 768,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -4956,18 +4956,18 @@
         "weather": {
             "sunrise": 1629779948,
             "sunset": 1629830941,
-            "wind_speed": 3.58,
-            "wind_deg": 34,
+            "wind_speed": 4.02,
+            "wind_deg": 25,
             "weather_desc": "broken clouds",
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 293.25,
-            "feels_like": 293.01,
+            "temp": 292.98,
+            "feels_like": 292.69,
             "temp_min": 291.97,
             "temp_max": 294.76,
             "pressure": 1027,
-            "humidity": 65
+            "humidity": 64
         }
     },
     {
@@ -5008,7 +5008,7 @@
             },
             "published_at": "2021-06-02T08:51:05Z",
             "statistics": {
-                "view_count": 382035,
+                "view_count": 382088,
                 "like_count": 878,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -5018,18 +5018,18 @@
         "weather": {
             "sunrise": 1629779948,
             "sunset": 1629830941,
-            "wind_speed": 3.58,
-            "wind_deg": 34,
+            "wind_speed": 4.02,
+            "wind_deg": 25,
             "weather_desc": "broken clouds",
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 293.25,
-            "feels_like": 293.01,
+            "temp": 292.98,
+            "feels_like": 292.69,
             "temp_min": 291.97,
             "temp_max": 294.76,
             "pressure": 1027,
-            "humidity": 65
+            "humidity": 64
         }
     },
     {
@@ -5090,8 +5090,8 @@
             },
             "published_at": "2021-08-18T15:28:59Z",
             "statistics": {
-                "view_count": 52962,
-                "like_count": 442,
+                "view_count": 53086,
+                "like_count": 443,
                 "dislike_count": 8,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -5106,10 +5106,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 295.01,
-            "feels_like": 294.56,
+            "temp": 294.8,
+            "feels_like": 294.33,
             "temp_min": 293.29,
-            "temp_max": 296.49,
+            "temp_max": 295.92,
             "pressure": 1025,
             "humidity": 50
         }
@@ -5149,7 +5149,7 @@
             },
             "published_at": "2021-04-14T15:19:58Z",
             "statistics": {
-                "view_count": 199619,
+                "view_count": 199641,
                 "like_count": 1508,
                 "dislike_count": 34,
                 "favorite_count": 0,
@@ -5159,16 +5159,16 @@
         "weather": {
             "sunrise": 1629780078,
             "sunset": 1629830877,
-            "wind_speed": 5.14,
+            "wind_speed": 4.63,
             "wind_deg": 20,
-            "weather_desc": "broken clouds",
-            "weather_icon": "04d",
+            "weather_desc": "few clouds",
+            "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 294.3,
-            "feels_like": 294.14,
+            "temp": 294.2,
+            "feels_like": 294.03,
             "temp_min": 292.56,
-            "temp_max": 295.91,
+            "temp_max": 295.92,
             "pressure": 1027,
             "humidity": 64
         }
@@ -5202,7 +5202,7 @@
             },
             "published_at": "2021-04-28T15:05:09Z",
             "statistics": {
-                "view_count": 86289,
+                "view_count": 86315,
                 "like_count": 423,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -5212,16 +5212,16 @@
         "weather": {
             "sunrise": 1629780152,
             "sunset": 1629830964,
-            "wind_speed": 4.47,
-            "wind_deg": 342,
-            "weather_desc": "broken clouds",
-            "weather_icon": "04d",
+            "wind_speed": 3.58,
+            "wind_deg": 298,
+            "weather_desc": "few clouds",
+            "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 294.19,
-            "feels_like": 294.18,
+            "temp": 294.08,
+            "feels_like": 294.06,
             "temp_min": 292.04,
-            "temp_max": 295.92,
+            "temp_max": 295.94,
             "pressure": 1026,
             "humidity": 70
         }
@@ -5275,7 +5275,7 @@
             },
             "published_at": "2021-03-23T14:34:07Z",
             "statistics": {
-                "view_count": 348789,
+                "view_count": 348806,
                 "like_count": 1173,
                 "dislike_count": 40,
                 "favorite_count": 0,
@@ -5291,10 +5291,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 294.05,
-            "feels_like": 294.02,
+            "temp": 293.92,
+            "feels_like": 293.88,
             "temp_min": 292.53,
-            "temp_max": 296.43,
+            "temp_max": 295.88,
             "pressure": 1027,
             "humidity": 70
         }
@@ -5328,7 +5328,7 @@
             },
             "published_at": "2021-03-25T11:46:26Z",
             "statistics": {
-                "view_count": 211447,
+                "view_count": 211457,
                 "like_count": 1236,
                 "dislike_count": 19,
                 "favorite_count": 0,
@@ -5344,10 +5344,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 288.43,
-            "feels_like": 288.31,
-            "temp_min": 287.95,
-            "temp_max": 288.64,
+            "temp": 288.37,
+            "feels_like": 288.25,
+            "temp_min": 286.9,
+            "temp_max": 289.41,
             "pressure": 1025,
             "humidity": 88
         }
@@ -5381,7 +5381,7 @@
             },
             "published_at": "2019-12-21T12:16:29Z",
             "statistics": {
-                "view_count": 998790,
+                "view_count": 998813,
                 "like_count": 6319,
                 "dislike_count": 119,
                 "favorite_count": 0,
@@ -5397,10 +5397,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 288.71,
-            "feels_like": 288.54,
+            "temp": 288.78,
+            "feels_like": 288.62,
             "temp_min": 288.09,
-            "temp_max": 289.15,
+            "temp_max": 289.55,
             "pressure": 1025,
             "humidity": 85
         }
@@ -5434,7 +5434,7 @@
             },
             "published_at": "2019-01-31T10:55:46Z",
             "statistics": {
-                "view_count": 4722252,
+                "view_count": 4722384,
                 "like_count": 6257,
                 "dislike_count": 182,
                 "favorite_count": 0,
@@ -5450,10 +5450,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 288.31,
-            "feels_like": 288.1,
+            "temp": 288.28,
+            "feels_like": 288.07,
             "temp_min": 288.05,
-            "temp_max": 288.75,
+            "temp_max": 289.15,
             "pressure": 1024,
             "humidity": 85
         }
@@ -5505,7 +5505,7 @@
             },
             "published_at": "2020-06-22T11:29:53Z",
             "statistics": {
-                "view_count": 2538188,
+                "view_count": 2538235,
                 "like_count": 9353,
                 "dislike_count": 231,
                 "favorite_count": 0,
@@ -5521,12 +5521,12 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 295.48,
-            "feels_like": 295.18,
+            "temp": 295.03,
+            "feels_like": 294.76,
             "temp_min": 292.47,
-            "temp_max": 296.11,
+            "temp_max": 295.56,
             "pressure": 1013,
-            "humidity": 54
+            "humidity": 57
         }
     },
     {
@@ -5584,7 +5584,7 @@
             },
             "published_at": "2020-09-07T17:17:22Z",
             "statistics": {
-                "view_count": 468619,
+                "view_count": 468626,
                 "like_count": 6838,
                 "dislike_count": 190,
                 "favorite_count": 0,
@@ -5600,10 +5600,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 294.69,
-            "feels_like": 294.73,
+            "temp": 294.2,
+            "feels_like": 294.19,
             "temp_min": 291.39,
-            "temp_max": 295.03,
+            "temp_max": 294.48,
             "pressure": 1015,
             "humidity": 70
         }
@@ -5651,7 +5651,7 @@
             },
             "published_at": "2021-06-22T13:26:00Z",
             "statistics": {
-                "view_count": 32215,
+                "view_count": 32221,
                 "like_count": 345,
                 "dislike_count": 9,
                 "favorite_count": 0,
@@ -5667,10 +5667,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 296.08,
-            "feels_like": 295.81,
+            "temp": 295.7,
+            "feels_like": 295.39,
             "temp_min": 292.61,
-            "temp_max": 296.25,
+            "temp_max": 295.7,
             "pressure": 1014,
             "humidity": 53
         }
@@ -5710,7 +5710,7 @@
             },
             "published_at": "2021-08-19T13:58:05Z",
             "statistics": {
-                "view_count": 3233,
+                "view_count": 3235,
                 "like_count": 114,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -5763,7 +5763,7 @@
             },
             "published_at": "2020-12-21T15:56:29Z",
             "statistics": {
-                "view_count": 5044349,
+                "view_count": 5044382,
                 "like_count": 24706,
                 "dislike_count": 1069,
                 "favorite_count": 0,
@@ -5825,7 +5825,7 @@
             },
             "published_at": "2021-08-24T12:32:48Z",
             "statistics": {
-                "view_count": 47,
+                "view_count": 48,
                 "like_count": 3,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -5841,12 +5841,12 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 298.5,
-            "feels_like": 299.49,
-            "temp_min": 298.23,
-            "temp_max": 299.2,
+            "temp": 298.23,
+            "feels_like": 299.25,
+            "temp_min": 298.2,
+            "temp_max": 298.36,
             "pressure": 1012,
-            "humidity": 92
+            "humidity": 94
         }
     },
     {
@@ -5891,7 +5891,7 @@
             },
             "published_at": "2020-12-28T07:50:29Z",
             "statistics": {
-                "view_count": 2282415,
+                "view_count": 2282439,
                 "like_count": 11256,
                 "dislike_count": 268,
                 "favorite_count": 0,
@@ -5955,8 +5955,8 @@
             },
             "published_at": "2020-01-17T05:46:51Z",
             "statistics": {
-                "view_count": 1566386,
-                "like_count": 4358,
+                "view_count": 1566431,
+                "like_count": 4359,
                 "dislike_count": 92,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -5967,7 +5967,7 @@
             "sunset": 1629804809,
             "wind_speed": 7.86,
             "wind_deg": 244,
-            "weather_desc": "light rain",
+            "weather_desc": "moderate rain",
             "weather_icon": "10n",
             "weather_status": "Rain",
             "base": "stations",
@@ -6013,8 +6013,8 @@
             },
             "published_at": "2021-08-22T21:01:55Z",
             "statistics": {
-                "view_count": 16296,
-                "like_count": 303,
+                "view_count": 16441,
+                "like_count": 305,
                 "dislike_count": 4,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -6120,7 +6120,7 @@
             },
             "published_at": "2021-07-09T01:28:26Z",
             "statistics": {
-                "view_count": 26077,
+                "view_count": 26084,
                 "like_count": 137,
                 "dislike_count": 2,
                 "favorite_count": 0,
@@ -6200,8 +6200,8 @@
             },
             "published_at": "2020-06-05T00:52:05Z",
             "statistics": {
-                "view_count": 281061,
-                "like_count": 1332,
+                "view_count": 281068,
+                "like_count": 1334,
                 "dislike_count": 33,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -6216,10 +6216,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.29,
-            "feels_like": 304.17,
+            "temp": 300.15,
+            "feels_like": 303.78,
             "temp_min": 299.2,
-            "temp_max": 301.34,
+            "temp_max": 300.65,
             "pressure": 1010,
             "humidity": 89
         }
@@ -6295,7 +6295,7 @@
             },
             "published_at": "2020-09-10T01:01:44Z",
             "statistics": {
-                "view_count": 460259,
+                "view_count": 460269,
                 "like_count": 1598,
                 "dislike_count": 35,
                 "favorite_count": 0,
@@ -6311,10 +6311,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 299.3,
-            "feels_like": 299.3,
+            "temp": 299.22,
+            "feels_like": 299.22,
             "temp_min": 298.4,
-            "temp_max": 300.54,
+            "temp_max": 299.85,
             "pressure": 1011,
             "humidity": 88
         }
@@ -6348,7 +6348,7 @@
             },
             "published_at": "2021-07-14T02:56:14Z",
             "statistics": {
-                "view_count": 19798,
+                "view_count": 19800,
                 "like_count": 137,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -6364,10 +6364,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 299.3,
-            "feels_like": 299.3,
+            "temp": 299.22,
+            "feels_like": 299.22,
             "temp_min": 298.4,
-            "temp_max": 300.54,
+            "temp_max": 299.85,
             "pressure": 1011,
             "humidity": 88
         }
@@ -6462,7 +6462,7 @@
             },
             "published_at": "2020-06-05T01:20:11Z",
             "statistics": {
-                "view_count": 3585708,
+                "view_count": 3585736,
                 "like_count": 11980,
                 "dislike_count": 536,
                 "favorite_count": 0,
@@ -6478,10 +6478,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.29,
-            "feels_like": 304.17,
+            "temp": 300.15,
+            "feels_like": 303.78,
             "temp_min": 299.2,
-            "temp_max": 301.34,
+            "temp_max": 300.65,
             "pressure": 1010,
             "humidity": 89
         }
@@ -6562,7 +6562,7 @@
             },
             "published_at": "2020-11-23T01:49:16Z",
             "statistics": {
-                "view_count": 84061,
+                "view_count": 84064,
                 "like_count": 451,
                 "dislike_count": 12,
                 "favorite_count": 0,
@@ -6578,10 +6578,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.29,
-            "feels_like": 304.17,
+            "temp": 300.15,
+            "feels_like": 303.78,
             "temp_min": 299.2,
-            "temp_max": 301.34,
+            "temp_max": 300.65,
             "pressure": 1010,
             "humidity": 89
         }
@@ -6653,7 +6653,7 @@
             },
             "published_at": "2020-06-05T01:21:27Z",
             "statistics": {
-                "view_count": 1051532,
+                "view_count": 1051552,
                 "like_count": 2657,
                 "dislike_count": 57,
                 "favorite_count": 0,
@@ -6669,10 +6669,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 299.3,
-            "feels_like": 299.3,
+            "temp": 299.22,
+            "feels_like": 299.22,
             "temp_min": 298.4,
-            "temp_max": 300.54,
+            "temp_max": 299.85,
             "pressure": 1011,
             "humidity": 88
         }
@@ -6746,7 +6746,7 @@
             },
             "published_at": "2020-06-05T00:43:21Z",
             "statistics": {
-                "view_count": 6485332,
+                "view_count": 6485405,
                 "like_count": 17491,
                 "dislike_count": 293,
                 "favorite_count": 0,
@@ -6762,10 +6762,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 299.97,
-            "feels_like": 302.58,
+            "temp": 299.82,
+            "feels_like": 302.25,
             "temp_min": 298.91,
-            "temp_max": 301.05,
+            "temp_max": 300.37,
             "pressure": 1010,
             "humidity": 81
         }
@@ -6846,7 +6846,7 @@
             },
             "published_at": "2021-07-09T01:14:27Z",
             "statistics": {
-                "view_count": 75407,
+                "view_count": 75419,
                 "like_count": 361,
                 "dislike_count": 1,
                 "favorite_count": 0,
@@ -6862,10 +6862,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 296.16,
-            "feels_like": 296.61,
-            "temp_min": 296.16,
-            "temp_max": 296.16,
+            "temp": 295.61,
+            "feels_like": 296,
+            "temp_min": 295.61,
+            "temp_max": 295.61,
             "pressure": 1011,
             "humidity": 80
         }
@@ -6938,7 +6938,7 @@
             },
             "published_at": "2021-06-09T06:00:52Z",
             "statistics": {
-                "view_count": 180552,
+                "view_count": 180630,
                 "like_count": 1229,
                 "dislike_count": 21,
                 "favorite_count": 0,
@@ -6954,10 +6954,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 301.45,
-            "feels_like": 306.36,
+            "temp": 301.11,
+            "feels_like": 305.46,
             "temp_min": 300.16,
-            "temp_max": 302.3,
+            "temp_max": 301.61,
             "pressure": 1009,
             "humidity": 82
         }
@@ -7003,7 +7003,7 @@
             },
             "published_at": "2021-08-19T18:20:03Z",
             "statistics": {
-                "view_count": 12096,
+                "view_count": 12106,
                 "like_count": 87,
                 "dislike_count": 2,
                 "favorite_count": 0,
@@ -7063,7 +7063,7 @@
             },
             "published_at": "2021-08-24T04:44:52Z",
             "statistics": {
-                "view_count": 2676,
+                "view_count": 2698,
                 "like_count": 58,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -7139,8 +7139,8 @@
             },
             "published_at": "2020-08-10T03:28:56Z",
             "statistics": {
-                "view_count": 381691,
-                "like_count": 2129,
+                "view_count": 381723,
+                "like_count": 2131,
                 "dislike_count": 25,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -7224,7 +7224,7 @@
             },
             "published_at": "2020-06-05T00:53:45Z",
             "statistics": {
-                "view_count": 483557,
+                "view_count": 483566,
                 "like_count": 1383,
                 "dislike_count": 45,
                 "favorite_count": 0,
@@ -7240,10 +7240,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 297.02,
-            "feels_like": 297.79,
+            "temp": 296.95,
+            "feels_like": 297.71,
             "temp_min": 296.22,
-            "temp_max": 298.37,
+            "temp_max": 297.68,
             "pressure": 1012,
             "humidity": 89
         }
@@ -7375,8 +7375,8 @@
             },
             "published_at": "2021-01-08T10:56:18Z",
             "statistics": {
-                "view_count": 416415,
-                "like_count": 2241,
+                "view_count": 416495,
+                "like_count": 2242,
                 "dislike_count": 23,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -7470,8 +7470,8 @@
             },
             "published_at": "2021-06-22T10:49:08Z",
             "statistics": {
-                "view_count": 627266,
-                "like_count": 5373,
+                "view_count": 627419,
+                "like_count": 5374,
                 "dislike_count": 65,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -7489,7 +7489,7 @@
             "temp": 300.12,
             "feels_like": 303.8,
             "temp_min": 299.96,
-            "temp_max": 302.1,
+            "temp_max": 301.41,
             "pressure": 1012,
             "humidity": 90
         }
@@ -7525,7 +7525,7 @@
             },
             "published_at": "2021-05-14T02:46:48Z",
             "statistics": {
-                "view_count": 31328,
+                "view_count": 31332,
                 "like_count": 205,
                 "dislike_count": 5,
                 "favorite_count": 0,
@@ -7628,8 +7628,8 @@
             },
             "published_at": "2021-07-28T08:37:38Z",
             "statistics": {
-                "view_count": 396295,
-                "like_count": 4334,
+                "view_count": 396975,
+                "like_count": 4336,
                 "dislike_count": 36,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -7681,7 +7681,7 @@
             },
             "published_at": "2021-08-20T00:30:10Z",
             "statistics": {
-                "view_count": 1396,
+                "view_count": 1397,
                 "like_count": 37,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -7697,10 +7697,10 @@
             "weather_icon": "04n",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 299.75,
-            "feels_like": 299.75,
+            "temp": 299.74,
+            "feels_like": 299.74,
             "temp_min": 299.48,
-            "temp_max": 301.62,
+            "temp_max": 300.93,
             "pressure": 1009,
             "humidity": 84
         }
@@ -7734,7 +7734,7 @@
             },
             "published_at": "2021-07-01T19:36:30Z",
             "statistics": {
-                "view_count": 50977,
+                "view_count": 50988,
                 "like_count": 438,
                 "dislike_count": 5,
                 "favorite_count": 0,
@@ -7750,12 +7750,12 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 299.1,
-            "feels_like": 299.1,
-            "temp_min": 297.09,
-            "temp_max": 302.38,
+            "temp": 299.2,
+            "feels_like": 299.2,
+            "temp_min": 297.64,
+            "temp_max": 302.04,
             "pressure": 1011,
-            "humidity": 83
+            "humidity": 82
         }
     },
     {
@@ -7787,7 +7787,7 @@
             },
             "published_at": "2021-07-01T22:03:38Z",
             "statistics": {
-                "view_count": 33922,
+                "view_count": 33936,
                 "like_count": 313,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -7803,12 +7803,12 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 299.1,
-            "feels_like": 299.1,
-            "temp_min": 297.09,
-            "temp_max": 302.38,
+            "temp": 299.2,
+            "feels_like": 299.2,
+            "temp_min": 297.64,
+            "temp_max": 302.04,
             "pressure": 1011,
-            "humidity": 83
+            "humidity": 82
         }
     },
     {
@@ -7840,7 +7840,7 @@
             },
             "published_at": "2021-07-30T14:52:43Z",
             "statistics": {
-                "view_count": 38821,
+                "view_count": 38841,
                 "like_count": 344,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -7856,10 +7856,10 @@
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 300.52,
-            "feels_like": 301.3,
-            "temp_min": 298.35,
-            "temp_max": 303.16,
+            "temp": 300.51,
+            "feels_like": 301.29,
+            "temp_min": 298.73,
+            "temp_max": 302.77,
             "pressure": 1013,
             "humidity": 55
         }
@@ -7893,7 +7893,7 @@
             },
             "published_at": "2021-08-04T18:59:26Z",
             "statistics": {
-                "view_count": 23426,
+                "view_count": 23442,
                 "like_count": 318,
                 "dislike_count": 6,
                 "favorite_count": 0,
@@ -7909,12 +7909,12 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 301.37,
-            "feels_like": 304.69,
-            "temp_min": 299.11,
-            "temp_max": 304.32,
+            "temp": 301.6,
+            "feels_like": 305.03,
+            "temp_min": 299.27,
+            "temp_max": 304.46,
             "pressure": 1012,
-            "humidity": 73
+            "humidity": 72
         }
     },
     {
@@ -7946,8 +7946,8 @@
             },
             "published_at": "2021-07-24T02:15:51Z",
             "statistics": {
-                "view_count": 25108,
-                "like_count": 362,
+                "view_count": 25119,
+                "like_count": 363,
                 "dislike_count": 5,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -7962,12 +7962,12 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 301.37,
-            "feels_like": 304.69,
-            "temp_min": 299.11,
-            "temp_max": 304.32,
+            "temp": 301.6,
+            "feels_like": 305.03,
+            "temp_min": 299.27,
+            "temp_max": 304.46,
             "pressure": 1012,
-            "humidity": 73
+            "humidity": 72
         }
     },
     {
@@ -7999,7 +7999,7 @@
             },
             "published_at": "2021-05-08T22:20:28Z",
             "statistics": {
-                "view_count": 74279,
+                "view_count": 74297,
                 "like_count": 782,
                 "dislike_count": 13,
                 "favorite_count": 0,
@@ -8015,12 +8015,12 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 301.37,
-            "feels_like": 304.69,
-            "temp_min": 299.11,
-            "temp_max": 304.32,
+            "temp": 301.6,
+            "feels_like": 305.03,
+            "temp_min": 299.27,
+            "temp_max": 304.46,
             "pressure": 1012,
-            "humidity": 73
+            "humidity": 72
         }
     },
     {
@@ -8054,7 +8054,7 @@
             },
             "published_at": "2021-08-04T19:00:15Z",
             "statistics": {
-                "view_count": 17677,
+                "view_count": 17686,
                 "like_count": 240,
                 "dislike_count": 4,
                 "favorite_count": 0,
@@ -8070,12 +8070,12 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 301.37,
-            "feels_like": 304.69,
-            "temp_min": 299.11,
-            "temp_max": 304.32,
+            "temp": 301.6,
+            "feels_like": 305.03,
+            "temp_min": 299.27,
+            "temp_max": 304.46,
             "pressure": 1012,
-            "humidity": 73
+            "humidity": 72
         }
     },
     {
@@ -8107,7 +8107,7 @@
             },
             "published_at": "2021-08-20T18:40:26Z",
             "statistics": {
-                "view_count": 7477,
+                "view_count": 7491,
                 "like_count": 146,
                 "dislike_count": 1,
                 "favorite_count": 0,
@@ -8123,10 +8123,10 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 302.35,
-            "feels_like": 307.13,
-            "temp_min": 299.82,
-            "temp_max": 303.94,
+            "temp": 302.28,
+            "feels_like": 306.96,
+            "temp_min": 299.4,
+            "temp_max": 304.65,
             "pressure": 1011,
             "humidity": 74
         }
@@ -8180,7 +8180,7 @@
             },
             "published_at": "2019-10-06T21:41:21Z",
             "statistics": {
-                "view_count": 831055,
+                "view_count": 831102,
                 "like_count": 2875,
                 "dislike_count": 62,
                 "favorite_count": 0,
@@ -8190,14 +8190,14 @@
         "weather": {
             "sunrise": 1629802409,
             "sunset": 1629851615,
-            "wind_speed": 1.54,
-            "wind_deg": 170,
-            "weather_desc": "scattered clouds",
-            "weather_icon": "03d",
-            "weather_status": "Clouds",
+            "wind_speed": 4.12,
+            "wind_deg": 290,
+            "weather_desc": "clear sky",
+            "weather_icon": "01d",
+            "weather_status": "Clear",
             "base": "stations",
-            "temp": 300.83,
-            "feels_like": 303.09,
+            "temp": 300.92,
+            "feels_like": 303.26,
             "temp_min": 298.86,
             "temp_max": 303.59,
             "pressure": 1015,
@@ -8264,7 +8264,7 @@
             },
             "published_at": "2021-06-10T15:59:43Z",
             "statistics": {
-                "view_count": 408043,
+                "view_count": 408057,
                 "like_count": 1625,
                 "dislike_count": 19,
                 "favorite_count": 0,
@@ -8345,7 +8345,7 @@
             },
             "published_at": "2021-06-10T15:58:01Z",
             "statistics": {
-                "view_count": 1110061,
+                "view_count": 1110167,
                 "like_count": 5316,
                 "dislike_count": 79,
                 "favorite_count": 0,
@@ -8414,7 +8414,7 @@
             },
             "published_at": "2019-09-21T10:58:28Z",
             "statistics": {
-                "view_count": 1220406,
+                "view_count": 1220414,
                 "like_count": 4688,
                 "dislike_count": 76,
                 "favorite_count": 0,
@@ -8467,8 +8467,8 @@
             },
             "published_at": "2021-06-14T17:22:22Z",
             "statistics": {
-                "view_count": 476988,
-                "like_count": 1325,
+                "view_count": 477029,
+                "like_count": 1326,
                 "dislike_count": 29,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -8477,18 +8477,18 @@
         "weather": {
             "sunrise": 1629803898,
             "sunset": 1629853405,
-            "wind_speed": 10.8,
-            "wind_deg": 70,
+            "wind_speed": 9.77,
+            "wind_deg": 60,
             "weather_desc": "haze",
             "weather_icon": "50d",
             "weather_status": "Haze",
             "base": "stations",
-            "temp": 291.38,
-            "feels_like": 291.61,
+            "temp": 291.78,
+            "feels_like": 292,
             "temp_min": 291.07,
-            "temp_max": 292.04,
+            "temp_max": 293.04,
             "pressure": 1011,
-            "humidity": 90
+            "humidity": 88
         }
     },
     {
@@ -8520,7 +8520,7 @@
             },
             "published_at": "2021-08-24T07:57:09Z",
             "statistics": {
-                "view_count": 1237,
+                "view_count": 1307,
                 "like_count": 19,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -8531,15 +8531,15 @@
             "sunrise": 1629803065,
             "sunset": 1629849373,
             "wind_speed": 1.79,
-            "wind_deg": 155,
+            "wind_deg": 177,
             "weather_desc": "clear sky",
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 305.1,
-            "feels_like": 312.1,
+            "temp": 305.29,
+            "feels_like": 312.29,
             "temp_min": 303.15,
-            "temp_max": 305.94,
+            "temp_max": 306.49,
             "pressure": 1017,
             "humidity": 69
         }
@@ -8573,7 +8573,7 @@
             },
             "published_at": "2020-11-12T12:33:34Z",
             "statistics": {
-                "view_count": 4533451,
+                "view_count": 4533563,
                 "like_count": 5808,
                 "dislike_count": 316,
                 "favorite_count": 0,
@@ -8589,12 +8589,12 @@
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 300.7,
-            "feels_like": 301.96,
-            "temp_min": 298.85,
+            "temp": 301.21,
+            "feels_like": 302.58,
+            "temp_min": 299.31,
             "temp_max": 302.48,
             "pressure": 1017,
-            "humidity": 60
+            "humidity": 59
         }
     },
     {
@@ -8626,7 +8626,7 @@
             },
             "published_at": "2021-04-12T20:34:48Z",
             "statistics": {
-                "view_count": 57992,
+                "view_count": 57997,
                 "like_count": 638,
                 "dislike_count": 10,
                 "favorite_count": 0,
@@ -8679,8 +8679,8 @@
             },
             "published_at": "2021-08-22T18:14:35Z",
             "statistics": {
-                "view_count": 1935,
-                "like_count": 55,
+                "view_count": 1939,
+                "like_count": 64,
                 "dislike_count": 0,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -8696,11 +8696,11 @@
             "weather_status": "Clouds",
             "base": "stations",
             "temp": 297.98,
-            "feels_like": 298.45,
+            "feels_like": 298.42,
             "temp_min": 297.09,
             "temp_max": 298.75,
             "pressure": 1010,
-            "humidity": 74
+            "humidity": 73
         }
     },
     {
@@ -8732,8 +8732,8 @@
             },
             "published_at": "2021-08-24T01:25:47Z",
             "statistics": {
-                "view_count": 9181,
-                "like_count": 133,
+                "view_count": 9346,
+                "like_count": 134,
                 "dislike_count": 3,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -8785,8 +8785,8 @@
             },
             "published_at": "2021-07-29T21:21:09Z",
             "statistics": {
-                "view_count": 35124,
-                "like_count": 433,
+                "view_count": 35166,
+                "like_count": 434,
                 "dislike_count": 6,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -8801,10 +8801,10 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 294.59,
-            "feels_like": 294.77,
-            "temp_min": 291.75,
-            "temp_max": 298.71,
+            "temp": 294.67,
+            "feels_like": 294.86,
+            "temp_min": 291.86,
+            "temp_max": 299.24,
             "pressure": 1014,
             "humidity": 76
         }
@@ -8838,8 +8838,8 @@
             },
             "published_at": "2019-05-09T18:31:59Z",
             "statistics": {
-                "view_count": 1942401,
-                "like_count": 5071,
+                "view_count": 1942480,
+                "like_count": 5072,
                 "dislike_count": 239,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -8854,8 +8854,8 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 303.07,
-            "feels_like": 310.07,
+            "temp": 303.03,
+            "feels_like": 310.03,
             "temp_min": 302.59,
             "temp_max": 305.38,
             "pressure": 1017,
@@ -8909,7 +8909,7 @@
             },
             "published_at": "2019-09-24T00:56:29Z",
             "statistics": {
-                "view_count": 1141595,
+                "view_count": 1141628,
                 "like_count": 5799,
                 "dislike_count": 88,
                 "favorite_count": 0,
@@ -8925,8 +8925,8 @@
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 287.59,
-            "feels_like": 286.6,
+            "temp": 287.65,
+            "feels_like": 286.67,
             "temp_min": 277.53,
             "temp_max": 289.07,
             "pressure": 1022,
@@ -8962,8 +8962,8 @@
             },
             "published_at": "2021-08-21T13:59:14Z",
             "statistics": {
-                "view_count": 10293,
-                "like_count": 145,
+                "view_count": 10307,
+                "like_count": 144,
                 "dislike_count": 2,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -8972,16 +8972,16 @@
         "weather": {
             "sunrise": 1629799050,
             "sunset": 1629847880,
-            "wind_speed": 0.45,
-            "wind_deg": 150,
+            "wind_speed": 0.89,
+            "wind_deg": 226,
             "weather_desc": "clear sky",
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 302.37,
-            "feels_like": 304.56,
-            "temp_min": 299.25,
-            "temp_max": 304.94,
+            "temp": 302.14,
+            "feels_like": 304.17,
+            "temp_min": 299.39,
+            "temp_max": 304.64,
             "pressure": 1011,
             "humidity": 60
         }
@@ -9015,8 +9015,8 @@
             },
             "published_at": "2021-07-27T18:49:33Z",
             "statistics": {
-                "view_count": 1124980,
-                "like_count": 4797,
+                "view_count": 1125232,
+                "like_count": 4798,
                 "dislike_count": 142,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -9025,18 +9025,18 @@
         "weather": {
             "sunrise": 1629804335,
             "sunset": 1629852623,
-            "wind_speed": 3.09,
-            "wind_deg": 0,
+            "wind_speed": 4.12,
+            "wind_deg": 180,
             "weather_desc": "clear sky",
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 303.88,
-            "feels_like": 310.88,
-            "temp_min": 303.4,
-            "temp_max": 305.02,
+            "temp": 304.72,
+            "feels_like": 311.72,
+            "temp_min": 303.47,
+            "temp_max": 306.12,
             "pressure": 1015,
-            "humidity": 79
+            "humidity": 74
         }
     },
     {
@@ -9068,7 +9068,7 @@
             },
             "published_at": "2019-06-12T11:18:10Z",
             "statistics": {
-                "view_count": 798548,
+                "view_count": 798560,
                 "like_count": 3664,
                 "dislike_count": 72,
                 "favorite_count": 0,
@@ -9084,8 +9084,8 @@
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 303.59,
-            "feels_like": 307.76,
+            "temp": 303.6,
+            "feels_like": 307.78,
             "temp_min": 302.58,
             "temp_max": 306.48,
             "pressure": 1017,
@@ -9140,8 +9140,8 @@
             },
             "published_at": "2021-08-11T20:39:14Z",
             "statistics": {
-                "view_count": 139411,
-                "like_count": 1089,
+                "view_count": 139468,
+                "like_count": 1090,
                 "dislike_count": 17,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -9204,7 +9204,7 @@
             },
             "published_at": "2020-07-07T13:49:27Z",
             "statistics": {
-                "view_count": 1632087,
+                "view_count": 1632119,
                 "like_count": 6155,
                 "dislike_count": 189,
                 "favorite_count": 0,
@@ -9220,12 +9220,12 @@
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 303.84,
-            "feels_like": 305.64,
-            "temp_min": 301.36,
-            "temp_max": 306.15,
+            "temp": 304.02,
+            "feels_like": 305.75,
+            "temp_min": 301.65,
+            "temp_max": 305.99,
             "pressure": 1014,
-            "humidity": 52
+            "humidity": 51
         }
     },
     {
@@ -9274,8 +9274,8 @@
             },
             "published_at": "2021-05-03T15:19:07Z",
             "statistics": {
-                "view_count": 5941974,
-                "like_count": 26264,
+                "view_count": 5942381,
+                "like_count": 26265,
                 "dislike_count": 1229,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -9290,12 +9290,12 @@
             "weather_icon": "01d",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 303.84,
-            "feels_like": 305.64,
-            "temp_min": 301.36,
-            "temp_max": 306.15,
+            "temp": 304.02,
+            "feels_like": 305.75,
+            "temp_min": 301.65,
+            "temp_max": 305.99,
             "pressure": 1014,
-            "humidity": 52
+            "humidity": 51
         }
     },
     {
@@ -9358,7 +9358,7 @@
             },
             "published_at": "2021-07-14T18:57:43Z",
             "statistics": {
-                "view_count": 147752,
+                "view_count": 147816,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -9374,10 +9374,10 @@
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 302.45,
-            "feels_like": 304.7,
+            "temp": 302.48,
+            "feels_like": 304.75,
             "temp_min": 301.16,
-            "temp_max": 303.79,
+            "temp_max": 304.34,
             "pressure": 1015,
             "humidity": 60
         }
@@ -9434,7 +9434,7 @@
             },
             "published_at": "2021-07-29T16:10:19Z",
             "statistics": {
-                "view_count": 195168,
+                "view_count": 195213,
                 "like_count": 948,
                 "dislike_count": 13,
                 "favorite_count": 0,
@@ -9445,13 +9445,13 @@
             "sunrise": 1629802675,
             "sunset": 1629848903,
             "wind_speed": 0.89,
-            "wind_deg": 172,
+            "wind_deg": 40,
             "weather_desc": "broken clouds",
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 305.12,
-            "feels_like": 312.07,
+            "temp": 305.1,
+            "feels_like": 312.02,
             "temp_min": 303.72,
             "temp_max": 306.49,
             "pressure": 1018,
@@ -9489,7 +9489,7 @@
             },
             "published_at": "2021-03-03T21:49:57Z",
             "statistics": {
-                "view_count": 126078,
+                "view_count": 126087,
                 "like_count": 1170,
                 "dislike_count": 10,
                 "favorite_count": 0,
@@ -9499,18 +9499,18 @@
         "weather": {
             "sunrise": 1629798417,
             "sunset": 1629847715,
-            "wind_speed": 1.79,
-            "wind_deg": 271,
+            "wind_speed": 2.24,
+            "wind_deg": 336,
             "weather_desc": "scattered clouds",
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
             "temp": 299.57,
             "feels_like": 299.57,
-            "temp_min": 299.25,
+            "temp_min": 299.26,
             "temp_max": 300.92,
             "pressure": 1009,
-            "humidity": 74
+            "humidity": 73
         }
     },
     {
@@ -9542,7 +9542,7 @@
             },
             "published_at": "2021-06-01T19:42:00Z",
             "statistics": {
-                "view_count": 136745,
+                "view_count": 136754,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -9558,9 +9558,9 @@
             "weather_icon": "50d",
             "weather_status": "Mist",
             "base": "stations",
-            "temp": 288.38,
-            "feels_like": 288.36,
-            "temp_min": 287.12,
+            "temp": 288.4,
+            "feels_like": 288.38,
+            "temp_min": 287.27,
             "temp_max": 293.36,
             "pressure": 1014,
             "humidity": 92
@@ -9611,7 +9611,7 @@
             },
             "published_at": "2020-09-01T21:54:52Z",
             "statistics": {
-                "view_count": 614121,
+                "view_count": 614131,
                 "like_count": 3527,
                 "dislike_count": 72,
                 "favorite_count": 0,
@@ -9621,16 +9621,16 @@
         "weather": {
             "sunrise": 1629812035,
             "sunset": 1629859859,
-            "wind_speed": 1.79,
-            "wind_deg": 163,
+            "wind_speed": 1.34,
+            "wind_deg": 198,
             "weather_desc": "overcast clouds",
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 288.99,
-            "feels_like": 288.8,
+            "temp": 289.21,
+            "feels_like": 289.04,
             "temp_min": 287.04,
-            "temp_max": 293.05,
+            "temp_max": 293.44,
             "pressure": 1014,
             "humidity": 83
         }
@@ -9667,8 +9667,8 @@
             },
             "published_at": "2021-08-21T12:53:21Z",
             "statistics": {
-                "view_count": 31741,
-                "like_count": 284,
+                "view_count": 31882,
+                "like_count": 285,
                 "dislike_count": 3,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -9683,12 +9683,12 @@
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 301.73,
-            "feels_like": 304.05,
+            "temp": 301.8,
+            "feels_like": 304.03,
             "temp_min": 300.26,
-            "temp_max": 303.44,
+            "temp_max": 303.62,
             "pressure": 1013,
-            "humidity": 64
+            "humidity": 63
         }
     },
     {
@@ -9755,7 +9755,7 @@
             },
             "published_at": "2021-06-25T13:25:33Z",
             "statistics": {
-                "view_count": 425851,
+                "view_count": 425900,
                 "like_count": 2809,
                 "dislike_count": 114,
                 "favorite_count": 0,
@@ -9771,10 +9771,10 @@
             "weather_icon": "50d",
             "weather_status": "Smoke",
             "base": "stations",
-            "temp": 304.48,
-            "feels_like": 302.67,
-            "temp_min": 303.18,
-            "temp_max": 307.17,
+            "temp": 304.78,
+            "feels_like": 302.96,
+            "temp_min": 303.33,
+            "temp_max": 307.72,
             "pressure": 1013,
             "humidity": 23
         }
@@ -9819,8 +9819,8 @@
             },
             "published_at": "2021-08-19T20:19:44Z",
             "statistics": {
-                "view_count": 20773,
-                "like_count": 416,
+                "view_count": 20830,
+                "like_count": 417,
                 "dislike_count": 10,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -9835,10 +9835,10 @@
             "weather_icon": "50d",
             "weather_status": "Smoke",
             "base": "stations",
-            "temp": 304.48,
-            "feels_like": 302.67,
-            "temp_min": 303.18,
-            "temp_max": 307.17,
+            "temp": 304.78,
+            "feels_like": 302.96,
+            "temp_min": 303.33,
+            "temp_max": 307.72,
             "pressure": 1013,
             "humidity": 23
         }
@@ -9872,7 +9872,7 @@
             },
             "published_at": "2021-06-07T00:36:25Z",
             "statistics": {
-                "view_count": 38632,
+                "view_count": 38635,
                 "like_count": 417,
                 "dislike_count": 5,
                 "favorite_count": 0,
@@ -9888,12 +9888,12 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 302.18,
-            "feels_like": 306.13,
-            "temp_min": 299.81,
-            "temp_max": 304.5,
+            "temp": 302.23,
+            "feels_like": 306.44,
+            "temp_min": 300.05,
+            "temp_max": 304.61,
             "pressure": 1011,
-            "humidity": 71
+            "humidity": 72
         }
     },
     {
@@ -9925,7 +9925,7 @@
             },
             "published_at": "2021-05-04T16:30:39Z",
             "statistics": {
-                "view_count": 392294,
+                "view_count": 392330,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -9941,12 +9941,12 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 306.05,
-            "feels_like": 309.82,
-            "temp_min": 304.59,
+            "temp": 305.96,
+            "feels_like": 309.34,
+            "temp_min": 303.49,
             "temp_max": 307.47,
             "pressure": 1021,
-            "humidity": 52
+            "humidity": 51
         }
     },
     {
@@ -9994,7 +9994,7 @@
             },
             "published_at": "2021-06-21T13:09:55Z",
             "statistics": {
-                "view_count": 55487,
+                "view_count": 55510,
                 "like_count": 352,
                 "dislike_count": 10,
                 "favorite_count": 0,
@@ -10004,18 +10004,18 @@
         "weather": {
             "sunrise": 1629802936,
             "sunset": 1629851580,
-            "wind_speed": 2.06,
-            "wind_deg": 250,
+            "wind_speed": 2.57,
+            "wind_deg": 230,
             "weather_desc": "scattered clouds",
             "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 302.17,
-            "feels_like": 307.1,
-            "temp_min": 301.24,
-            "temp_max": 304.82,
+            "temp": 302.55,
+            "feels_like": 307.63,
+            "temp_min": 301.52,
+            "temp_max": 305.05,
             "pressure": 1016,
-            "humidity": 76
+            "humidity": 74
         }
     },
     {
@@ -10047,7 +10047,7 @@
             },
             "published_at": "2021-05-14T12:34:02Z",
             "statistics": {
-                "view_count": 19008,
+                "view_count": 19011,
                 "like_count": 256,
                 "dislike_count": 1,
                 "favorite_count": 0,
@@ -10063,10 +10063,10 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 298.97,
-            "feels_like": 299.77,
+            "temp": 299.04,
+            "feels_like": 299.85,
             "temp_min": 294.83,
-            "temp_max": 302.31,
+            "temp_max": 301.98,
             "pressure": 1011,
             "humidity": 83
         }
@@ -10100,7 +10100,7 @@
             },
             "published_at": "2020-02-25T00:59:30Z",
             "statistics": {
-                "view_count": 581987,
+                "view_count": 581993,
                 "like_count": 2122,
                 "dislike_count": 60,
                 "favorite_count": 0,
@@ -10112,16 +10112,16 @@
             "sunset": 1629849240,
             "wind_speed": 5.66,
             "wind_deg": 240,
-            "weather_desc": "broken clouds",
-            "weather_icon": "04d",
+            "weather_desc": "scattered clouds",
+            "weather_icon": "03d",
             "weather_status": "Clouds",
             "base": "stations",
             "temp": 298.17,
-            "feels_like": 298.76,
+            "feels_like": 298.63,
             "temp_min": 297.85,
             "temp_max": 299.84,
             "pressure": 1015,
-            "humidity": 78
+            "humidity": 73
         }
     },
     {
@@ -10179,7 +10179,7 @@
             },
             "published_at": "2021-02-12T03:04:33Z",
             "statistics": {
-                "view_count": 342500,
+                "view_count": 342514,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -10190,17 +10190,17 @@
             "sunrise": 1629802846,
             "sunset": 1629849415,
             "wind_speed": 0.89,
-            "wind_deg": 217,
+            "wind_deg": 167,
             "weather_desc": "overcast clouds",
             "weather_icon": "04d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 303.63,
-            "feels_like": 309.94,
+            "temp": 303.72,
+            "feels_like": 309.89,
             "temp_min": 302.07,
-            "temp_max": 305.19,
+            "temp_max": 305.34,
             "pressure": 1018,
-            "humidity": 72
+            "humidity": 71
         }
     },
     {
@@ -10232,7 +10232,7 @@
             },
             "published_at": "2020-10-25T14:22:45Z",
             "statistics": {
-                "view_count": 290582,
+                "view_count": 290593,
                 "like_count": 2668,
                 "dislike_count": 47,
                 "favorite_count": 0,
@@ -10248,10 +10248,10 @@
             "weather_icon": "02d",
             "weather_status": "Clouds",
             "base": "stations",
-            "temp": 302.35,
-            "feels_like": 306.72,
-            "temp_min": 299.82,
-            "temp_max": 303.94,
+            "temp": 302.21,
+            "feels_like": 306.39,
+            "temp_min": 299.36,
+            "temp_max": 303.82,
             "pressure": 1011,
             "humidity": 72
         }
@@ -10285,8 +10285,8 @@
             },
             "published_at": "2021-07-06T10:33:14Z",
             "statistics": {
-                "view_count": 288068,
-                "like_count": 1048,
+                "view_count": 288124,
+                "like_count": 1049,
                 "dislike_count": 17,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -10338,7 +10338,7 @@
             },
             "published_at": "2021-06-18T14:25:40Z",
             "statistics": {
-                "view_count": 61683,
+                "view_count": 61694,
                 "like_count": 406,
                 "dislike_count": 11,
                 "favorite_count": 0,
