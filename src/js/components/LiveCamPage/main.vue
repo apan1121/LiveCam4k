@@ -1,14 +1,18 @@
 <template>
     <div v-if="cssLoaded && LiveCamInfo" class="live-cam-page">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" :class="{ scroll }">
             <div class="container">
                 <ul class="navbar-nav">
-                    <li class="nav-item live-cam-page-back" @click="goBack">
+                    <li class="nav-item live-cam-page-back"
+                        :title="$t('LiveCamPage.Back')"
+                        @click="goBack"
+                    >
                         <i class="fas fa-chevron-left"></i>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item"
+                        :title="$t('LiveCamPage.Share')"
                         @click="shareUrl"
                     >
                         <i class="fas fa-share-alt"></i>
@@ -16,6 +20,7 @@
                     <li v-if="ReportUrl" class="nav-item">
                         <a :href="ReportUrl"
                             target="_blank"
+                            :title="$t('LiveCamPage.Report')"
                         >
                             <i class="far fa-paper-plane"></i>
                         </a>
@@ -60,6 +65,7 @@ export default {
         ...mapGetters([
             'LiveCamListFlag',
             'LiveCamList',
+            'PageSetting_scrollTop',
         ]),
         LiveCamInfo(){
             if (!this.LiveCamListFlag) {
@@ -76,6 +82,9 @@ export default {
                 url = this.$t('LiveCamPage.ReportUrl', { liveCamKey: this.LiveCamInfo.key });
             }
             return url;
+        },
+        scroll(){
+            return this.PageSetting_scrollTop > 0;
         },
     },
     watch: {

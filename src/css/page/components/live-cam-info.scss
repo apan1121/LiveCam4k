@@ -6,7 +6,7 @@
         margin-bottom: $spacer * 1.5;
         .youtube-player-box{
             position: relative;
-            max-height: 90vh;
+            max-height: calc(100vh - #{$spacer * 4});
             width: 100%;
             background: #000;
 

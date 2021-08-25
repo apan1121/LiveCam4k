@@ -272,6 +272,9 @@ export default {
 
     LiveCamPage: {
         ReportUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSctqk4YCsKe1i3YmJ9tOc6ZizhgzneyoyUhmHwGZ550tgSeAQ/viewform?usp=pp_url&entry.1747969396={liveCamKey}',
+        Report: 'Report',
+        Share: 'Share',
+        Back: 'Back',
     },
 
     WeatherStatus: {

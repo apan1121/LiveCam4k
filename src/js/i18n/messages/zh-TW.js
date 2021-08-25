@@ -274,6 +274,9 @@ export default {
 
     LiveCamPage: {
         ReportUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScxdmjNg1ZkMbGwgfizYU4lJrYx_6fVnIyqzHf3K28ek14ohg/viewform?entry.1539737227={liveCamKey}',
+        Report: '回報',
+        Share: '分享',
+        Back: '回上一頁',
     },
 
     WeatherStatus: {

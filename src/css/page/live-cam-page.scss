@@ -15,6 +15,7 @@ body[page-name="LiveCamPage"] {
             padding-top: $spacer * 3;
             > .navbar{
                 height: $spacer * 3.5;
+                transition: height 0.3s;
                 >.container{
                     .navbar-nav {
                         flex-direction: row;
@@ -22,6 +23,7 @@ body[page-name="LiveCamPage"] {
                             font-size: $spacer * 2;
                             cursor: pointer;
                             color: $gray-100;
+                            transition: font-size 0.3s;
                             a {
                                 color: $gray-100;
                             }
@@ -38,6 +40,16 @@ body[page-name="LiveCamPage"] {
                         &:last-child{
                             .nav-item{
                                 padding-left: $spacer * 2.5;
+                            }
+                        }
+                    }
+                }
+                &.scroll{
+                    height: $spacer * 2;
+                    >.container{
+                        .navbar-nav {
+                            .nav-item{
+                                font-size: $spacer * 1.25;
                             }
                         }
                     }
