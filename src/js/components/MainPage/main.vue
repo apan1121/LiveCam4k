@@ -88,6 +88,13 @@ export default {
         },
     },
     watch: {
+        '$i18n.locale': {
+            immediate: true,
+            deep: true,
+            handler(){
+                this.SetPageSetting({ lang: this.$i18n.locale });
+            },
+        },
     },
     created(){},
     mounted(){

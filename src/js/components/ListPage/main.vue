@@ -28,13 +28,6 @@ import { linkRegister } from 'lib/common/util';
 import LiveCam4kPageMixin from 'lib/common/mixins/LiveCam4kPageMixin';
 import { module_name, module_store } from './store/index';
 
-linkRegister.register([
-    {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: '/dist/css/page/list-page.css',
-    },
-]);
 
 // import $ from 'jquery';
 // import 'bootstrap';
@@ -51,7 +44,9 @@ export default {
     mixins: [LiveCam4kPageMixin],
     props: {},
     data(){
-        return {};
+        return {
+            cssLoaded: false,
+        };
     },
     computed: {
         ...mapGetters([
@@ -78,7 +73,19 @@ export default {
             this.$store.registerModule(module_name_array, module_store);
         }
     },
-    created(){},
+    created(){
+        const that = this;
+        linkRegister.register([
+            {
+                rel: 'stylesheet',
+                type: 'text/css',
+                href: '/dist/css/page/list-page.css',
+                onload: () => {
+                    that.cssLoaded = true;
+                },
+            },
+        ]);
+    },
     mounted(){
         const that = this;
         that.setPageTitle('');

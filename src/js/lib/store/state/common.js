@@ -5,6 +5,7 @@ export default {
     PageSetting_device: '',
     PageSetting_browser: {},
 
+    PageSetting_lang: 'en-US',
     CurrentPosition: false,
 
     LiveCamListFlag: false,
@@ -24,6 +25,8 @@ export default {
     // MapProviderUrl: 'http://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
     // MapProviderUrl: 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
     // MapProviderUrl: 'https://cartocdn_{s}.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png',
+    // MapProviderUrl: 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png',
+    // MapProviderUrl: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
 
     WeatherIcon: {
         '01d': 'icon icon-sun',
