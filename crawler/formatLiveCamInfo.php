@@ -221,6 +221,8 @@ foreach ($youtubeList AS $youtubeInfo) {
             } else if (!empty($youtubeInfo['title'])) {
                 $title = $youtubeInfo['title'];
             }
+            $title = str_replace('🔴', '', $title);
+            $title = trim($title);
 
 
             $notLiveYoutubeFind[] = [
@@ -698,6 +700,8 @@ function searchYoutubeByKeyword(string $keyword, $channelId)
         "q" => $keyword,
         "key" => $YOUTUBE_API_KEY,
         "maxResults" => 10,
+        "type" => 'video',
+        "eventType" => 'live',
     ];
 
     $url = "https://www.googleapis.com/youtube/v3/search?".http_build_query($params);
