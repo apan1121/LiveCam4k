@@ -1243,7 +1243,7 @@ class GpsMapper {
     public function latLngToTimezoneString( $lat, $lng)
     {
         $timezone = $this->timezoneStrings[$this->kdLookupRoot($lat,$lng)];
-        $hour = $this->timezoneHours[$timezone];
+        $hour = $this->timezoneHours[$timezone] ?? null;
 
         return ["timezone" => $timezone, "hour" => $hour];
     }

@@ -117,6 +117,8 @@ foreach ($LiveCameInputList AS $LiveCameInputListIndex => $_LiveCameInputList) {
     $youtube_url = $_LiveCameInputList['Youtube 影片'];
     $youtube_id = parseYoutubeId($youtube_url);
     $gps = $_LiveCameInputList['GPS 座標'];
+    $website = $_LiveCameInputList['Website 網址'];
+
     if (empty($gps)) {
         $gps = [];
     } else {
@@ -140,6 +142,7 @@ foreach ($LiveCameInputList AS $LiveCameInputListIndex => $_LiveCameInputList) {
                     'created_at' => '',
                     'updated_at' => '',
                     'youtube_id' => $youtube_id,
+                    'website' => $website,
                 ];
                 $SheetEmptyLiveCamList[] = $tmp;
                 $LiveCameInputListUsedIndex[] = $LiveCameInputListIndex;
@@ -150,6 +153,7 @@ foreach ($LiveCameInputList AS $LiveCameInputListIndex => $_LiveCameInputList) {
         }
     }
 }
+
 /**
  * 移除表單內容
  */
@@ -158,7 +162,7 @@ if (!empty($LiveCameInputListUsedIndex)) {
         unset($LiveCameInputList[$index]);
     }
     $LiveCameInputList = array_values($LiveCameInputList);
-    $LiveCameInputList = formatArrToSheet($LiveCameInputList, ['時間戳記', 'Youtube 影片', 'GPS 座標']);
+    $LiveCameInputList = formatArrToSheet($LiveCameInputList, ['時間戳記', 'Youtube 影片', 'GPS 座標', 'Website 網址']);
     $spreadSheet->clear("LiveCamListInput", "A", 1, "Z", $LiveCamInputSheetCount);
     $spreadSheet->set("LiveCamListInput", $LiveCameInputList);
 }
@@ -183,6 +187,8 @@ foreach ($SheetEmptyLiveCamList AS $liveCamInfo) {
 
     $YoutubeIdMapToLiveCamKey[$liveCamInfo['youtube_id']] = $key;
 }
+
+
 
 
 /**
@@ -310,6 +316,7 @@ $LiveCamList = [];
 
 
 $ResponseMailError = [];
+
 foreach ($SheetLiveCamList AS &$liveCamInfo) {
     $orgLiveCamInfo = json_decode(json_encode($liveCamInfo), true);
     $key = $liveCamInfo['key'];
@@ -433,6 +440,7 @@ foreach ($SheetLiveCamList AS &$liveCamInfo) {
         "youtube" => $liveCamInfo['youtube'],
         "gps" => $gps,
         "embed" => $liveCamInfo['embed'],
+        "website" => $liveCamInfo['website'] ?? '',
         "timezone" => $timezone,
 
         "video" => $video_info,
@@ -484,7 +492,7 @@ save(LIVE_CAM_LIST, $LiveCamList, true);
 showMsg("寫回 Sheet 中");
 $SheetLiveCamList = array_values($SheetLiveCamList);
 $SheetLiveCamList = array_orderby($SheetLiveCamList, "local", SORT_ASC, "city", SORT_ASC);
-$SheetLiveCamList = formatArrToSheet($SheetLiveCamList, ['key','local', 'city', 'youtube', 'gps', 'embed', 'error', 'offline_at', 'title', 'created_at', 'updated_at']);
+$SheetLiveCamList = formatArrToSheet($SheetLiveCamList, ['key','local', 'city', 'youtube', 'gps', 'embed', 'error', 'offline_at', 'website', 'title', 'created_at', 'updated_at']);
 $spreadSheet->set("LiveCamList", $SheetLiveCamList);
 
 /**
