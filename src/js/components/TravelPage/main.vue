@@ -1,15 +1,18 @@
 <template>
     <div v-if="cssLoaded" id="travel">
-        travel
+        <template v-if="start_point === false">
+            <choose-start-point-box @sumbit="sumbit"></choose-start-point-box>
+        </template>
     </div>
 </template>
 <script>
 import { mapActions, mapMutations, mapGetters } from 'vuex';
-
 import LiveCam4kPageMixin from 'lib/common/mixins/LiveCam4kPageMixin';
-import { linkRegister } from 'lib/common/util';
+import { linkRegister, string } from 'lib/common/util';
 
 import { module_name, module_store } from './store/index';
+
+import ChooseStartPointBox from './components/ChooseStartPointBox.vue';
 // import $ from 'jquery';
 // import 'bootstrap';
 
@@ -17,13 +20,16 @@ import { module_name, module_store } from './store/index';
 // import { string, jsVars, popup, trackJS, localStorage, ppPanel } from 'lib/common/util';
 
 export default {
-    components: {},
+    components: {
+        ChooseStartPointBox,
+    },
     filters: {},
     mixins: [LiveCam4kPageMixin],
     props: {},
     data(){
         return {
             cssLoaded: false,
+            start_point: false,
         };
     },
     computed: {
@@ -63,6 +69,9 @@ export default {
     methods: {
         ...mapActions({}),
         ...mapMutations({}),
+        sumbit(data){
+            console.log(data);
+        },
     },
 };
 </script>

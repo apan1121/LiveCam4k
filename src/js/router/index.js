@@ -30,13 +30,12 @@ const routes = [
         meta: { title: '攝影機' },
         props: true,
     },
-
     {
         path: '*',
         redirect: {
             name: 'ListPage',
         },
-      }
+    },
 ];
 
 const router = new VueRouter({

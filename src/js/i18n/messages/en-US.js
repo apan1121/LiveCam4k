@@ -309,4 +309,11 @@ export default {
         wind_speed: 'Wind Speed',
         temp: 'Temperature',
     },
+
+    TravelPage: {
+        Dice: {
+            Random: 'Random',
+            CurrentPoint: 'Current Position',
+        },
+    },
 };

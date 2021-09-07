@@ -188,7 +188,7 @@ export default {
                 } else {
                     this.canShare = true;
                 }
-            }, 100);
+            }, 50);
         },
         shareTo(type){
             const that = this;

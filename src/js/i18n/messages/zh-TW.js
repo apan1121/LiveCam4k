@@ -313,4 +313,11 @@ export default {
         sunset: '日落',
         pressure: '氣壓',
     },
+
+    TravelPage: {
+        Dice: {
+            Random: '亂數',
+            CurrentPoint: '當前地點',
+        },
+    },
 };

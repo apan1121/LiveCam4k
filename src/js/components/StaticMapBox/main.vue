@@ -39,10 +39,16 @@ export default {
             type: Boolean,
             default: true,
         },
+        moveMarkWait: {
+            type: Number,
+            default: 300,
+        },
     },
     data(){
         return {
             initFlag: false,
+            map: null,
+            marker: null,
         };
     },
     computed: {
@@ -53,6 +59,21 @@ export default {
     watch: {
         initFlag(){
             this.init();
+        },
+        lat(){
+            if (!!this.map && 1) {
+                this.setPosition();
+            }
+        },
+        lng(){
+            if (!!this.map && 1) {
+                this.setPosition();
+            }
+        },
+        zoom(){
+            if (!!this.map && 1) {
+                this.setZoom();
+            }
         },
     },
     created(){
@@ -97,11 +118,7 @@ export default {
                 }).addTo(that.map);
 
                 that.map.setView(new L.LatLng(that.lat, that.lng), that.zoom);
-                L.marker(new L.LatLng(that.lat, that.lng))
-                    .on('click', () => {
-                        that.$emit('click-point', new L.LatLng(that.lat, that.lng));
-                    })
-                    .addTo(that.map);
+                that.setMark();
 
                 if (!that.dragging) {
                     that.map.dragging.disable();
@@ -109,8 +126,33 @@ export default {
                     that.map.doubleClickZoom.disable();
                     that.map.scrollWheelZoom.disable();
                 }
-
             }, 300);
+        },
+        setPosition(){
+            const that = this;
+            clearTimeout(that.setPositionTimer);
+            that.setPositionTimer = setTimeout(() => {
+                that.map.setView(new L.LatLng(that.lat, that.lng), that.zoom);
+                that.setMark();
+            }, that.moveMarkWait);
+        },
+        setMark(){
+            const that = this;
+            if (!!that.marker && 1) {
+                that.map.removeLayer(that.marker);
+            }
+            that.marker = L.marker(new L.LatLng(that.lat, that.lng))
+                .on('click', () => {
+                    that.$emit('click-point', new L.LatLng(that.lat, that.lng));
+                })
+                .addTo(that.map);
+        },
+        setZoom(){
+            const that = this;
+            clearTimeout(that.setZoomTimer);
+            that.setZoomTimer = setTimeout(() => {
+                that.map.setZoom(that.zoom);
+            }, 100);
         },
     },
 };
