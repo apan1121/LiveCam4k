@@ -53,7 +53,7 @@
                 <template v-else>
                     <div class="choose-live-cam-box">
                         <div class="choose-live-cam-empty">
-                            處理中
+                            <loading-box></loading-box>
                         </div>
                     </div>
                 </template>
@@ -84,6 +84,7 @@ import CalcLiveCamList from '../components/CalcLiveCamList.vue';
 
 export default {
     components: {
+        LoadingBox: () => import('components/LoadingBox/main.vue'),
         StaticMapBox: () => import('components/StaticMapBox/main.vue'),
         CalcLiveCamList,
     },
