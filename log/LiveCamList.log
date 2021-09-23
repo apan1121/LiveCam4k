@@ -99,9 +99,9 @@
             "weather_icon": "01n",
             "weather_status": "Clear",
             "base": "stations",
-            "temp": 277.28,
-            "feels_like": 275.87,
-            "temp_min": 271.44,
+            "temp": 277.71,
+            "feels_like": 276.37,
+            "temp_min": 273.72,
             "temp_max": 281.36,
             "pressure": 1016,
             "humidity": 76
@@ -222,7 +222,7 @@
             },
             "published_at": "2021-05-21T13:52:29Z",
             "statistics": {
-                "view_count": 458488,
+                "view_count": 458489,
                 "like_count": 756,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -734,8 +734,8 @@
             },
             "published_at": "2021-09-22T18:52:07Z",
             "statistics": {
-                "view_count": 15398,
-                "like_count": 818,
+                "view_count": 15497,
+                "like_count": 820,
                 "dislike_count": 7,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -837,7 +837,7 @@
             "published_at": "2021-09-15T09:37:36Z",
             "statistics": {
                 "view_count": 75043,
-                "like_count": 1493,
+                "like_count": 1494,
                 "dislike_count": 15,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -1003,7 +1003,7 @@
             },
             "published_at": "2019-11-26T18:51:02Z",
             "statistics": {
-                "view_count": 6137842,
+                "view_count": 6137853,
                 "like_count": 18040,
                 "dislike_count": 552,
                 "favorite_count": 0,
@@ -1541,7 +1541,7 @@
             },
             "published_at": "2021-09-08T13:24:05Z",
             "statistics": {
-                "view_count": 34595,
+                "view_count": 34608,
                 "like_count": 134,
                 "dislike_count": 4,
                 "favorite_count": 0,
@@ -1654,7 +1654,7 @@
             },
             "published_at": "2021-09-17T15:48:46Z",
             "statistics": {
-                "view_count": 7646,
+                "view_count": 7648,
                 "like_count": 59,
                 "dislike_count": 4,
                 "favorite_count": 0,
@@ -1816,7 +1816,7 @@
             },
             "published_at": "2019-11-18T16:25:21Z",
             "statistics": {
-                "view_count": 2202088,
+                "view_count": 2202092,
                 "like_count": 8737,
                 "dislike_count": 219,
                 "favorite_count": 0,
@@ -2008,7 +2008,7 @@
             },
             "published_at": "2021-08-31T20:30:27Z",
             "statistics": {
-                "view_count": 16038,
+                "view_count": 16040,
                 "like_count": 201,
                 "dislike_count": 4,
                 "favorite_count": 0,
@@ -2071,7 +2071,7 @@
             },
             "published_at": "2021-08-31T20:28:26Z",
             "statistics": {
-                "view_count": 18749,
+                "view_count": 18752,
                 "like_count": 238,
                 "dislike_count": 4,
                 "favorite_count": 0,
@@ -2647,7 +2647,7 @@
             },
             "published_at": "2021-03-28T11:04:46Z",
             "statistics": {
-                "view_count": 1435225,
+                "view_count": 1435227,
                 "like_count": 3410,
                 "dislike_count": 130,
                 "favorite_count": 0,
@@ -2827,7 +2827,7 @@
             },
             "published_at": "2020-02-28T12:05:04Z",
             "statistics": {
-                "view_count": 2311340,
+                "view_count": 2311341,
                 "like_count": 6624,
                 "dislike_count": 205,
                 "favorite_count": 0,
@@ -3048,7 +3048,7 @@
             },
             "published_at": "2020-11-12T06:50:38Z",
             "statistics": {
-                "view_count": 9969644,
+                "view_count": 9969650,
                 "like_count": 47504,
                 "dislike_count": 1172,
                 "favorite_count": 0,
@@ -3123,7 +3123,7 @@
             },
             "published_at": "2020-02-11T09:08:56Z",
             "statistics": {
-                "view_count": 1363843,
+                "view_count": 1363846,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -3689,7 +3689,7 @@
             },
             "published_at": "2020-11-09T10:01:36Z",
             "statistics": {
-                "view_count": 637484,
+                "view_count": 637491,
                 "like_count": 938,
                 "dislike_count": 156,
                 "favorite_count": 0,
@@ -3982,7 +3982,7 @@
             },
             "published_at": "2019-12-12T13:43:55Z",
             "statistics": {
-                "view_count": 498853,
+                "view_count": 498854,
                 "like_count": 4565,
                 "dislike_count": 162,
                 "favorite_count": 0,
@@ -4589,7 +4589,7 @@
             },
             "published_at": "2021-08-23T15:43:40Z",
             "statistics": {
-                "view_count": 458474,
+                "view_count": 458477,
                 "like_count": 2761,
                 "dislike_count": 109,
                 "favorite_count": 0,
@@ -5034,8 +5034,8 @@
             },
             "published_at": "2021-09-23T01:36:45Z",
             "statistics": {
-                "view_count": 17,
-                "like_count": 4,
+                "view_count": 22,
+                "like_count": 5,
                 "dislike_count": 0,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -5095,7 +5095,7 @@
             },
             "published_at": "2021-01-19T16:57:47Z",
             "statistics": {
-                "view_count": 2768726,
+                "view_count": 2768736,
                 "like_count": 8222,
                 "dislike_count": 201,
                 "favorite_count": 0,
@@ -6405,7 +6405,7 @@
             },
             "published_at": "2020-02-25T17:28:35Z",
             "statistics": {
-                "view_count": 9870668,
+                "view_count": 9870701,
                 "like_count": 65451,
                 "dislike_count": 1333,
                 "favorite_count": 0,
@@ -6467,7 +6467,7 @@
             },
             "published_at": "2018-09-25T15:49:57Z",
             "statistics": {
-                "view_count": 7512994,
+                "view_count": 7513005,
                 "like_count": 26954,
                 "dislike_count": 744,
                 "favorite_count": 0,
@@ -6530,7 +6530,7 @@
             },
             "published_at": "2019-01-03T10:58:40Z",
             "statistics": {
-                "view_count": 1120146,
+                "view_count": 1120147,
                 "like_count": 6084,
                 "dislike_count": 146,
                 "favorite_count": 0,
@@ -6979,7 +6979,7 @@
             },
             "published_at": "2021-09-20T07:01:02Z",
             "statistics": {
-                "view_count": 3616,
+                "view_count": 3617,
                 "like_count": 46,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -7039,7 +7039,7 @@
             },
             "published_at": "2021-02-25T13:56:46Z",
             "statistics": {
-                "view_count": 218607,
+                "view_count": 218613,
                 "like_count": 1240,
                 "dislike_count": 25,
                 "favorite_count": 0,
@@ -7155,7 +7155,7 @@
             },
             "published_at": "2020-10-25T07:00:20Z",
             "statistics": {
-                "view_count": 180057,
+                "view_count": 180059,
                 "like_count": 1054,
                 "dislike_count": 10,
                 "favorite_count": 0,
@@ -7309,7 +7309,7 @@
             },
             "published_at": "2021-08-19T00:10:26Z",
             "statistics": {
-                "view_count": 91310,
+                "view_count": 91332,
                 "like_count": 595,
                 "dislike_count": 12,
                 "favorite_count": 0,
@@ -7363,7 +7363,7 @@
             },
             "published_at": "2021-09-18T01:51:43Z",
             "statistics": {
-                "view_count": 80975,
+                "view_count": 81057,
                 "like_count": 254,
                 "dislike_count": 12,
                 "favorite_count": 0,
@@ -7514,7 +7514,7 @@
             "published_at": "2021-07-20T23:36:44Z",
             "statistics": {
                 "view_count": 116635,
-                "like_count": 901,
+                "like_count": 902,
                 "dislike_count": 19,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -7621,7 +7621,7 @@
             },
             "published_at": "2021-05-14T05:54:58Z",
             "statistics": {
-                "view_count": 90552,
+                "view_count": 90559,
                 "like_count": 314,
                 "dislike_count": 7,
                 "favorite_count": 0,
@@ -7853,7 +7853,7 @@
             },
             "published_at": "2021-05-16T13:51:36Z",
             "statistics": {
-                "view_count": 741751,
+                "view_count": 741785,
                 "like_count": 2643,
                 "dislike_count": 44,
                 "favorite_count": 0,
@@ -7907,7 +7907,7 @@
             },
             "published_at": "2019-12-28T09:48:35Z",
             "statistics": {
-                "view_count": 203070,
+                "view_count": 203071,
                 "like_count": 725,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -7997,7 +7997,7 @@
             },
             "published_at": "2021-01-03T09:28:05Z",
             "statistics": {
-                "view_count": 205656,
+                "view_count": 205664,
                 "like_count": 1083,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -8182,7 +8182,7 @@
             },
             "published_at": "2021-07-21T22:31:10Z",
             "statistics": {
-                "view_count": 171693,
+                "view_count": 171713,
                 "like_count": 1110,
                 "dislike_count": 15,
                 "favorite_count": 0,
@@ -8268,7 +8268,7 @@
             },
             "published_at": "2020-08-09T02:14:20Z",
             "statistics": {
-                "view_count": 520146,
+                "view_count": 520149,
                 "like_count": 2887,
                 "dislike_count": 65,
                 "favorite_count": 0,
@@ -8322,7 +8322,7 @@
             },
             "published_at": "2021-07-21T01:37:21Z",
             "statistics": {
-                "view_count": 239175,
+                "view_count": 239194,
                 "like_count": 1981,
                 "dislike_count": 47,
                 "favorite_count": 0,
@@ -8459,7 +8459,7 @@
             },
             "published_at": "2021-06-22T03:09:57Z",
             "statistics": {
-                "view_count": 64174,
+                "view_count": 64179,
                 "like_count": 387,
                 "dislike_count": 6,
                 "favorite_count": 0,
@@ -8513,7 +8513,7 @@
             },
             "published_at": "2021-09-19T18:48:02Z",
             "statistics": {
-                "view_count": 14157,
+                "view_count": 14176,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -8694,7 +8694,7 @@
             },
             "published_at": "2021-09-21T02:30:16Z",
             "statistics": {
-                "view_count": 814,
+                "view_count": 815,
                 "like_count": 11,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -9315,7 +9315,7 @@
             },
             "published_at": "2021-05-11T04:51:05Z",
             "statistics": {
-                "view_count": 1491222,
+                "view_count": 1491279,
                 "like_count": 9415,
                 "dislike_count": 193,
                 "favorite_count": 0,
@@ -9450,7 +9450,7 @@
             },
             "published_at": "2020-10-09T03:43:09Z",
             "statistics": {
-                "view_count": 342694,
+                "view_count": 342710,
                 "like_count": 948,
                 "dislike_count": 35,
                 "favorite_count": 0,
@@ -9558,7 +9558,7 @@
             },
             "published_at": "2021-09-06T06:32:19Z",
             "statistics": {
-                "view_count": 45518,
+                "view_count": 45533,
                 "like_count": 878,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -10118,7 +10118,7 @@
             },
             "published_at": "2021-06-02T08:51:05Z",
             "statistics": {
-                "view_count": 490828,
+                "view_count": 490829,
                 "like_count": 1070,
                 "dislike_count": 20,
                 "favorite_count": 0,
@@ -10330,7 +10330,7 @@
             },
             "published_at": "2021-04-14T15:19:58Z",
             "statistics": {
-                "view_count": 273675,
+                "view_count": 273677,
                 "like_count": 2021,
                 "dislike_count": 43,
                 "favorite_count": 0,
@@ -10384,7 +10384,7 @@
             },
             "published_at": "2021-04-28T15:05:09Z",
             "statistics": {
-                "view_count": 142941,
+                "view_count": 142942,
                 "like_count": 629,
                 "dislike_count": 11,
                 "favorite_count": 0,
@@ -10512,7 +10512,7 @@
             },
             "published_at": "2021-04-29T13:18:27Z",
             "statistics": {
-                "view_count": 202829,
+                "view_count": 202831,
                 "like_count": 820,
                 "dislike_count": 27,
                 "favorite_count": 0,
@@ -10742,7 +10742,7 @@
             },
             "published_at": "2019-12-21T12:16:29Z",
             "statistics": {
-                "view_count": 1071137,
+                "view_count": 1071141,
                 "like_count": 6550,
                 "dislike_count": 123,
                 "favorite_count": 0,
@@ -10851,7 +10851,7 @@
             "published_at": "2020-05-28T15:45:57Z",
             "statistics": {
                 "view_count": 1603135,
-                "like_count": 5432,
+                "like_count": 5433,
                 "dislike_count": 158,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -10904,7 +10904,7 @@
             },
             "published_at": "2021-01-15T20:55:29Z",
             "statistics": {
-                "view_count": 35906,
+                "view_count": 35909,
                 "like_count": 174,
                 "dislike_count": 3,
                 "favorite_count": 0,
@@ -11210,7 +11210,7 @@
             },
             "published_at": "2021-05-20T14:28:32Z",
             "statistics": {
-                "view_count": 309358,
+                "view_count": 309364,
                 "like_count": 881,
                 "dislike_count": 24,
                 "favorite_count": 0,
@@ -11390,7 +11390,7 @@
             },
             "published_at": "2020-06-22T11:29:53Z",
             "statistics": {
-                "view_count": 2689227,
+                "view_count": 2689234,
                 "like_count": 9666,
                 "dislike_count": 241,
                 "favorite_count": 0,
@@ -11538,7 +11538,7 @@
             },
             "published_at": "2021-06-22T13:26:00Z",
             "statistics": {
-                "view_count": 58387,
+                "view_count": 58391,
                 "like_count": 571,
                 "dislike_count": 13,
                 "favorite_count": 0,
@@ -11659,7 +11659,7 @@
             },
             "published_at": "2021-08-23T19:28:21Z",
             "statistics": {
-                "view_count": 40122,
+                "view_count": 40123,
                 "like_count": 1004,
                 "dislike_count": 13,
                 "favorite_count": 0,
@@ -11773,7 +11773,7 @@
             },
             "published_at": "2020-11-30T23:08:29Z",
             "statistics": {
-                "view_count": 2151322,
+                "view_count": 2151324,
                 "like_count": 13419,
                 "dislike_count": 526,
                 "favorite_count": 0,
@@ -12191,7 +12191,7 @@
             },
             "published_at": "2021-09-21T10:23:04Z",
             "statistics": {
-                "view_count": 1197,
+                "view_count": 1199,
                 "like_count": 23,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -12249,7 +12249,7 @@
             },
             "published_at": "2020-06-08T13:20:25Z",
             "statistics": {
-                "view_count": 474355,
+                "view_count": 474356,
                 "like_count": 928,
                 "dislike_count": 55,
                 "favorite_count": 0,
@@ -12721,7 +12721,7 @@
             },
             "published_at": "2020-01-17T05:46:51Z",
             "statistics": {
-                "view_count": 1692051,
+                "view_count": 1692069,
                 "like_count": 4846,
                 "dislike_count": 111,
                 "favorite_count": 0,
@@ -12780,8 +12780,8 @@
             },
             "published_at": "2021-08-22T21:01:55Z",
             "statistics": {
-                "view_count": 122444,
-                "like_count": 933,
+                "view_count": 122455,
+                "like_count": 934,
                 "dislike_count": 16,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -13142,7 +13142,7 @@
             },
             "published_at": "2020-06-05T00:52:05Z",
             "statistics": {
-                "view_count": 303975,
+                "view_count": 303977,
                 "like_count": 1431,
                 "dislike_count": 36,
                 "favorite_count": 0,
@@ -13407,7 +13407,7 @@
             },
             "published_at": "2020-06-05T01:20:11Z",
             "statistics": {
-                "view_count": 3858460,
+                "view_count": 3858482,
                 "like_count": 12669,
                 "dislike_count": 550,
                 "favorite_count": 0,
@@ -13508,7 +13508,7 @@
             },
             "published_at": "2020-11-23T01:49:16Z",
             "statistics": {
-                "view_count": 90462,
+                "view_count": 90463,
                 "like_count": 480,
                 "dislike_count": 14,
                 "favorite_count": 0,
@@ -14008,7 +14008,7 @@
             },
             "published_at": "2021-08-19T18:20:03Z",
             "statistics": {
-                "view_count": 147584,
+                "view_count": 147596,
                 "like_count": 658,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -14069,7 +14069,7 @@
             },
             "published_at": "2021-08-24T04:44:52Z",
             "statistics": {
-                "view_count": 127113,
+                "view_count": 127120,
                 "like_count": 851,
                 "dislike_count": 11,
                 "favorite_count": 0,
@@ -14232,7 +14232,7 @@
             },
             "published_at": "2020-06-05T00:53:45Z",
             "statistics": {
-                "view_count": 509797,
+                "view_count": 509799,
                 "like_count": 1477,
                 "dislike_count": 49,
                 "favorite_count": 0,
@@ -14390,7 +14390,7 @@
             },
             "published_at": "2020-12-17T02:41:48Z",
             "statistics": {
-                "view_count": 898765,
+                "view_count": 898790,
                 "like_count": 4712,
                 "dislike_count": 48,
                 "favorite_count": 0,
@@ -14749,7 +14749,7 @@
             },
             "published_at": "2019-02-20T02:44:06Z",
             "statistics": {
-                "view_count": 97952,
+                "view_count": 97954,
                 "like_count": 499,
                 "dislike_count": 11,
                 "favorite_count": 0,
@@ -14907,7 +14907,7 @@
             },
             "published_at": "2020-08-14T03:23:59Z",
             "statistics": {
-                "view_count": 57888,
+                "view_count": 57890,
                 "like_count": 382,
                 "dislike_count": 11,
                 "favorite_count": 0,
@@ -15017,7 +15017,7 @@
             },
             "published_at": "2019-10-06T03:31:05Z",
             "statistics": {
-                "view_count": 1739116,
+                "view_count": 1739129,
                 "like_count": 8032,
                 "dislike_count": 331,
                 "favorite_count": 0,
@@ -15267,7 +15267,7 @@
             },
             "published_at": "2019-03-30T15:53:37Z",
             "statistics": {
-                "view_count": 365505,
+                "view_count": 365506,
                 "like_count": 1229,
                 "dislike_count": 58,
                 "favorite_count": 0,
@@ -15713,7 +15713,7 @@
             },
             "published_at": "2021-05-11T21:53:18Z",
             "statistics": {
-                "view_count": 56333,
+                "view_count": 56334,
                 "like_count": 645,
                 "dislike_count": 19,
                 "favorite_count": 0,
@@ -16102,7 +16102,7 @@
             },
             "published_at": "2021-07-08T14:29:06Z",
             "statistics": {
-                "view_count": 9232,
+                "view_count": 9233,
                 "like_count": 93,
                 "dislike_count": 2,
                 "favorite_count": 0,
@@ -16167,7 +16167,7 @@
             "published_at": "2021-06-12T15:01:52Z",
             "statistics": {
                 "view_count": 66083,
-                "like_count": 401,
+                "like_count": 402,
                 "dislike_count": 8,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -16220,7 +16220,7 @@
             },
             "published_at": "2019-01-31T12:06:58Z",
             "statistics": {
-                "view_count": 4501767,
+                "view_count": 4501776,
                 "like_count": 9421,
                 "dislike_count": 315,
                 "favorite_count": 0,
@@ -16363,7 +16363,7 @@
             },
             "published_at": "2021-06-10T15:59:43Z",
             "statistics": {
-                "view_count": 516227,
+                "view_count": 516269,
                 "like_count": 1978,
                 "dislike_count": 25,
                 "favorite_count": 0,
@@ -16520,7 +16520,7 @@
             },
             "published_at": "2021-06-10T16:02:43Z",
             "statistics": {
-                "view_count": 76508,
+                "view_count": 76510,
                 "like_count": 991,
                 "dislike_count": 11,
                 "favorite_count": 0,
@@ -16590,7 +16590,7 @@
             },
             "published_at": "2019-09-21T10:58:28Z",
             "statistics": {
-                "view_count": 1266662,
+                "view_count": 1266673,
                 "like_count": 4874,
                 "dislike_count": 78,
                 "favorite_count": 0,
@@ -16644,7 +16644,7 @@
             },
             "published_at": "2021-06-14T17:22:22Z",
             "statistics": {
-                "view_count": 683723,
+                "view_count": 683805,
                 "like_count": 1821,
                 "dislike_count": 39,
                 "favorite_count": 0,
@@ -16752,7 +16752,7 @@
             },
             "published_at": "2021-07-09T15:12:47Z",
             "statistics": {
-                "view_count": 11437,
+                "view_count": 11441,
                 "like_count": 127,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -16982,7 +16982,7 @@
             },
             "published_at": "2021-09-19T14:56:29Z",
             "statistics": {
-                "view_count": 10355,
+                "view_count": 10364,
                 "like_count": 66,
                 "dislike_count": 2,
                 "favorite_count": 0,
@@ -17045,7 +17045,7 @@
             },
             "published_at": "2019-04-30T16:41:34Z",
             "statistics": {
-                "view_count": 2034406,
+                "view_count": 2034417,
                 "like_count": 8986,
                 "dislike_count": 237,
                 "favorite_count": 0,
@@ -17153,7 +17153,7 @@
             },
             "published_at": "2021-09-12T18:55:32Z",
             "statistics": {
-                "view_count": 9562,
+                "view_count": 9570,
                 "like_count": 74,
                 "dislike_count": 1,
                 "favorite_count": 0,
@@ -17207,7 +17207,7 @@
             },
             "published_at": "2020-11-12T12:33:34Z",
             "statistics": {
-                "view_count": 4841822,
+                "view_count": 4841867,
                 "like_count": 6123,
                 "dislike_count": 334,
                 "favorite_count": 0,
@@ -17273,9 +17273,9 @@
             },
             "published_at": "2021-02-18T21:32:30Z",
             "statistics": {
-                "view_count": 1320097,
+                "view_count": 1320138,
                 "like_count": 9384,
-                "dislike_count": 456,
+                "dislike_count": 457,
                 "favorite_count": 0,
                 "comment_count": 0
             }
@@ -17397,7 +17397,7 @@
             },
             "published_at": "2021-08-24T23:01:31Z",
             "statistics": {
-                "view_count": 156451,
+                "view_count": 156476,
                 "like_count": 1001,
                 "dislike_count": 17,
                 "favorite_count": 0,
@@ -17822,7 +17822,7 @@
             },
             "published_at": "2021-01-27T13:47:39Z",
             "statistics": {
-                "view_count": 2823988,
+                "view_count": 2824012,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -18006,7 +18006,7 @@
             },
             "published_at": "2019-05-06T17:36:44Z",
             "statistics": {
-                "view_count": 1403542,
+                "view_count": 1403550,
                 "like_count": 3071,
                 "dislike_count": 159,
                 "favorite_count": 0,
@@ -18060,7 +18060,7 @@
             },
             "published_at": "2021-08-24T01:25:47Z",
             "statistics": {
-                "view_count": 423116,
+                "view_count": 423129,
                 "like_count": 2010,
                 "dislike_count": 45,
                 "favorite_count": 0,
@@ -18662,8 +18662,8 @@
             },
             "published_at": "2021-09-22T20:09:52Z",
             "statistics": {
-                "view_count": 2214,
-                "like_count": 92,
+                "view_count": 2255,
+                "like_count": 93,
                 "dislike_count": 5,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -18778,7 +18778,7 @@
             },
             "published_at": "2021-08-14T17:34:27Z",
             "statistics": {
-                "view_count": 118771,
+                "view_count": 118791,
                 "like_count": 1394,
                 "dislike_count": 27,
                 "favorite_count": 0,
@@ -19005,7 +19005,7 @@
             },
             "published_at": "2020-07-07T13:49:27Z",
             "statistics": {
-                "view_count": 1789893,
+                "view_count": 1789919,
                 "like_count": 6912,
                 "dislike_count": 208,
                 "favorite_count": 0,
@@ -19076,7 +19076,7 @@
             },
             "published_at": "2021-05-03T15:19:07Z",
             "statistics": {
-                "view_count": 7415253,
+                "view_count": 7415408,
                 "like_count": 33691,
                 "dislike_count": 1604,
                 "favorite_count": 0,
@@ -19193,7 +19193,7 @@
             },
             "published_at": "2021-09-22T15:01:08Z",
             "statistics": {
-                "view_count": 8796,
+                "view_count": 8864,
                 "like_count": 181,
                 "dislike_count": 4,
                 "favorite_count": 0,
@@ -19332,7 +19332,7 @@
             },
             "published_at": "2021-07-29T16:10:19Z",
             "statistics": {
-                "view_count": 367863,
+                "view_count": 367881,
                 "like_count": 1540,
                 "dislike_count": 26,
                 "favorite_count": 0,
@@ -19388,7 +19388,7 @@
             },
             "published_at": "2021-03-03T21:49:57Z",
             "statistics": {
-                "view_count": 140288,
+                "view_count": 140290,
                 "like_count": 1305,
                 "dislike_count": 14,
                 "favorite_count": 0,
@@ -19476,7 +19476,7 @@
             },
             "published_at": "2021-08-02T11:10:27Z",
             "statistics": {
-                "view_count": 47709,
+                "view_count": 47710,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -19584,7 +19584,7 @@
             },
             "published_at": "2020-08-27T15:33:29Z",
             "statistics": {
-                "view_count": 582223,
+                "view_count": 582228,
                 "like_count": 3010,
                 "dislike_count": 65,
                 "favorite_count": 0,
@@ -19865,7 +19865,7 @@
             },
             "published_at": "2021-06-01T19:42:37Z",
             "statistics": {
-                "view_count": 147947,
+                "view_count": 147951,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -19935,7 +19935,7 @@
             },
             "published_at": "2020-09-01T21:54:52Z",
             "statistics": {
-                "view_count": 650329,
+                "view_count": 650334,
                 "like_count": 3723,
                 "dislike_count": 73,
                 "favorite_count": 0,
@@ -20200,7 +20200,7 @@
             },
             "published_at": "2019-01-31T16:09:17Z",
             "statistics": {
-                "view_count": 190421,
+                "view_count": 190423,
                 "like_count": 811,
                 "dislike_count": 22,
                 "favorite_count": 0,
@@ -20308,7 +20308,7 @@
             },
             "published_at": "2021-06-07T00:36:25Z",
             "statistics": {
-                "view_count": 50185,
+                "view_count": 50188,
                 "like_count": 506,
                 "dislike_count": 7,
                 "favorite_count": 0,
@@ -20447,7 +20447,7 @@
             },
             "published_at": "2021-05-04T16:30:39Z",
             "statistics": {
-                "view_count": 490929,
+                "view_count": 490943,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -20503,7 +20503,7 @@
             },
             "published_at": "2021-08-30T14:26:26Z",
             "statistics": {
-                "view_count": 12468,
+                "view_count": 12470,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -20649,7 +20649,7 @@
             },
             "published_at": "2020-05-28T03:37:17Z",
             "statistics": {
-                "view_count": 264788,
+                "view_count": 264789,
                 "like_count": 590,
                 "dislike_count": 28,
                 "favorite_count": 0,
@@ -20730,7 +20730,7 @@
             },
             "published_at": "2020-03-26T16:01:21Z",
             "statistics": {
-                "view_count": 363387,
+                "view_count": 363393,
                 "like_count": 0,
                 "dislike_count": 0,
                 "favorite_count": 0,
@@ -21322,7 +21322,7 @@
             },
             "published_at": "2020-08-03T16:26:46Z",
             "statistics": {
-                "view_count": 661827,
+                "view_count": 661832,
                 "like_count": 5320,
                 "dislike_count": 102,
                 "favorite_count": 0,
@@ -21514,7 +21514,7 @@
             },
             "published_at": "2019-01-30T14:40:29Z",
             "statistics": {
-                "view_count": 698064,
+                "view_count": 698069,
                 "like_count": 3108,
                 "dislike_count": 115,
                 "favorite_count": 0,
@@ -21825,7 +21825,7 @@
             },
             "published_at": "2021-04-08T23:47:46Z",
             "statistics": {
-                "view_count": 659043,
+                "view_count": 659053,
                 "like_count": 2133,
                 "dislike_count": 60,
                 "favorite_count": 0,
@@ -21882,7 +21882,7 @@
             },
             "published_at": "2020-06-21T14:58:27Z",
             "statistics": {
-                "view_count": 235610,
+                "view_count": 235611,
                 "like_count": 1151,
                 "dislike_count": 16,
                 "favorite_count": 0,
@@ -22126,7 +22126,7 @@
             "published_at": "2021-02-18T21:43:24Z",
             "statistics": {
                 "view_count": 692634,
-                "like_count": 6446,
+                "like_count": 6447,
                 "dislike_count": 308,
                 "favorite_count": 0,
                 "comment_count": 0
@@ -22421,7 +22421,7 @@
             },
             "published_at": "2021-06-18T14:25:40Z",
             "statistics": {
-                "view_count": 103609,
+                "view_count": 103618,
                 "like_count": 605,
                 "dislike_count": 13,
                 "favorite_count": 0,
@@ -22615,7 +22615,7 @@
             },
             "published_at": "2021-06-15T04:55:03Z",
             "statistics": {
-                "view_count": 45215,
+                "view_count": 45216,
                 "like_count": 274,
                 "dislike_count": 14,
                 "favorite_count": 0,
